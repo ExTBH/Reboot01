@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/errorpage.css">
+    <title>Something is wrong</title>
+</head>
+
+<body>
+    {{ if eq .Type "NOT_FOUND" }}
+    <h1 id="title">Page not Found</h1>
+    {{ else if eq .Type "BAD_REQUEST" }}
+    <h1 id="title">Bad Request</h1>
+    {{ else if eq .Type "NOT_ALLOWED" }}
+    <h1 id="title">Method Not Allowed</h1>
+    {{ else if eq .Type "INTERNAL" }}
+    <h1 id="title">Internal Server Error</h1>
+    {{ else if eq .Type "DIR_FORBIDDEN" }}
+    <h1 id="title">Directory Access Forbidden</h1>
+    {{ else if eq .Type "API_BUSY" }}
+    <h1 id="title">API Fetching in Progress, please try again in few momoents</h1>
+    {{ else if eq .Type "API_DOWN" }}
+    <h1 id="title">API is Down, Contact site Admin</h1>
+    {{ end }}    
+    <a class="rounded-button" href="/">Go back Home?</a>
+</body>
+</html>

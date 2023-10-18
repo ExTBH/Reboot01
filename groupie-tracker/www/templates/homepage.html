@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/homepage.css">
+    <link rel="stylesheet" href="/styles/nav-bar.css">
+    <link rel="stylesheet" href="/styles/band_card.css">
+    <link rel="stylesheet" href="/styles/filter.css">
+    <title>Disover some Bands!</title>
+</head>
+
+<body>
+
+    <header style="margin-top: 0px;">
+        <a href="/" id="title">groupie-tracker</a>
+    </header>
+    
+    <section id="nav-bar">
+        <div class="search-bar-container">
+            <button class="rounded-button" style="color: black; font-size: 1.5em;"
+                onclick="toggleFilters()">Filters</button>
+            {{ if .SetSearch }}
+            <input type="search" name="search" id="search" placeholder="Post Malone..." class="search-bar"
+                autocomplete="off">
+            <div id="results"></div>
+            {{ end }}
+        </div>
+    </section>
+    
+
+    <section class="cards-grid">
+        {{ range $band := .Bands }}
+        {{ template "band_card" $band }}
+        {{ end }}
+    </section>
+    <section id="filter">
+        <form action="/filter" style="padding: 5px;">
+            <div>
+                <h3>Select Countries:</h3>
+                <div class="v-scoll">
+                    {{ range .FilterCountries }}
+                    <label><input type="checkbox" name="countries" value="{{ . }}">{{ . }}</label>
+                    {{ end }}
+                    
+                </div>
+            </div>
+            <div class="v-line"></div>
+            <div>
+                <h3 id="creation">Select Creation Date:</h3>
+                <input type="range" min="{{ .FilterMinCreation}}" max="{{ .FilterMaxCreation}}" value="{{ .FilterMinCreation}}" name="creationMin" id="creationMin" title="Minimum Creation Year">
+                <input type="range" min="{{ .FilterMinCreation}}" max="{{ .FilterMaxCreation}}" value="{{ .FilterMaxCreation}}" name="creationMax" id="creationMax" title="Maximum Creation Year">
+                <h3 id="album">Select First Album Date:</h3>
+                <input type="range" min="{{ .FilterMinAlbum}}" max="{{ .FilterMaxAlbum}}" value="{{ .FilterMinAlbum}}" name="albumMin" id="albumMin">
+                <input type="range" min="{{ .FilterMinAlbum}}" max="{{ .FilterMaxAlbum}}" value="{{ .FilterMaxAlbum}}" name="albumMax" id="albumMax">
+
+            </div>
+            <div class="v-line"></div>
+            <div>
+                <h3>Select Number of Members:</h3>
+                {{ range .FilterBandSizes }}
+                <label><input type="checkbox" name="members" value="{{ . }}">{{ . }}</label>
+                {{ end }}
+                <br>
+            </div>
+            <div class="v-line"></div>
+            <div id="apply-button-container">
+                <button type="submit" class="rounded-button" title="Filters will be applied left to right">Apply Filters</button>
+            </div>
+        </form>
+    </section>
+</body>
+{{ if .SetSearch }}
+<script src="/js/searchbar.js"></script>
+<script src="/js/search-autocomplete.js"></script>
+{{ end }}
+<script src="/js/filter.js"></script>
+</html>

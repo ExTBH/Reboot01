@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+
+
+body {
+    background: #dde1e7;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+h1, a, p {
+    font-family: 'Gabarito', cursive;
+}
+
+.v-line {
+    width: 2px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+#title {
+    font-size: 5vw;
+    font-family: 'Gabarito', cursive;
+    text-transform: capitalize;
+    color: rgb(137, 137, 137);
+    text-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    text-decoration: none;
+    text-align: center;
+}
+
+.rounded-button {
+    background: #dde1e7;
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    color: rgb(137, 137, 137);
+    border-radius: 40px;
+    transition: background-color ease 0.3s;
+    transition: transform ease 0.3s;
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.rounded-button:hover {
+    background: #dde1e7;
+    box-shadow: -1px -1px 9px rgba(255,255,255,0.45), 1px 1px 9px rgba(94,104,121,0.3);
+    color: rgb(8, 8, 8);
+    transition: transform ease 0.3s;
+    background-color: rgb(237, 237, 237);
+    transform: scale(0.99);
+}

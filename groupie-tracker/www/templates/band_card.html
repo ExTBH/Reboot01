@@ -1,0 +1,7 @@
+{{ define "band_card" }}
+<div class="card" id="{{ .Id }}">
+    <img src="{{ .Image }}" alt="{{ .Name }} band image" loading="lazy">
+    <p style="font-weight: bold;">{{ .Name }}</p>
+    <a href="/band/{{ .Id }}" class="rounded-button"><i class="ri-arrow-right-s-fill"></i>Check More!</a>
+</div>
+{{ end }}

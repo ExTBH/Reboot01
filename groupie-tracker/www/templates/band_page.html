@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/band.css">
+    <title>{{ .Band.Name }}</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">{{ .Band.Name }} Band!</h1>
+    </header>
+    <section class="band-card">
+        <img src="{{ .Band.Image }}" alt="{{ .Band.Name }} Band Logo" loading="lazy" id="img">
+        <h1 class="band-card-item">Creation Date: {{ .Band.CreationDate }}</h1>
+        <h1 class="band-card-item">First Album Date: {{ .Band.FirstAlbum }}</h1>
+    </section>
+    <section id="band-data">
+        <div>
+            <table border="1">
+                <th>Members</th>
+                <tbody>
+                    {{ range .Band.Members}}
+                    <tr>
+                        <td>{{ . }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Location</th>
+                        <th>Dates</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range $index, $relation := .Band.Relations}}
+                    <tr>
+                        <td>{{$index}}</td>
+                        <td>{{ $relation.City }}, {{ $relation.Country }}</td>
+                        <td>
+                            {{ range $relation.Date }}
+                            {{ . }}<br>
+                            {{ end }}
+                        </td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+        <div class="v-line"></div>
+        <div>
+            {{ if eq .MapURL "" }}
+            <p>Error displaying map</p>
+            {{ else }}
+            <h1 style="text-align: center;"><img src="{{ .MapURL}}" alt="Anotated map" id="map"></h1>
+            {{ end }}
+        </div>
+    </section>
+</body>
+
+
+</html>

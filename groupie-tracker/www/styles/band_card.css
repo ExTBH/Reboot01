@@ -1,0 +1,32 @@
+.card {
+    display: inline-flex;
+    padding: 16px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+    background: #dde1e7;
+    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
+    color: rgb(137, 137, 137);
+    max-width: 100%;
+}
+
+.card>img {
+    max-width: 100%;
+    border-radius: 40px;
+    box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45), 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+
+.card>a {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.card>p {
+    font-size: large;
+}
+
+@media (max-width: 500px) {
+    .card {
+        max-width: 80%;
+    }
+}
