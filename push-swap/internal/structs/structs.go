@@ -3,7 +3,7 @@ package structs
 type Instruction string
 
 type Rui struct {
-	Instructions   []*Instruction
+	Instructions   []Instruction
 	StackA, StackB []int
 }
 

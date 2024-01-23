@@ -11,11 +11,7 @@ import (
 )
 
 func main() {
-	if len(os.Args) == 1 {
-		return
-	}
 	if len(os.Args) != 2 {
-		fmt.Println("Error: Missing Agument!!!")
 		os.Exit(2)
 	}
 	asm_3adel := os.Args[1]
@@ -46,11 +42,23 @@ func main() {
 	} else {
 		fmt.Println("KO")
 	}
+	// fmt.Println(rui.StackA)
 }
 
-func readInstructions() []*structs.Instruction {
+func readInstructions() []structs.Instruction {
+	// check stdin have actual data in it
+	fi, err := os.Stdin.Stat()
+	if err != nil {
+		fmt.Println("Error:", err)
+		os.Exit(1)
+	}
+	size := fi.Size()
+	if size <= 0 {
+		return nil
+	}
+	// read stdin
 	var v string
-	arr := []*structs.Instruction(nil)
+	arr := []structs.Instruction(nil)
 	for {
 		_, err := fmt.Scanln(&v)
 		if err != nil {
@@ -58,8 +66,7 @@ func readInstructions() []*structs.Instruction {
 		}
 		switch structs.Instruction(v) {
 		case structs.InstructionPA, structs.InstructionPB, structs.InstructionRA, structs.InstructionRB, structs.InstructionRR, structs.InstructionRRA, structs.InstructionRRB, structs.InstructionRRR, structs.InstructionSA, structs.InstructionSB, structs.InstructionSS:
-			v_casted := structs.Instruction(v)
-			arr = append(arr, &v_casted)
+			arr = append(arr, structs.Instruction(v))
 		default:
 			fmt.Println("Error: instruction not vaild")
 			os.Exit(2)
