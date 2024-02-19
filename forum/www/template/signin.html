@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing In</title>
+
+    <link rel="stylesheet" href="../static/css/singcsscode.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/navbar.css" />
+</head>
+
+<body>
+
+    <section class="sign-in">
+        <div data-controller="visibility" data-visibility-target="content" data-visibility-visible-value="false"
+            class="header hidden lg:hidden off-canvas-menu" role="dialog" aria-modal="true">
+
+            <div data-visibility-target="content" data-action="click->visibility#off" class="forfirstdiv hidden"
+                aria-hidden="true" data-transition-enter data-transition-enter-start data-transition-enter-end
+                data-transition-leave data-transition-leave-start data-transition-leave-end>
+            </div>
+
+            <div data-visibility-target="content" class="forthefirstdiv2" data-transition-enter
+                data-transition-enter-start data-transition-enter-end data-transition-leave data-transition-leave-start
+                data-transition-leave-end>
+                <div data-visibility-target="content" class="forthefirstdiv3 hidden" data-transition-enter
+                    data-transition-enter-start data-transition-enter-end data-transition-leave
+                    data-transition-leave-start data-transition-leave-end>
+                    <button type="button" data-action="click->visibility#off">
+                        <span class="sr-only">Close sidebar</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="navbarcon">
+                    <div class="iconlog">
+                        <a aria-label="Return back home" href="/">
+                            <img alt="SnadBox Logo" class="imglogo lg:hidden" src="../static/imgs/logo.png" />
+                        </a>
+                    </div>
+                    <nav aria-label="Sidebar" class="mt-3">
+                        <div class="navitems">
+                            <a class="navLinks" data-test-id="nav-home" data-turbo-method="get" href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="navLinksSvg" role="img"
+                                    aria-labelledby="a9wbb1p9czalp3h7ymry2sheehq2cazx">
+                                    <title id="a9wbb1p9czalp3h7ymry2sheehq2cazx">Home icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25">
+                                    </path>
+                                </svg>
+
+                                Home
+                            </a>
+                            <a class="navLinks" data-test-id="nav-about" data-turbo-method="get" href="/about">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="navLinksSvg" role="img"
+                                    aria-labelledby="akxz4y09mp1dcylxj15n80zeyn4ktw7r">
+                                    <title id="akxz4y09mp1dcylxj15n80zeyn4ktw7r">About icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z">
+                                    </path>
+                                </svg>
+
+                                About
+                            </a>
+                        </div>
+                        <hr class="navdisplay" aria-hidden="true">
+                        <div class="mynavbtn">
+                            <a class="navLinks" data-test-id="nav-sign-up" data-turbo-method="get" href="/signup">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="navLinksSvg" role="img"
+                                    aria-labelledby="aeciwpjmeysuvdev4d396gi14lcha9uz">
+                                    <title id="aeciwpjmeysuvdev4d396gi14lcha9uz">Get started icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z">
+                                    </path>
+                                </svg>
+
+                                Get started
+                            </a>
+                            <label class="darkmodebtn2" id="darkmodelabel2">
+                                <input checked="checked" type="checkbox">
+                                <svg viewBox="0 0 384 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="moon">
+                                    <path
+                                        d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                                    </path>
+                                </svg>
+                                <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="sun">
+                                    <path
+                                        d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z">
+                                    </path>
+                                </svg>
+                            </label>
+                            <turbo-frame id="theme_switcher_mobile">
+                            </turbo-frame>
+                            <a class="navLinks" data-test-id="nav-sign-in" data-turbo-method="get" href="/login">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="navLinksSvg" role="img"
+                                    aria-labelledby="aay4rpwsy4quud0g6jnfgnc3lwzrstq6">
+                                    <title id="aay4rpwsy4quud0g6jnfgnc3lwzrstq6">Sign in icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75">
+                                    </path>
+                                </svg>
+
+                                Login
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="flex-shrink-0 w-14" aria-hidden="true">
+                <!-- Force sidebar to shrink to fit close icon -->
+            </div>
+        </div>
+        </div>
+
+        <nav class="decnavdiv">
+            <div class="decnavdivitems">
+                <div class="decnavbaritems">
+                    <div class="decforicon">
+                        <div class="deciconlog">
+                            <a class="logo" aria-label="Return back home" href="/">
+                                <img alt="SnadBox Logo" class="imglogo" src="../static/imgs/logo.png" />
+                            </a>
+                            <a aria-label="Return back home" href="/">
+                                <img alt="SnadBox Logo" class="decimglogo" src="../static/imgs/logo.png"
+                                    title="SandBox Logo" id="ahe0qgdvha28ouotdzc5x37gu5kqupvi" />
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- <div class="search-header">
+                        <input placeholder="Search" class="search-header__input" type="text" />
+                        <button class="search-header__button" type="submit" name="PostName" value="PostsInSearch">
+                            <svg fill="none" viewBox="0 0 14 18" height="18" width="18" class="search-header__icon">
+                                <path fill="#3A3A3A"
+                                    d="M7.132 0C3.197 0 0 3.124 0 6.97c0 3.844 3.197 6.969 7.132 6.969 1.557 0 2.995-.49 4.169-1.32L16.82 18 18 16.847l-5.454-5.342a6.846 6.846 0 0 0 1.718-4.536C14.264 3.124 11.067 0 7.132 0zm0 .82c3.48 0 6.293 2.748 6.293 6.15 0 3.4-2.813 6.149-6.293 6.149S.839 10.37.839 6.969C.839 3.568 3.651.82 7.132.82z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div> -->
+
+                    <div class="navbar">
+
+
+                    </div>
+
+                    <div class="menudiv" data-controller="open-menu"
+                        data-open-menu-visibility-outlet=".off-canvas-menu">
+                        <button type="button" data-action="open-menu#open" class="menudivbtn"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only"></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="menudivbtnsvg" role="img"
+                                aria-labelledby="am1zu9nbcpuvbgoqub7jo37o0dqansma">
+                                <title id="am1zu9nbcpuvbgoqub7jo37o0dqansma">Open mobile menu button</title>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure><img src="../static/imgs/logo.png" alt="sing up image"></figure>
+                    <a href="#" class="signup-image-link">Create an
+                        account</a>
+                </div>
+                <div class="signin-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST" class="register-form" id="login-form">
+                        <div class="form-group">
+                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="your_name" id="your_name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="your_pass" id="your_pass" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="remember-me" id="remember-me" class="agree-term">
+                            <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember
+                                me</label>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signin" id="signin" class="form-submit" value="Log in">
+                        </div>
+                    </form>
+                    <div class="social-login">
+                        <span class="social-label">Or login with</span>
+                        <ul class="socials">
+                            <li>
+                                <a herf="/user/login/github" style="margin-top: 30px; ">
+                                    <button class="Github">
+                                        <svg viewBox="0 0 15 15" class="svgIconGithub">
+                                            <path
+                                                d="M7.49933 0.25C3.49635 0.25 0.25 3.49593 0.25 7.50024C0.25 10.703 2.32715 13.4206 5.2081 14.3797C5.57084 14.446 5.70302 14.2222 5.70302 14.0299C5.70302 13.8576 5.69679 13.4019 5.69323 12.797C3.67661 13.235 3.25112 11.825 3.25112 11.825C2.92132 10.9874 2.44599 10.7644 2.44599 10.7644C1.78773 10.3149 2.49584 10.3238 2.49584 10.3238C3.22353 10.375 3.60629 11.0711 3.60629 11.0711C4.25298 12.1788 5.30335 11.8588 5.71638 11.6732C5.78225 11.205 5.96962 10.8854 6.17658 10.7043C4.56675 10.5209 2.87415 9.89918 2.87415 7.12104C2.87415 6.32925 3.15677 5.68257 3.62053 5.17563C3.54576 4.99226 3.29697 4.25521 3.69174 3.25691C3.69174 3.25691 4.30015 3.06196 5.68522 3.99973C6.26337 3.83906 6.8838 3.75895 7.50022 3.75583C8.1162 3.75895 8.73619 3.83906 9.31523 3.99973C10.6994 3.06196 11.3069 3.25691 11.3069 3.25691C11.7026 4.25521 11.4538 4.99226 11.3795 5.17563C11.8441 5.68257 12.1245 6.32925 12.1245 7.12104C12.1245 9.9063 10.4292 10.5192 8.81452 10.6985C9.07444 10.9224 9.30633 11.3648 9.30633 12.0413C9.30633 13.0102 9.29742 13.7922 9.29742 14.0299C9.29742 14.2239 9.42828 14.4496 9.79591 14.3788C12.6746 13.4179 14.75 10.7025 14.75 7.50024C14.75 3.49593 11.5036 0.25 7.49933 0.25Z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </li>
+                            <li>
+                                <a herf="/user/login/google" style="margin-top: 30px;">
+                                    <button class="Google">
+                                        <svg viewBox="0 0 56.6934 56.6934" class="svgIconGoogle">
+                                            <path
+                                                d="M51.981,24.4812c-7.7173-0.0038-15.4346-0.0019-23.1518-0.001c0.001,3.2009-0.0038,6.4018,0.0019,9.6017  c4.4693-0.001,8.9386-0.0019,13.407,0c-0.5179,3.0673-2.3408,5.8723-4.9258,7.5991c-1.625,1.0926-3.492,1.8018-5.4168,2.139  c-1.9372,0.3306-3.9389,0.3729-5.8713-0.0183c-1.9651-0.3921-3.8409-1.2108-5.4773-2.3649  c-2.6166-1.8383-4.6135-4.5279-5.6388-7.5549c-1.0484-3.0788-1.0561-6.5046,0.0048-9.5805  c0.7361-2.1679,1.9613-4.1705,3.5708-5.8002c1.9853-2.0324,4.5664-3.4853,7.3473-4.0811c2.3812-0.5083,4.8921-0.4113,7.2234,0.294  c1.9815,0.6016,3.8082,1.6874,5.3044,3.1163c1.5125-1.5039,3.0173-3.0164,4.527-4.5231c0.7918-0.811,1.624-1.5865,2.3908-2.4196  c-2.2928-2.1218-4.9805-3.8274-7.9172-4.9056C32.0723,4.0363,26.1097,3.995,20.7871,5.8372  C14.7889,7.8907,9.6815,12.3763,6.8497,18.0459c-0.9859,1.9536-1.7057,4.0388-2.1381,6.1836  C3.6238,29.5732,4.382,35.2707,6.8468,40.1378c1.6019,3.1768,3.8985,6.001,6.6843,8.215c2.6282,2.0958,5.6916,3.6439,8.9396,4.5078  c4.0984,1.0993,8.461,1.0743,12.5864,0.1355c3.7284-0.8581,7.256-2.6397,10.0725-5.24c2.977-2.7358,5.1006-6.3403,6.2249-10.2138  C52.5807,33.3171,52.7498,28.8064,51.981,24.4812z">
+                                            </path>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <div class="footer">
+        <p>© 2021 All rights reserved. <a href="#" class="footerLink">Privacy</a> | <a href="#"
+                class="footerLink">Terms</a></p>
+    </div>
+    <!-- for dark mode js -->
+    <script>
+        // Get the checkbox element
+        const checkbox = document.querySelector('.darkmodebtn input[type="checkbox"]');
+
+        // Add event listener for the checkbox change event
+        checkbox.addEventListener('change', function () {
+            // Check if the checkbox is checked
+            if (this.checked) {
+                // Remove the dark mode class from the body element
+                document.body.classList.remove('dark-mode');
+            } else {
+                // Add the dark mode class to the body element
+                document.body.classList.add('dark-mode');
+            }
+        });
+
+        const checkbox2 = document.querySelector('.darkmodebtn2 input[type="checkbox"]');
+
+        // Add event listener for the checkbox change event
+        checkbox2.addEventListener('change', function () {
+            // Check if the checkbox is checked
+            if (this.checked) {
+                // Remove the dark mode class from the body element
+                document.body.classList.remove('dark-mode');
+            } else {
+                // Add the dark mode class to the body element
+                document.body.classList.add('dark-mode');
+            }
+        });
+    </script>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</footer>
+
+</html>

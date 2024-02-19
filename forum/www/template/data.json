@@ -1,0 +1,230 @@
+{
+    "resources": [
+        {
+            "type": "forums",
+            "id": "1",
+            "attributes": {
+                "title": "Flarum\/demo",
+                "description": "demo demo installation of Flarum",
+                "showLanguageSelector": true,
+                "baseUrl": "https:\/\/demo.flarum.site",
+                "basePath": "",
+                "baseOrigin": "https:\/\/demo.flarum.site",
+                "debug": false,
+                "apiUrl": "https:\/\/demo.flarum.site\/api",
+                "welcomeTitle": "Welcome to Flarum\/demo",
+                "welcomeMessage": "Using version \u003Ca href=\u0022https:\/\/github.com\/flarum\/core\/tree\/v1.8.3\u0022 target=\u0022_blank\u0022\u003Ev1.8.3\u003C\/a\u003E. It is regularly reset and updated. Last reset: 2023-11-12 17:12:32. No mail is sent. Do not publish any sensitive information.",
+                "themePrimaryColor": "#8f66db",
+                "themeSecondaryColor": "#e4e2e2",
+                "logoUrl": "https:\/\/demo.flarum.site\/assets\/logo-jjrf3k9u.png",
+                "faviconUrl": null,
+                "headerHtml": null,
+                "footerHtml": null,
+                "allowSignUp": true,
+                "defaultRoute": "\/all",
+                "canViewForum": true,
+                "canStartDiscussion": false,
+                "canSearchUsers": false,
+                "canCreateAccessToken": false,
+                "canModerateAccessTokens": false,
+                "assetsBaseUrl": "https:\/\/demo.flarum.site\/assets",
+                "canViewFlags": false,
+                "guidelinesUrl": null,
+                "canBypassTagCounts": false,
+                "minPrimaryTags": "1",
+                "maxPrimaryTags": "1",
+                "minSecondaryTags": "0",
+                "maxSecondaryTags": "3",
+                "displayNameDriver": "username",
+                "setNicknameOnRegistration": false,
+                "randomizeUsernameOnRegistration": false,
+                "allowUsernameMentionFormat": true
+            },
+            "relationships": {
+                "groups": {
+                    "data": [
+                        {
+                            "type": "groups",
+                            "id": "1"
+                        },
+                        {
+                            "type": "groups",
+                            "id": "2"
+                        },
+                        {
+                            "type": "groups",
+                            "id": "3"
+                        },
+                        {
+                            "type": "groups",
+                            "id": "11"
+                        },
+                        {
+                            "type": "groups",
+                            "id": "12"
+                        },
+                        {
+                            "type": "groups",
+                            "id": "13"
+                        },
+                        {
+                            "type": "groups",
+                            "id": "14"
+                        },
+                        {
+                            "type": "groups",
+                            "id": "15"
+                        },
+                        {
+                            "type": "groups",
+                            "id": "16"
+                        }
+                    ]
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tags",
+                            "id": "26"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "groups",
+            "id": "1",
+            "attributes": {
+                "nameSingular": "Admin",
+                "namePlural": "Admins",
+                "color": "#B72A2A",
+                "icon": "fas fa-wrench",
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "groups",
+            "id": "2",
+            "attributes": {
+                "nameSingular": "Guest",
+                "namePlural": "Guests",
+                "color": null,
+                "icon": null,
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "groups",
+            "id": "3",
+            "attributes": {
+                "nameSingular": "Member",
+                "namePlural": "Members",
+                "color": null,
+                "icon": null,
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "groups",
+            "id": "11",
+            "attributes": {
+                "nameSingular": "Mod",
+                "namePlural": "Mods",
+                "color": "#7f3434",
+                "icon": "fas fa-shield-alt",
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "groups",
+            "id": "12",
+            "attributes": {
+                "nameSingular": "Apprentice",
+                "namePlural": "Apprentices",
+                "color": "",
+                "icon": "",
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "groups",
+            "id": "13",
+            "attributes": {
+                "nameSingular": "Verified",
+                "namePlural": "Verified",
+                "color": "#28c4d5",
+                "icon": "fas fa-check",
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "groups",
+            "id": "14",
+            "attributes": {
+                "nameSingular": "Premium",
+                "namePlural": "Premium",
+                "color": "#f8ba12",
+                "icon": "fas fa-star",
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "groups",
+            "id": "15",
+            "attributes": {
+                "nameSingular": "Newbies",
+                "namePlural": "Newbies",
+                "color": "#ad3e00",
+                "icon": "",
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "groups",
+            "id": "16",
+            "attributes": {
+                "nameSingular": "Venture",
+                "namePlural": "Venture",
+                "color": "",
+                "icon": "",
+                "isHidden": 0
+            }
+        },
+        {
+            "type": "tags",
+            "id": "26",
+            "attributes": {
+                "name": "New Ventures",
+                "description": "",
+                "slug": "new-ventures",
+                "color": "",
+                "backgroundUrl": null,
+                "backgroundMode": null,
+                "icon": "",
+                "discussionCount": 0,
+                "position": 5,
+                "defaultSort": null,
+                "isChild": false,
+                "isHidden": false,
+                "lastPostedAt": null,
+                "canStartDiscussion": false,
+                "canAddToDiscussion": false
+            }
+        }
+    ],
+    "session": {
+        "userId": 0,
+        "csrfToken": "KyqK3sPINVuZLvrdAGPhwuDoo1aOwpqcgMISoQ3x"
+    },
+    "locales": {
+        "en": "Default"
+    },
+    "locale": "en",
+    "fof-sentry.scrub-emails": true,
+    "apiDocument": {
+        "links": {
+            "first": "https:\/\/demo.flarum.site\/api\/discussions?sort=\u0026page%5Blimit%5D=20"
+        },
+        "data": []
+    }
+}

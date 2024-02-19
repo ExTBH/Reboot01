@@ -1,0 +1,2404 @@
+<!DOCTYPE html>
+<html lang="en" id="root-element" class="dark">
+    <head>
+        <title>Your Career in Web Development Starts Here | The Odin Project
+    </title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <script type="text/javascript">
+            window.NREUM || (NREUM = {});
+            NREUM.info = {
+                "beacon": "bam.nr-data.net",
+                "errorBeacon": "bam.nr-data.net",
+                "licenseKey": "17c82925e3",
+                "applicationID": "2418536",
+                "transactionName": "d1xcEEpcDg1RS05FQlVHWwdnQwMGUUpOXllZVg==",
+                "queueTime": 2,
+                "applicationTime": 78,
+                "agent": ""
+            }
+        </script>
+        <script type="text/javascript">
+            (window.NREUM || (NREUM = {})).init = {
+                ajax: {
+                    deny_list: ["bam.nr-data.net"]
+                }
+            };
+            (window.NREUM || (NREUM = {})).loader_config = {
+                licenseKey: "17c82925e3",
+                applicationID: "2418536"
+            };
+            ;/*! For license information please see nr-loader-rum-1.251.1.min.js.LICENSE.txt */
+            (()=>{
+                var e, t, r = {
+                    234: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            P_: ()=>v,
+                            Mt: ()=>b,
+                            C5: ()=>s,
+                            DL: ()=>w,
+                            OP: ()=>S,
+                            lF: ()=>T,
+                            Yu: ()=>x,
+                            Dg: ()=>m,
+                            CX: ()=>c,
+                            GE: ()=>_,
+                            sU: ()=>R
+                        });
+                        var n = r(8632)
+                          , i = r(9567);
+                        const o = {
+                            beacon: n.ce.beacon,
+                            errorBeacon: n.ce.errorBeacon,
+                            licenseKey: void 0,
+                            applicationID: void 0,
+                            sa: void 0,
+                            queueTime: void 0,
+                            applicationTime: void 0,
+                            ttGuid: void 0,
+                            user: void 0,
+                            account: void 0,
+                            product: void 0,
+                            extra: void 0,
+                            jsAttributes: {},
+                            userAttributes: void 0,
+                            atts: void 0,
+                            transactionName: void 0,
+                            tNamePlain: void 0
+                        }
+                          , a = {};
+                        function s(e) {
+                            if (!e)
+                                throw new Error("All info objects require an agent identifier!");
+                            if (!a[e])
+                                throw new Error("Info for ".concat(e, " was never set"));
+                            return a[e]
+                        }
+                        function c(e, t) {
+                            if (!e)
+                                throw new Error("All info objects require an agent identifier!");
+                            a[e] = (0,
+                            i.D)(t, o);
+                            const r = (0,
+                            n.ek)(e);
+                            r && (r.info = a[e])
+                        }
+                        const u = e=>{
+                            if (!e || "string" != typeof e)
+                                return !1;
+                            try {
+                                document.createDocumentFragment().querySelector(e)
+                            } catch {
+                                return !1
+                            }
+                            return !0
+                        }
+                        ;
+                        var d = r(7056)
+                          , l = r(50);
+                        const f = "[data-nr-mask]"
+                          , g = ()=>{
+                            const e = {
+                                mask_selector: "*",
+                                block_selector: "[data-nr-block]",
+                                mask_input_options: {
+                                    color: !1,
+                                    date: !1,
+                                    "datetime-local": !1,
+                                    email: !1,
+                                    month: !1,
+                                    number: !1,
+                                    range: !1,
+                                    search: !1,
+                                    tel: !1,
+                                    text: !1,
+                                    time: !1,
+                                    url: !1,
+                                    week: !1,
+                                    textarea: !1,
+                                    select: !1,
+                                    password: !0
+                                }
+                            };
+                            return {
+                                feature_flags: [],
+                                proxy: {
+                                    assets: void 0,
+                                    beacon: void 0
+                                },
+                                privacy: {
+                                    cookies_enabled: !0
+                                },
+                                ajax: {
+                                    deny_list: void 0,
+                                    block_internal: !0,
+                                    enabled: !0,
+                                    harvestTimeSeconds: 10,
+                                    autoStart: !0
+                                },
+                                distributed_tracing: {
+                                    enabled: void 0,
+                                    exclude_newrelic_header: void 0,
+                                    cors_use_newrelic_header: void 0,
+                                    cors_use_tracecontext_headers: void 0,
+                                    allowed_origins: void 0
+                                },
+                                session: {
+                                    domain: void 0,
+                                    expiresMs: d.oD,
+                                    inactiveMs: d.Hb
+                                },
+                                ssl: void 0,
+                                obfuscate: void 0,
+                                jserrors: {
+                                    enabled: !0,
+                                    harvestTimeSeconds: 10,
+                                    autoStart: !0
+                                },
+                                metrics: {
+                                    enabled: !0,
+                                    autoStart: !0
+                                },
+                                page_action: {
+                                    enabled: !0,
+                                    harvestTimeSeconds: 30,
+                                    autoStart: !0
+                                },
+                                page_view_event: {
+                                    enabled: !0,
+                                    autoStart: !0
+                                },
+                                page_view_timing: {
+                                    enabled: !0,
+                                    harvestTimeSeconds: 30,
+                                    long_task: !1,
+                                    autoStart: !0
+                                },
+                                session_trace: {
+                                    enabled: !0,
+                                    harvestTimeSeconds: 10,
+                                    autoStart: !0
+                                },
+                                harvest: {
+                                    tooManyRequestsDelay: 60
+                                },
+                                session_replay: {
+                                    autoStart: !0,
+                                    enabled: !1,
+                                    harvestTimeSeconds: 60,
+                                    sampling_rate: 50,
+                                    error_sampling_rate: 50,
+                                    collect_fonts: !1,
+                                    inline_images: !1,
+                                    inline_stylesheet: !0,
+                                    mask_all_inputs: !0,
+                                    get mask_text_selector() {
+                                        return e.mask_selector
+                                    },
+                                    set mask_text_selector(t) {
+                                        u(t) ? e.mask_selector = "".concat(t, ",").concat(f) : "" === t || null === t ? e.mask_selector = f : (0,
+                                        l.Z)("An invalid session_replay.mask_selector was provided. '*' will be used.", t)
+                                    },
+                                    get block_class() {
+                                        return "nr-block"
+                                    },
+                                    get ignore_class() {
+                                        return "nr-ignore"
+                                    },
+                                    get mask_text_class() {
+                                        return "nr-mask"
+                                    },
+                                    get block_selector() {
+                                        return e.block_selector
+                                    },
+                                    set block_selector(t) {
+                                        u(t) ? e.block_selector += ",".concat(t) : "" !== t && (0,
+                                        l.Z)("An invalid session_replay.block_selector was provided and will not be used", t)
+                                    },
+                                    get mask_input_options() {
+                                        return e.mask_input_options
+                                    },
+                                    set mask_input_options(t) {
+                                        t && "object" == typeof t ? e.mask_input_options = {
+                                            ...t,
+                                            password: !0
+                                        } : (0,
+                                        l.Z)("An invalid session_replay.mask_input_option was provided and will not be used", t)
+                                    }
+                                },
+                                spa: {
+                                    enabled: !0,
+                                    harvestTimeSeconds: 10,
+                                    autoStart: !0
+                                }
+                            }
+                        }
+                          , p = {}
+                          , h = "All configuration objects require an agent identifier!";
+                        function v(e) {
+                            if (!e)
+                                throw new Error(h);
+                            if (!p[e])
+                                throw new Error("Configuration for ".concat(e, " was never set"));
+                            return p[e]
+                        }
+                        function m(e, t) {
+                            if (!e)
+                                throw new Error(h);
+                            p[e] = (0,
+                            i.D)(t, g());
+                            const r = (0,
+                            n.ek)(e);
+                            r && (r.init = p[e])
+                        }
+                        function b(e, t) {
+                            if (!e)
+                                throw new Error(h);
+                            var r = v(e);
+                            if (r) {
+                                for (var n = t.split("."), i = 0; i < n.length - 1; i++)
+                                    if ("object" != typeof (r = r[n[i]]))
+                                        return;
+                                r = r[n[n.length - 1]]
+                            }
+                            return r
+                        }
+                        const y = {
+                            accountID: void 0,
+                            trustKey: void 0,
+                            agentID: void 0,
+                            licenseKey: void 0,
+                            applicationID: void 0,
+                            xpid: void 0
+                        }
+                          , A = {};
+                        function w(e) {
+                            if (!e)
+                                throw new Error("All loader-config objects require an agent identifier!");
+                            if (!A[e])
+                                throw new Error("LoaderConfig for ".concat(e, " was never set"));
+                            return A[e]
+                        }
+                        function _(e, t) {
+                            if (!e)
+                                throw new Error("All loader-config objects require an agent identifier!");
+                            A[e] = (0,
+                            i.D)(t, y);
+                            const r = (0,
+                            n.ek)(e);
+                            r && (r.loader_config = A[e])
+                        }
+                        const x = (0,
+                        n.mF)().o;
+                        var E = r(385)
+                          , D = r(6818);
+                        const k = {
+                            buildEnv: D.Re,
+                            customTransaction: void 0,
+                            disabled: !1,
+                            distMethod: D.gF,
+                            isolatedBacklog: !1,
+                            loaderType: void 0,
+                            maxBytes: 3e4,
+                            offset: Math.floor(E._A?.performance?.timeOrigin || E._A?.performance?.timing?.navigationStart || Date.now()),
+                            onerror: void 0,
+                            origin: "" + E._A.location,
+                            ptid: void 0,
+                            releaseIds: {},
+                            session: void 0,
+                            xhrWrappable: "function" == typeof E._A.XMLHttpRequest?.prototype?.addEventListener,
+                            version: D.q4,
+                            denyList: void 0
+                        }
+                          , j = {};
+                        function S(e) {
+                            if (!e)
+                                throw new Error("All runtime objects require an agent identifier!");
+                            if (!j[e])
+                                throw new Error("Runtime for ".concat(e, " was never set"));
+                            return j[e]
+                        }
+                        function R(e, t) {
+                            if (!e)
+                                throw new Error("All runtime objects require an agent identifier!");
+                            j[e] = (0,
+                            i.D)(t, k);
+                            const r = (0,
+                            n.ek)(e);
+                            r && (r.runtime = j[e])
+                        }
+                        function T(e) {
+                            return function(e) {
+                                try {
+                                    const t = s(e);
+                                    return !!t.licenseKey && !!t.errorBeacon && !!t.applicationID
+                                } catch (e) {
+                                    return !1
+                                }
+                            }(e)
+                        }
+                    }
+                    ,
+                    9567: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            D: ()=>i
+                        });
+                        var n = r(50);
+                        function i(e, t) {
+                            try {
+                                if (!e || "object" != typeof e)
+                                    return (0,
+                                    n.Z)("Setting a Configurable requires an object as input");
+                                if (!t || "object" != typeof t)
+                                    return (0,
+                                    n.Z)("Setting a Configurable requires a model to set its initial properties");
+                                const r = Object.create(Object.getPrototypeOf(t), Object.getOwnPropertyDescriptors(t))
+                                  , o = 0 === Object.keys(r).length ? e : r;
+                                for (let a in o)
+                                    if (void 0 !== e[a])
+                                        try {
+                                            Array.isArray(e[a]) && Array.isArray(t[a]) ? r[a] = Array.from(new Set([...e[a], ...t[a]])) : "object" == typeof e[a] && "object" == typeof t[a] ? r[a] = i(e[a], t[a]) : r[a] = e[a]
+                                        } catch (e) {
+                                            (0,
+                                            n.Z)("An error occurred while setting a property of a Configurable", e)
+                                        }
+                                return r
+                            } catch (e) {
+                                (0,
+                                n.Z)("An error occured while setting a Configurable", e)
+                            }
+                        }
+                    }
+                    ,
+                    6818: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            Re: ()=>i,
+                            gF: ()=>o,
+                            q4: ()=>n
+                        });
+                        const n = "1.251.1"
+                          , i = "PROD"
+                          , o = "CDN"
+                    }
+                    ,
+                    385: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            Nk: ()=>d,
+                            Tt: ()=>s,
+                            _A: ()=>o,
+                            cv: ()=>l,
+                            iS: ()=>a,
+                            il: ()=>n,
+                            ux: ()=>c,
+                            v6: ()=>i,
+                            w1: ()=>u
+                        });
+                        const n = "undefined" != typeof window && !!window.document
+                          , i = "undefined" != typeof WorkerGlobalScope && ("undefined" != typeof self && self instanceof WorkerGlobalScope && self.navigator instanceof WorkerNavigator || "undefined" != typeof globalThis && globalThis instanceof WorkerGlobalScope && globalThis.navigator instanceof WorkerNavigator)
+                          , o = n ? window : "undefined" != typeof WorkerGlobalScope && ("undefined" != typeof self && self instanceof WorkerGlobalScope && self || "undefined" != typeof globalThis && globalThis instanceof WorkerGlobalScope && globalThis)
+                          , a = Boolean("hidden" === o?.document?.visibilityState)
+                          , s = /iPad|iPhone|iPod/.test(o.navigator?.userAgent)
+                          , c = s && "undefined" == typeof SharedWorker
+                          , u = ((()=>{
+                            const e = o.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);
+                            Array.isArray(e) && e.length >= 2 && e[1]
+                        }
+                        )(),
+                        Boolean(n && window.document.documentMode))
+                          , d = !!o.navigator?.sendBeacon
+                          , l = Math.floor(o?.performance?.timeOrigin || o?.performance?.timing?.navigationStart || Date.now())
+                    }
+                    ,
+                    1117: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            w: ()=>o
+                        });
+                        var n = r(50);
+                        const i = {
+                            agentIdentifier: "",
+                            ee: void 0
+                        };
+                        class o {
+                            constructor(e) {
+                                try {
+                                    if ("object" != typeof e)
+                                        return (0,
+                                        n.Z)("shared context requires an object as input");
+                                    this.sharedContext = {},
+                                    Object.assign(this.sharedContext, i),
+                                    Object.entries(e).forEach((e=>{
+                                        let[t,r] = e;
+                                        Object.keys(i).includes(t) && (this.sharedContext[t] = r)
+                                    }
+                                    ))
+                                } catch (e) {
+                                    (0,
+                                    n.Z)("An error occured while setting SharedContext", e)
+                                }
+                            }
+                        }
+                    }
+                    ,
+                    8e3: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            L: ()=>d,
+                            R: ()=>c
+                        });
+                        var n = r(8325)
+                          , i = r(1284)
+                          , o = r(4322)
+                          , a = r(3325);
+                        const s = {};
+                        function c(e, t) {
+                            const r = {
+                                staged: !1,
+                                priority: a.p[t] || 0
+                            };
+                            u(e),
+                            s[e].get(t) || s[e].set(t, r)
+                        }
+                        function u(e) {
+                            e && (s[e] || (s[e] = new Map))
+                        }
+                        function d() {
+                            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ""
+                              , t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "feature";
+                            if (u(e),
+                            !e || !s[e].get(t))
+                                return a(t);
+                            s[e].get(t).staged = !0;
+                            const r = [...s[e]];
+                            function a(t) {
+                                const r = e ? n.ee.get(e) : n.ee
+                                  , a = o.X.handlers;
+                                if (r.backlog && a) {
+                                    var s = r.backlog[t]
+                                      , c = a[t];
+                                    if (c) {
+                                        for (var u = 0; s && u < s.length; ++u)
+                                            l(s[u], c);
+                                        (0,
+                                        i.D)(c, (function(e, t) {
+                                            (0,
+                                            i.D)(t, (function(t, r) {
+                                                r[0].on(e, r[1])
+                                            }
+                                            ))
+                                        }
+                                        ))
+                                    }
+                                    delete a[t],
+                                    r.backlog[t] = null,
+                                    r.emit("drain-" + t, [])
+                                }
+                            }
+                            r.every((e=>{
+                                let[t,r] = e;
+                                return r.staged
+                            }
+                            )) && (r.sort(((e,t)=>e[1].priority - t[1].priority)),
+                            r.forEach((t=>{
+                                let[r] = t;
+                                s[e].delete(r),
+                                a(r)
+                            }
+                            )))
+                        }
+                        function l(e, t) {
+                            var r = e[1];
+                            (0,
+                            i.D)(t[r], (function(t, r) {
+                                var n = e[0];
+                                if (r[0] === n) {
+                                    var i = r[1]
+                                      , o = e[3]
+                                      , a = e[2];
+                                    i.apply(o, a)
+                                }
+                            }
+                            ))
+                        }
+                    }
+                    ,
+                    8325: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            A: ()=>c,
+                            ee: ()=>u
+                        });
+                        var n = r(8632)
+                          , i = r(2210)
+                          , o = r(234);
+                        class a {
+                            constructor(e) {
+                                this.contextId = e
+                            }
+                        }
+                        var s = r(3117);
+                        const c = "nr@context:".concat(s.a)
+                          , u = function e(t, r) {
+                            var n = {}
+                              , s = {}
+                              , d = {}
+                              , f = !1;
+                            try {
+                                f = 16 === r.length && (0,
+                                o.OP)(r).isolatedBacklog
+                            } catch (e) {}
+                            var g = {
+                                on: h,
+                                addEventListener: h,
+                                removeEventListener: function(e, t) {
+                                    var r = n[e];
+                                    if (!r)
+                                        return;
+                                    for (var i = 0; i < r.length; i++)
+                                        r[i] === t && r.splice(i, 1)
+                                },
+                                emit: function(e, r, n, i, o) {
+                                    !1 !== o && (o = !0);
+                                    if (u.aborted && !i)
+                                        return;
+                                    t && o && t.emit(e, r, n);
+                                    for (var a = p(n), c = v(e), d = c.length, l = 0; l < d; l++)
+                                        c[l].apply(a, r);
+                                    var f = b()[s[e]];
+                                    f && f.push([g, e, r, a]);
+                                    return a
+                                },
+                                get: m,
+                                listeners: v,
+                                context: p,
+                                buffer: function(e, t) {
+                                    const r = b();
+                                    if (t = t || "feature",
+                                    g.aborted)
+                                        return;
+                                    Object.entries(e || {}).forEach((e=>{
+                                        let[n,i] = e;
+                                        s[i] = t,
+                                        t in r || (r[t] = [])
+                                    }
+                                    ))
+                                },
+                                abort: l,
+                                aborted: !1,
+                                isBuffering: function(e) {
+                                    return !!b()[s[e]]
+                                },
+                                debugId: r,
+                                backlog: f ? {} : t && "object" == typeof t.backlog ? t.backlog : {}
+                            };
+                            return g;
+                            function p(e) {
+                                return e && e instanceof a ? e : e ? (0,
+                                i.X)(e, c, (()=>new a(c))) : new a(c)
+                            }
+                            function h(e, t) {
+                                n[e] = v(e).concat(t)
+                            }
+                            function v(e) {
+                                return n[e] || []
+                            }
+                            function m(t) {
+                                return d[t] = d[t] || e(g, t)
+                            }
+                            function b() {
+                                return g.backlog
+                            }
+                        }(void 0, "globalEE")
+                          , d = (0,
+                        n.fP)();
+                        function l() {
+                            u.aborted = !0,
+                            u.backlog = {}
+                        }
+                        d.ee || (d.ee = u)
+                    }
+                    ,
+                    5546: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            E: ()=>n,
+                            p: ()=>i
+                        });
+                        var n = r(8325).ee.get("handle");
+                        function i(e, t, r, i, o) {
+                            o ? (o.buffer([e], i),
+                            o.emit(e, t, r)) : (n.buffer([e], i),
+                            n.emit(e, t, r))
+                        }
+                    }
+                    ,
+                    4322: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            X: ()=>o
+                        });
+                        var n = r(5546);
+                        o.on = a;
+                        var i = o.handlers = {};
+                        function o(e, t, r, o) {
+                            a(o || n.E, i, e, t, r)
+                        }
+                        function a(e, t, r, i, o) {
+                            o || (o = "feature"),
+                            e || (e = n.E);
+                            var a = t[o] = t[o] || {};
+                            (a[r] = a[r] || []).push([e, i])
+                        }
+                    }
+                    ,
+                    3239: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            bP: ()=>s,
+                            iz: ()=>c,
+                            m$: ()=>a
+                        });
+                        var n = r(385);
+                        let i = !1
+                          , o = !1;
+                        try {
+                            const e = {
+                                get passive() {
+                                    return i = !0,
+                                    !1
+                                },
+                                get signal() {
+                                    return o = !0,
+                                    !1
+                                }
+                            };
+                            n._A.addEventListener("test", null, e),
+                            n._A.removeEventListener("test", null, e)
+                        } catch (e) {}
+                        function a(e, t) {
+                            return i || o ? {
+                                capture: !!e,
+                                passive: i,
+                                signal: t
+                            } : !!e
+                        }
+                        function s(e, t) {
+                            let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2]
+                              , n = arguments.length > 3 ? arguments[3] : void 0;
+                            window.addEventListener(e, t, a(r, n))
+                        }
+                        function c(e, t) {
+                            let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2]
+                              , n = arguments.length > 3 ? arguments[3] : void 0;
+                            document.addEventListener(e, t, a(r, n))
+                        }
+                    }
+                    ,
+                    3117: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            a: ()=>n
+                        });
+                        const n = (0,
+                        r(4402).Rl)()
+                    }
+                    ,
+                    4402: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            Rl: ()=>a,
+                            ky: ()=>s
+                        });
+                        var n = r(385);
+                        const i = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";
+                        function o(e, t) {
+                            return e ? 15 & e[t] : 16 * Math.random() | 0
+                        }
+                        function a() {
+                            const e = n._A?.crypto || n._A?.msCrypto;
+                            let t, r = 0;
+                            return e && e.getRandomValues && (t = e.getRandomValues(new Uint8Array(30))),
+                            i.split("").map((e=>"x" === e ? o(t, r++).toString(16) : "y" === e ? (3 & o() | 8).toString(16) : e)).join("")
+                        }
+                        function s(e) {
+                            const t = n._A?.crypto || n._A?.msCrypto;
+                            let r, i = 0;
+                            t && t.getRandomValues && (r = t.getRandomValues(new Uint8Array(e)));
+                            const a = [];
+                            for (var s = 0; s < e; s++)
+                                a.push(o(r, i++).toString(16));
+                            return a.join("")
+                        }
+                    }
+                    ,
+                    7056: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            Bq: ()=>n,
+                            Hb: ()=>o,
+                            IK: ()=>c,
+                            oD: ()=>i,
+                            uT: ()=>s,
+                            wO: ()=>a
+                        });
+                        const n = "NRBA"
+                          , i = 144e5
+                          , o = 18e5
+                          , a = {
+                            PAUSE: "session-pause",
+                            RESET: "session-reset",
+                            RESUME: "session-resume",
+                            UPDATE: "session-update"
+                        }
+                          , s = {
+                            SAME_TAB: "same-tab",
+                            CROSS_TAB: "cross-tab"
+                        }
+                          , c = {
+                            OFF: 0,
+                            FULL: 1,
+                            ERROR: 2
+                        }
+                    }
+                    ,
+                    7894: (e,t,r)=>{
+                        "use strict";
+                        function n() {
+                            return Math.round(performance.now())
+                        }
+                        r.d(t, {
+                            z: ()=>n
+                        })
+                    }
+                    ,
+                    50: (e,t,r)=>{
+                        "use strict";
+                        function n(e, t) {
+                            "function" == typeof console.warn && (console.warn("New Relic: ".concat(e)),
+                            t && console.warn(t))
+                        }
+                        r.d(t, {
+                            Z: ()=>n
+                        })
+                    }
+                    ,
+                    2825: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            N: ()=>d,
+                            T: ()=>l
+                        });
+                        var n = r(8325)
+                          , i = r(5546)
+                          , o = r(3325)
+                          , a = r(385);
+                        const s = "newrelic";
+                        const c = {
+                            stn: [o.D.sessionTrace],
+                            err: [o.D.jserrors, o.D.metrics],
+                            ins: [o.D.pageAction],
+                            spa: [o.D.spa],
+                            sr: [o.D.sessionReplay, o.D.sessionTrace]
+                        }
+                          , u = new Set;
+                        function d(e, t) {
+                            const r = n.ee.get(t);
+                            e && "object" == typeof e && (u.has(t) || (Object.entries(e).forEach((e=>{
+                                let[t,n] = e;
+                                c[t] ? c[t].forEach((e=>{
+                                    n ? (0,
+                                    i.p)("feat-" + t, [], void 0, e, r) : (0,
+                                    i.p)("block-" + t, [], void 0, e, r),
+                                    (0,
+                                    i.p)("rumresp-" + t, [Boolean(n)], void 0, e, r)
+                                }
+                                )) : n && (0,
+                                i.p)("feat-" + t, [], void 0, void 0, r),
+                                l[t] = Boolean(n)
+                            }
+                            )),
+                            Object.keys(c).forEach((e=>{
+                                void 0 === l[e] && (c[e]?.forEach((t=>(0,
+                                i.p)("rumresp-" + e, [!1], void 0, t, r))),
+                                l[e] = !1)
+                            }
+                            )),
+                            u.add(t),
+                            function() {
+                                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                                try {
+                                    a._A.dispatchEvent(new CustomEvent(s,{
+                                        detail: e
+                                    }))
+                                } catch (e) {}
+                            }({
+                                loaded: !0
+                            })))
+                        }
+                        const l = {}
+                    }
+                    ,
+                    2210: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            X: ()=>i
+                        });
+                        var n = Object.prototype.hasOwnProperty;
+                        function i(e, t, r) {
+                            if (n.call(e, t))
+                                return e[t];
+                            var i = r();
+                            if (Object.defineProperty && Object.keys)
+                                try {
+                                    return Object.defineProperty(e, t, {
+                                        value: i,
+                                        writable: !0,
+                                        enumerable: !1
+                                    }),
+                                    i
+                                } catch (e) {}
+                            return e[t] = i,
+                            i
+                        }
+                    }
+                    ,
+                    1284: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            D: ()=>n
+                        });
+                        const n = (e,t)=>Object.entries(e || {}).map((e=>{
+                            let[r,n] = e;
+                            return t(r, n)
+                        }
+                        ))
+                    }
+                    ,
+                    4351: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            P: ()=>o
+                        });
+                        var n = r(8325);
+                        const i = ()=>{
+                            const e = new WeakSet;
+                            return (t,r)=>{
+                                if ("object" == typeof r && null !== r) {
+                                    if (e.has(r))
+                                        return;
+                                    e.add(r)
+                                }
+                                return r
+                            }
+                        }
+                        ;
+                        function o(e) {
+                            try {
+                                return JSON.stringify(e, i())
+                            } catch (e) {
+                                try {
+                                    n.ee.emit("internal-error", [e])
+                                } catch (e) {}
+                            }
+                        }
+                    }
+                    ,
+                    3960: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            KB: ()=>a,
+                            b2: ()=>o
+                        });
+                        var n = r(3239);
+                        function i() {
+                            return "undefined" == typeof document || "complete" === document.readyState
+                        }
+                        function o(e, t) {
+                            if (i())
+                                return e();
+                            (0,
+                            n.bP)("load", e, t)
+                        }
+                        function a(e) {
+                            if (i())
+                                return e();
+                            (0,
+                            n.iz)("DOMContentLoaded", e)
+                        }
+                    }
+                    ,
+                    8632: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            EZ: ()=>d,
+                            ce: ()=>o,
+                            ek: ()=>u,
+                            fP: ()=>a,
+                            gG: ()=>l,
+                            h5: ()=>c,
+                            mF: ()=>s
+                        });
+                        var n = r(7894)
+                          , i = r(385);
+                        const o = {
+                            beacon: "bam.nr-data.net",
+                            errorBeacon: "bam.nr-data.net"
+                        };
+                        function a() {
+                            return i._A.NREUM || (i._A.NREUM = {}),
+                            void 0 === i._A.newrelic && (i._A.newrelic = i._A.NREUM),
+                            i._A.NREUM
+                        }
+                        function s() {
+                            let e = a();
+                            return e.o || (e.o = {
+                                ST: i._A.setTimeout,
+                                SI: i._A.setImmediate,
+                                CT: i._A.clearTimeout,
+                                XHR: i._A.XMLHttpRequest,
+                                REQ: i._A.Request,
+                                EV: i._A.Event,
+                                PR: i._A.Promise,
+                                MO: i._A.MutationObserver,
+                                FETCH: i._A.fetch
+                            }),
+                            e
+                        }
+                        function c(e, t) {
+                            let r = a();
+                            r.initializedAgents ??= {},
+                            t.initializedAt = {
+                                ms: (0,
+                                n.z)(),
+                                date: new Date
+                            },
+                            r.initializedAgents[e] = t
+                        }
+                        function u(e) {
+                            let t = a();
+                            return t.initializedAgents?.[e]
+                        }
+                        function d(e, t) {
+                            a()[e] = t
+                        }
+                        function l() {
+                            return function() {
+                                let e = a();
+                                const t = e.info || {};
+                                e.info = {
+                                    beacon: o.beacon,
+                                    errorBeacon: o.errorBeacon,
+                                    ...t
+                                }
+                            }(),
+                            function() {
+                                let e = a();
+                                const t = e.init || {};
+                                e.init = {
+                                    ...t
+                                }
+                            }(),
+                            s(),
+                            function() {
+                                let e = a();
+                                const t = e.loader_config || {};
+                                e.loader_config = {
+                                    ...t
+                                }
+                            }(),
+                            a()
+                        }
+                    }
+                    ,
+                    7956: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            N: ()=>i
+                        });
+                        var n = r(3239);
+                        function i(e) {
+                            let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1]
+                              , r = arguments.length > 2 ? arguments[2] : void 0
+                              , i = arguments.length > 3 ? arguments[3] : void 0;
+                            (0,
+                            n.iz)("visibilitychange", (function() {
+                                if (t)
+                                    return void ("hidden" === document.visibilityState && e());
+                                e(document.visibilityState)
+                            }
+                            ), r, i)
+                        }
+                    }
+                    ,
+                    3081: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            gF: ()=>o,
+                            mY: ()=>i,
+                            t9: ()=>n,
+                            vz: ()=>s,
+                            xS: ()=>a
+                        });
+                        const n = r(3325).D.metrics
+                          , i = "sm"
+                          , o = "cm"
+                          , a = "storeSupportabilityMetrics"
+                          , s = "storeEventMetrics"
+                    }
+                    ,
+                    7633: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            t: ()=>n
+                        });
+                        const n = r(3325).D.pageViewEvent
+                    }
+                    ,
+                    9251: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            t: ()=>n
+                        });
+                        const n = r(3325).D.pageViewTiming
+                    }
+                    ,
+                    5938: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            W: ()=>i
+                        });
+                        var n = r(8325);
+                        class i {
+                            constructor(e, t, r) {
+                                this.agentIdentifier = e,
+                                this.aggregator = t,
+                                this.ee = n.ee.get(e),
+                                this.featureName = r,
+                                this.blocked = !1
+                            }
+                        }
+                    }
+                    ,
+                    7530: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            j: ()=>b
+                        });
+                        var n = r(3325)
+                          , i = r(234)
+                          , o = r(5546)
+                          , a = r(8325)
+                          , s = r(7894)
+                          , c = r(8e3)
+                          , u = r(3960)
+                          , d = r(385)
+                          , l = r(50)
+                          , f = r(3081)
+                          , g = r(8632);
+                        function p() {
+                            const e = (0,
+                            g.gG)();
+                            ["setErrorHandler", "finished", "addToTrace", "addRelease", "addPageAction", "setCurrentRouteName", "setPageViewName", "setCustomAttribute", "interaction", "noticeError", "setUserId", "setApplicationVersion", "start", "recordReplay", "pauseReplay"].forEach((t=>{
+                                e[t] = function() {
+                                    for (var r = arguments.length, n = new Array(r), i = 0; i < r; i++)
+                                        n[i] = arguments[i];
+                                    return function(t) {
+                                        for (var r = arguments.length, n = new Array(r > 1 ? r - 1 : 0), i = 1; i < r; i++)
+                                            n[i - 1] = arguments[i];
+                                        let o = [];
+                                        return Object.values(e.initializedAgents).forEach((e=>{
+                                            e.exposed && e.api[t] && o.push(e.api[t](...n))
+                                        }
+                                        )),
+                                        o.length > 1 ? o : o[0]
+                                    }(t, ...n)
+                                }
+                            }
+                            ))
+                        }
+                        var h = r(2825);
+                        const v = e=>{
+                            const t = e.startsWith("http");
+                            e += "/",
+                            r.p = t ? e : "https://" + e
+                        }
+                        ;
+                        let m = !1;
+                        function b(e) {
+                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
+                              , b = arguments.length > 2 ? arguments[2] : void 0
+                              , y = arguments.length > 3 ? arguments[3] : void 0
+                              , {init: A, info: w, loader_config: _, runtime: x={
+                                loaderType: b
+                            }, exposed: E=!0} = t;
+                            const D = (0,
+                            g.gG)();
+                            w || (A = D.init,
+                            w = D.info,
+                            _ = D.loader_config),
+                            (0,
+                            i.Dg)(e.agentIdentifier, A || {}),
+                            (0,
+                            i.GE)(e.agentIdentifier, _ || {}),
+                            w.jsAttributes ??= {},
+                            d.v6 && (w.jsAttributes.isWorker = !0),
+                            (0,
+                            i.CX)(e.agentIdentifier, w);
+                            const k = (0,
+                            i.P_)(e.agentIdentifier)
+                              , j = [w.beacon, w.errorBeacon];
+                            m || (k.proxy.assets && (v(k.proxy.assets),
+                            j.push(k.proxy.assets)),
+                            k.proxy.beacon && j.push(k.proxy.beacon),
+                            p(),
+                            (0,
+                            g.EZ)("activatedFeatures", h.T)),
+                            x.denyList = [...k.ajax.deny_list || [], ...k.ajax.block_internal ? j : []],
+                            (0,
+                            i.sU)(e.agentIdentifier, x),
+                            void 0 === e.api && (e.api = function(e, t) {
+                                t || (0,
+                                c.R)(e, "api");
+                                const g = {};
+                                var p = a.ee.get(e)
+                                  , h = p.get("tracer")
+                                  , v = "api-"
+                                  , m = v + "ixn-";
+                                function b(t, r, n, o) {
+                                    const a = (0,
+                                    i.C5)(e);
+                                    return null === r ? delete a.jsAttributes[t] : (0,
+                                    i.CX)(e, {
+                                        ...a,
+                                        jsAttributes: {
+                                            ...a.jsAttributes,
+                                            [t]: r
+                                        }
+                                    }),
+                                    w(v, n, !0, o || null === r ? "session" : void 0)(t, r)
+                                }
+                                function y() {}
+                                ["setErrorHandler", "finished", "addToTrace", "addRelease"].forEach((e=>{
+                                    g[e] = w(v, e, !0, "api")
+                                }
+                                )),
+                                g.addPageAction = w(v, "addPageAction", !0, n.D.pageAction),
+                                g.setCurrentRouteName = w(v, "routeName", !0, n.D.spa),
+                                g.setPageViewName = function(t, r) {
+                                    if ("string" == typeof t)
+                                        return "/" !== t.charAt(0) && (t = "/" + t),
+                                        (0,
+                                        i.OP)(e).customTransaction = (r || "http://custom.transaction") + t,
+                                        w(v, "setPageViewName", !0)()
+                                }
+                                ,
+                                g.setCustomAttribute = function(e, t) {
+                                    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                                    if ("string" == typeof e) {
+                                        if (["string", "number", "boolean"].includes(typeof t) || null === t)
+                                            return b(e, t, "setCustomAttribute", r);
+                                        (0,
+                                        l.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string, number or boolean type, but a type of <".concat(typeof t, "> was provided."))
+                                    } else
+                                        (0,
+                                        l.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e, "> was provided."))
+                                }
+                                ,
+                                g.setUserId = function(e) {
+                                    if ("string" == typeof e || null === e)
+                                        return b("enduser.id", e, "setUserId", !0);
+                                    (0,
+                                    l.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e, "> was provided."))
+                                }
+                                ,
+                                g.setApplicationVersion = function(e) {
+                                    if ("string" == typeof e || null === e)
+                                        return b("application.version", e, "setApplicationVersion", !1);
+                                    (0,
+                                    l.Z)("Failed to execute setApplicationVersion. Expected <String | null>, but got <".concat(typeof e, ">."))
+                                }
+                                ,
+                                g.start = e=>{
+                                    try {
+                                        const t = e ? "defined" : "undefined";
+                                        (0,
+                                        o.p)(f.xS, ["API/start/".concat(t, "/called")], void 0, n.D.metrics, p);
+                                        const r = Object.values(n.D);
+                                        if (void 0 === e)
+                                            e = r;
+                                        else {
+                                            if ((e = Array.isArray(e) && e.length ? e : [e]).some((e=>!r.includes(e))))
+                                                return (0,
+                                                l.Z)("Invalid feature name supplied. Acceptable feature names are: ".concat(r));
+                                            e.includes(n.D.pageViewEvent) || e.push(n.D.pageViewEvent)
+                                        }
+                                        e.forEach((e=>{
+                                            p.emit("".concat(e, "-opt-in"))
+                                        }
+                                        ))
+                                    } catch (e) {
+                                        (0,
+                                        l.Z)("An unexpected issue occurred", e)
+                                    }
+                                }
+                                ,
+                                g.recordReplay = function() {
+                                    (0,
+                                    o.p)(f.xS, ["API/recordReplay/called"], void 0, n.D.metrics, p),
+                                    (0,
+                                    o.p)("recordReplay", [], void 0, n.D.sessionReplay, p)
+                                }
+                                ,
+                                g.pauseReplay = function() {
+                                    (0,
+                                    o.p)(f.xS, ["API/pauseReplay/called"], void 0, n.D.metrics, p),
+                                    (0,
+                                    o.p)("pauseReplay", [], void 0, n.D.sessionReplay, p)
+                                }
+                                ,
+                                g.interaction = function() {
+                                    return (new y).get()
+                                }
+                                ;
+                                var A = y.prototype = {
+                                    createTracer: function(e, t) {
+                                        var r = {}
+                                          , i = this
+                                          , a = "function" == typeof t;
+                                        return (0,
+                                        o.p)(f.xS, ["API/createTracer/called"], void 0, n.D.metrics, p),
+                                        (0,
+                                        o.p)(m + "tracer", [(0,
+                                        s.z)(), e, r], i, n.D.spa, p),
+                                        function() {
+                                            if (h.emit((a ? "" : "no-") + "fn-start", [(0,
+                                            s.z)(), i, a], r),
+                                            a)
+                                                try {
+                                                    return t.apply(this, arguments)
+                                                } catch (e) {
+                                                    throw h.emit("fn-err", [arguments, this, e], r),
+                                                    e
+                                                } finally {
+                                                    h.emit("fn-end", [(0,
+                                                    s.z)()], r)
+                                                }
+                                        }
+                                    }
+                                };
+                                function w(e, t, r, i) {
+                                    return function() {
+                                        return (0,
+                                        o.p)(f.xS, ["API/" + t + "/called"], void 0, n.D.metrics, p),
+                                        i && (0,
+                                        o.p)(e + t, [(0,
+                                        s.z)(), ...arguments], r ? null : this, i, p),
+                                        r ? void 0 : this
+                                    }
+                                }
+                                function _() {
+                                    r.e(75).then(r.bind(r, 7438)).then((t=>{
+                                        let {setAPI: r} = t;
+                                        r(e),
+                                        (0,
+                                        c.L)(e, "api")
+                                    }
+                                    )).catch((()=>(0,
+                                    l.Z)("Downloading runtime APIs failed...")))
+                                }
+                                return ["actionText", "setName", "setAttribute", "save", "ignore", "onEnd", "getContext", "end", "get"].forEach((e=>{
+                                    A[e] = w(m, e, void 0, n.D.spa)
+                                }
+                                )),
+                                g.noticeError = function(e, t) {
+                                    "string" == typeof e && (e = new Error(e)),
+                                    (0,
+                                    o.p)(f.xS, ["API/noticeError/called"], void 0, n.D.metrics, p),
+                                    (0,
+                                    o.p)("err", [e, (0,
+                                    s.z)(), !1, t], void 0, n.D.jserrors, p)
+                                }
+                                ,
+                                d.il ? (0,
+                                u.b2)((()=>_()), !0) : _(),
+                                g
+                            }(e.agentIdentifier, y)),
+                            void 0 === e.exposed && (e.exposed = E),
+                            m = !0
+                        }
+                    }
+                    ,
+                    1926: (e,t,r)=>{
+                        r.nc = (()=>{
+                            try {
+                                return document?.currentScript?.nonce
+                            } catch (e) {}
+                            return ""
+                        }
+                        )()
+                    }
+                    ,
+                    3325: (e,t,r)=>{
+                        "use strict";
+                        r.d(t, {
+                            D: ()=>n,
+                            p: ()=>i
+                        });
+                        const n = {
+                            ajax: "ajax",
+                            jserrors: "jserrors",
+                            metrics: "metrics",
+                            pageAction: "page_action",
+                            pageViewEvent: "page_view_event",
+                            pageViewTiming: "page_view_timing",
+                            sessionReplay: "session_replay",
+                            sessionTrace: "session_trace",
+                            spa: "spa"
+                        }
+                          , i = {
+                            [n.pageViewEvent]: 1,
+                            [n.pageViewTiming]: 2,
+                            [n.metrics]: 3,
+                            [n.jserrors]: 4,
+                            [n.ajax]: 5,
+                            [n.sessionTrace]: 6,
+                            [n.pageAction]: 7,
+                            [n.spa]: 8,
+                            [n.sessionReplay]: 9
+                        }
+                    }
+                }, n = {};
+                function i(e) {
+                    var t = n[e];
+                    if (void 0 !== t)
+                        return t.exports;
+                    var o = n[e] = {
+                        exports: {}
+                    };
+                    return r[e](o, o.exports, i),
+                    o.exports
+                }
+                i.m = r,
+                i.d = (e,t)=>{
+                    for (var r in t)
+                        i.o(t, r) && !i.o(e, r) && Object.defineProperty(e, r, {
+                            enumerable: !0,
+                            get: t[r]
+                        })
+                }
+                ,
+                i.f = {},
+                i.e = e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e, t),
+                t)), [])),
+                i.u = e=>"nr-rum-1.251.1.min.js",
+                i.o = (e,t)=>Object.prototype.hasOwnProperty.call(e, t),
+                e = {},
+                t = "NRBA-1.251.1.PROD:",
+                i.l = (r,n,o,a)=>{
+                    if (e[r])
+                        e[r].push(n);
+                    else {
+                        var s, c;
+                        if (void 0 !== o)
+                            for (var u = document.getElementsByTagName("script"), d = 0; d < u.length; d++) {
+                                var l = u[d];
+                                if (l.getAttribute("src") == r || l.getAttribute("data-webpack") == t + o) {
+                                    s = l;
+                                    break
+                                }
+                            }
+                        if (!s) {
+                            c = !0;
+                            var f = {
+                                75: "sha512-se+MgwtmnbdP/MASClg+GOgpTkSpcEndd09loplWI8jtivCRtbuBQGqwgSDauFr6FUmrBsb2ccq/Hk5NZDAKMQ=="
+                            };
+                            (s = document.createElement("script")).charset = "utf-8",
+                            s.timeout = 120,
+                            i.nc && s.setAttribute("nonce", i.nc),
+                            s.setAttribute("data-webpack", t + o),
+                            s.src = r,
+                            0 !== s.src.indexOf(window.location.origin + "/") && (s.crossOrigin = "anonymous"),
+                            f[a] && (s.integrity = f[a])
+                        }
+                        e[r] = [n];
+                        var g = (t,n)=>{
+                            s.onerror = s.onload = null,
+                            clearTimeout(p);
+                            var i = e[r];
+                            if (delete e[r],
+                            s.parentNode && s.parentNode.removeChild(s),
+                            i && i.forEach((e=>e(n))),
+                            t)
+                                return t(n)
+                        }
+                          , p = setTimeout(g.bind(null, void 0, {
+                            type: "timeout",
+                            target: s
+                        }), 12e4);
+                        s.onerror = g.bind(null, s.onerror),
+                        s.onload = g.bind(null, s.onload),
+                        c && document.head.appendChild(s)
+                    }
+                }
+                ,
+                i.r = e=>{
+                    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                        value: "Module"
+                    }),
+                    Object.defineProperty(e, "__esModule", {
+                        value: !0
+                    })
+                }
+                ,
+                i.p = "https://js-agent.newrelic.com/",
+                (()=>{
+                    var e = {
+                        50: 0,
+                        832: 0
+                    };
+                    i.f.j = (t,r)=>{
+                        var n = i.o(e, t) ? e[t] : void 0;
+                        if (0 !== n)
+                            if (n)
+                                r.push(n[2]);
+                            else {
+                                var o = new Promise(((r,i)=>n = e[t] = [r, i]));
+                                r.push(n[2] = o);
+                                var a = i.p + i.u(t)
+                                  , s = new Error;
+                                i.l(a, (r=>{
+                                    if (i.o(e, t) && (0 !== (n = e[t]) && (e[t] = void 0),
+                                    n)) {
+                                        var o = r && ("load" === r.type ? "missing" : r.type)
+                                          , a = r && r.target && r.target.src;
+                                        s.message = "Loading chunk " + t + " failed.\n(" + o + ": " + a + ")",
+                                        s.name = "ChunkLoadError",
+                                        s.type = o,
+                                        s.request = a,
+                                        n[1](s)
+                                    }
+                                }
+                                ), "chunk-" + t, t)
+                            }
+                    }
+                    ;
+                    var t = (t,r)=>{
+                        var n, o, [a,s,c] = r, u = 0;
+                        if (a.some((t=>0 !== e[t]))) {
+                            for (n in s)
+                                i.o(s, n) && (i.m[n] = s[n]);
+                            if (c)
+                                c(i)
+                        }
+                        for (t && t(r); u < a.length; u++)
+                            o = a[u],
+                            i.o(e, o) && e[o] && e[o][0](),
+                            e[o] = 0
+                    }
+                      , r = self["webpackChunk:NRBA-1.251.1.PROD"] = self["webpackChunk:NRBA-1.251.1.PROD"] || [];
+                    r.forEach(t.bind(null, 0)),
+                    r.push = t.bind(null, r.push.bind(r))
+                }
+                )(),
+                (()=>{
+                    "use strict";
+                    i(1926);
+                    var e = i(50);
+                    class t {
+                        #e(t) {
+                            for (var r = arguments.length, n = new Array(r > 1 ? r - 1 : 0), i = 1; i < r; i++)
+                                n[i - 1] = arguments[i];
+                            if ("function" == typeof this.api?.[t])
+                                return this.api[t](...n);
+                            (0,
+                            e.Z)("Call to agent api ".concat(t, " failed. The API is not currently initialized."))
+                        }
+                        addPageAction(e, t) {
+                            return this.#e("addPageAction", e, t)
+                        }
+                        setPageViewName(e, t) {
+                            return this.#e("setPageViewName", e, t)
+                        }
+                        setCustomAttribute(e, t, r) {
+                            return this.#e("setCustomAttribute", e, t, r)
+                        }
+                        noticeError(e, t) {
+                            return this.#e("noticeError", e, t)
+                        }
+                        setUserId(e) {
+                            return this.#e("setUserId", e)
+                        }
+                        setApplicationVersion(e) {
+                            return this.#e("setApplicationVersion", e)
+                        }
+                        setErrorHandler(e) {
+                            return this.#e("setErrorHandler", e)
+                        }
+                        finished(e) {
+                            return this.#e("finished", e)
+                        }
+                        addRelease(e, t) {
+                            return this.#e("addRelease", e, t)
+                        }
+                        start(e) {
+                            return this.#e("start", e)
+                        }
+                        recordReplay() {
+                            return this.#e("recordReplay")
+                        }
+                        pauseReplay() {
+                            return this.#e("pauseReplay")
+                        }
+                        addToTrace(e) {
+                            return this.#e("addToTrace", e)
+                        }
+                        setCurrentRouteName(e) {
+                            return this.#e("setCurrentRouteName", e)
+                        }
+                        interaction() {
+                            return this.#e("interaction")
+                        }
+                    }
+                    var r = i(3325)
+                      , n = i(234);
+                    const o = Object.values(r.D);
+                    function a(e) {
+                        const t = {};
+                        return o.forEach((r=>{
+                            t[r] = function(e, t) {
+                                return !1 !== (0,
+                                n.Mt)(t, "".concat(e, ".enabled"))
+                            }(r, e)
+                        }
+                        )),
+                        t
+                    }
+                    var s = i(7530);
+                    var c = i(8e3)
+                      , u = i(5938)
+                      , d = i(3960)
+                      , l = i(385);
+                    class f extends u.W {
+                        constructor(e, t, r) {
+                            let i = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+                            super(e, t, r),
+                            this.auto = i,
+                            this.abortHandler = void 0,
+                            this.featAggregate = void 0,
+                            this.onAggregateImported = void 0,
+                            !1 === (0,
+                            n.Mt)(this.agentIdentifier, "".concat(this.featureName, ".autoStart")) && (this.auto = !1),
+                            this.auto && (0,
+                            c.R)(e, r)
+                        }
+                        importAggregator() {
+                            let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                            if (this.featAggregate)
+                                return;
+                            if (!this.auto)
+                                return void this.ee.on("".concat(this.featureName, "-opt-in"), (()=>{
+                                    (0,
+                                    c.R)(this.agentIdentifier, this.featureName),
+                                    this.auto = !0,
+                                    this.importAggregator()
+                                }
+                                ));
+                            const r = l.il && !0 === (0,
+                            n.Mt)(this.agentIdentifier, "privacy.cookies_enabled");
+                            let o;
+                            this.onAggregateImported = new Promise((e=>{
+                                o = e
+                            }
+                            ));
+                            const a = async()=>{
+                                let n;
+                                try {
+                                    if (r) {
+                                        const {setupAgentSession: e} = await i.e(75).then(i.bind(i, 957));
+                                        n = e(this.agentIdentifier)
+                                    }
+                                } catch (t) {
+                                    (0,
+                                    e.Z)("A problem occurred when starting up session manager. This page will not start or extend any session.", t)
+                                }
+                                try {
+                                    if (!this.shouldImportAgg(this.featureName, n))
+                                        return (0,
+                                        c.L)(this.agentIdentifier, this.featureName),
+                                        void o(!1);
+                                    const {lazyFeatureLoader: e} = await i.e(75).then(i.bind(i, 8582))
+                                      , {Aggregate: r} = await e(this.featureName, "aggregate");
+                                    this.featAggregate = new r(this.agentIdentifier,this.aggregator,t),
+                                    o(!0)
+                                } catch (t) {
+                                    (0,
+                                    e.Z)("Downloading and initializing ".concat(this.featureName, " failed..."), t),
+                                    this.abortHandler?.(),
+                                    (0,
+                                    c.L)(this.agentIdentifier, this.featureName),
+                                    o(!1)
+                                }
+                            }
+                            ;
+                            l.il ? (0,
+                            d.b2)((()=>a()), !0) : a()
+                        }
+                        shouldImportAgg(e, t) {
+                            return e !== r.D.sessionReplay || !!n.Yu.MO && (!1 !== (0,
+                            n.Mt)(this.agentIdentifier, "session_trace.enabled") && (!!t?.isNew || !!t?.state.sessionReplayMode))
+                        }
+                    }
+                    var g = i(7633);
+                    class p extends f {
+                        static featureName = g.t;
+                        constructor(e, t) {
+                            let r = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+                            super(e, t, g.t, r),
+                            this.importAggregator()
+                        }
+                    }
+                    var h = i(1117)
+                      , v = i(1284);
+                    class m extends h.w {
+                        constructor(e) {
+                            super(e),
+                            this.aggregatedData = {}
+                        }
+                        store(e, t, r, n, i) {
+                            var o = this.getBucket(e, t, r, i);
+                            return o.metrics = function(e, t) {
+                                t || (t = {
+                                    count: 0
+                                });
+                                return t.count += 1,
+                                (0,
+                                v.D)(e, (function(e, r) {
+                                    t[e] = b(r, t[e])
+                                }
+                                )),
+                                t
+                            }(n, o.metrics),
+                            o
+                        }
+                        merge(e, t, r, n, i) {
+                            var o = this.getBucket(e, t, n, i);
+                            if (o.metrics) {
+                                var a = o.metrics;
+                                a.count += r.count,
+                                (0,
+                                v.D)(r, (function(e, t) {
+                                    if ("count" !== e) {
+                                        var n = a[e]
+                                          , i = r[e];
+                                        i && !i.c ? a[e] = b(i.t, n) : a[e] = function(e, t) {
+                                            if (!t)
+                                                return e;
+                                            t.c || (t = y(t.t));
+                                            return t.min = Math.min(e.min, t.min),
+                                            t.max = Math.max(e.max, t.max),
+                                            t.t += e.t,
+                                            t.sos += e.sos,
+                                            t.c += e.c,
+                                            t
+                                        }(i, a[e])
+                                    }
+                                }
+                                ))
+                            } else
+                                o.metrics = r
+                        }
+                        storeMetric(e, t, r, n) {
+                            var i = this.getBucket(e, t, r);
+                            return i.stats = b(n, i.stats),
+                            i
+                        }
+                        getBucket(e, t, r, n) {
+                            this.aggregatedData[e] || (this.aggregatedData[e] = {});
+                            var i = this.aggregatedData[e][t];
+                            return i || (i = this.aggregatedData[e][t] = {
+                                params: r || {}
+                            },
+                            n && (i.custom = n)),
+                            i
+                        }
+                        get(e, t) {
+                            return t ? this.aggregatedData[e] && this.aggregatedData[e][t] : this.aggregatedData[e]
+                        }
+                        take(e) {
+                            for (var t = {}, r = "", n = !1, i = 0; i < e.length; i++)
+                                t[r = e[i]] = A(this.aggregatedData[r]),
+                                t[r].length && (n = !0),
+                                delete this.aggregatedData[r];
+                            return n ? t : null
+                        }
+                    }
+                    function b(e, t) {
+                        return null == e ? function(e) {
+                            e ? e.c++ : e = {
+                                c: 1
+                            };
+                            return e
+                        }(t) : t ? (t.c || (t = y(t.t)),
+                        t.c += 1,
+                        t.t += e,
+                        t.sos += e * e,
+                        e > t.max && (t.max = e),
+                        e < t.min && (t.min = e),
+                        t) : {
+                            t: e
+                        }
+                    }
+                    function y(e) {
+                        return {
+                            t: e,
+                            min: e,
+                            max: e,
+                            sos: e * e,
+                            c: 1
+                        }
+                    }
+                    function A(e) {
+                        return "object" != typeof e ? [] : (0,
+                        v.D)(e, w)
+                    }
+                    function w(e, t) {
+                        return t
+                    }
+                    var _ = i(8632)
+                      , x = i(4402)
+                      , E = i(4351);
+                    var D = i(5546)
+                      , k = i(7956)
+                      , j = i(3239)
+                      , S = i(7894)
+                      , R = i(9251);
+                    class T extends f {
+                        static featureName = R.t;
+                        constructor(e, t) {
+                            let r = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+                            super(e, t, R.t, r),
+                            l.il && ((0,
+                            k.N)((()=>(0,
+                            D.p)("docHidden", [(0,
+                            S.z)()], void 0, R.t, this.ee)), !0),
+                            (0,
+                            j.bP)("pagehide", (()=>(0,
+                            D.p)("winPagehide", [(0,
+                            S.z)()], void 0, R.t, this.ee))),
+                            this.importAggregator())
+                        }
+                    }
+                    var I = i(3081);
+                    class P extends f {
+                        static featureName = I.t9;
+                        constructor(e, t) {
+                            let r = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+                            super(e, t, I.t9, r),
+                            this.importAggregator()
+                        }
+                    }
+                    new class extends t {
+                        constructor(t) {
+                            let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (0,
+                            x.ky)(16);
+                            super(),
+                            l._A ? (this.agentIdentifier = r,
+                            this.sharedAggregator = new m({
+                                agentIdentifier: this.agentIdentifier
+                            }),
+                            this.features = {},
+                            (0,
+                            _.h5)(r, this),
+                            this.desiredFeatures = new Set(t.features || []),
+                            this.desiredFeatures.add(p),
+                            (0,
+                            s.j)(this, t, t.loaderType || "agent"),
+                            this.run()) : (0,
+                            e.Z)("Failed to initial the agent. Could not determine the runtime environment.")
+                        }
+                        get config() {
+                            return {
+                                info: (0,
+                                n.C5)(this.agentIdentifier),
+                                init: (0,
+                                n.P_)(this.agentIdentifier),
+                                loader_config: (0,
+                                n.DL)(this.agentIdentifier),
+                                runtime: (0,
+                                n.OP)(this.agentIdentifier)
+                            }
+                        }
+                        run() {
+                            try {
+                                const t = a(this.agentIdentifier)
+                                  , n = [...this.desiredFeatures];
+                                n.sort(((e,t)=>r.p[e.featureName] - r.p[t.featureName])),
+                                n.forEach((n=>{
+                                    if (t[n.featureName] || n.featureName === r.D.pageViewEvent) {
+                                        const i = function(e) {
+                                            switch (e) {
+                                            case r.D.ajax:
+                                                return [r.D.jserrors];
+                                            case r.D.sessionTrace:
+                                                return [r.D.ajax, r.D.pageViewEvent];
+                                            case r.D.sessionReplay:
+                                                return [r.D.sessionTrace];
+                                            case r.D.pageViewTiming:
+                                                return [r.D.pageViewEvent];
+                                            default:
+                                                return []
+                                            }
+                                        }(n.featureName);
+                                        i.every((e=>t[e])) || (0,
+                                        e.Z)("".concat(n.featureName, " is enabled but one or more dependent features has been disabled (").concat((0,
+                                        E.P)(i), "). This may cause unintended consequences or missing data...")),
+                                        this.features[n.featureName] = new n(this.agentIdentifier,this.sharedAggregator)
+                                    }
+                                }
+                                ))
+                            } catch (t) {
+                                (0,
+                                e.Z)("Failed to initialize all enabled instrument classes (agent aborted) -", t);
+                                for (const e in this.features)
+                                    this.features[e].abortHandler?.();
+                                const r = (0,
+                                _.fP)();
+                                return delete r.initializedAgents[this.agentIdentifier]?.api,
+                                delete r.initializedAgents[this.agentIdentifier]?.features,
+                                delete this.sharedAggregator,
+                                r.ee?.abort(),
+                                delete r.ee?.get(this.agentIdentifier),
+                                !1
+                            }
+                        }
+                    }
+                    ({
+                        features: [p, T, P],
+                        loaderType: "lite"
+                    })
+                }
+                )()
+            }
+            )();
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Odin Project empowers aspiring web developers to learn together for free">
+        <meta property="og:image" content="https://www.theodinproject.com/assets/og-logo-dc2c719e367496ffaee876882b3f62c9b139279824de6a6e16448398fa513f7a.png">
+        <meta name="csrf-param" content="authenticity_token"/>
+        <meta name="csrf-token" content="19yO8UtxBEcUvMnyFau-0NfuQa3hgwoIhK3Z-UuU78QrD4zK6zJmT-4jsw-ehGn4_K-Wx16mzqbwmv7sMmSpQQ"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/packs/309.css" data-turbo-track="reload"/>
+        <link rel="stylesheet" href="/packs/css/309-4ddacabb.css" data-turbo-track="reload"/>
+        <link rel="stylesheet" href="../static/css/indextry2.css" media="all" data-turbo-track="reload"/>
+        <script src="/packs/js/runtime-225264f48e6e973b015b.js" data-turbo-track="reload" defer="defer"></script>
+        <script src="/packs/js/946-1d2c6f0a42d09fd2f43d.js" data-turbo-track="reload" defer="defer"></script>
+        <script src="/packs/js/error_tracking-e1da985382b485e8714c.js" data-turbo-track="reload" defer="defer"></script>
+        <script src="/packs/js/309-d501242400d0bb6a5947.js" data-turbo-track="reload" defer="defer"></script>
+        <script src="/packs/js/application-23dd17d8edfc4c7e150f.js" data-turbo-track="reload" defer="defer"></script>
+        <script defer data-turbo-eval="false" src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "031c5e68316544eb9f1a2118163c1cfd"}'></script>
+        <script>
+            
+        </script>
+    </head>
+    <body class="h-full bg-gray-50 text-gray-600 dark:bg-gray-900 dark:text-gray-300">
+        <div data-controller="visibility" data-visibility-target="content" data-visibility-visible-value="false" class="fixed inset-0 flex z-40 hidden lg:hidden off-canvas-menu" role="dialog" aria-modal="true">
+            <div data-visibility-target="content" data-action="click->visibility#off" class="fixed inset-0 bg-gray-600 bg-opacity-75 dark:bg-black dark:bg-opacity-60 hidden" aria-hidden="true" data-transition-enter="transition-opacity ease-linear duration-200" data-transition-enter-start="transform opacity-0" data-transition-enter-end="transform opacity-100" data-transition-leave="transition-opacity ease-linear duration-200" data-transition-leave-start="transform opacity-100" data-transition-leave-end="transform opacity-0"></div>
+            <div data-visibility-target="content" class="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none hidden dark:bg-gray-800" data-transition-enter="transition ease-in-out duration-200 transform" data-transition-enter-start="-translate-x-full" data-transition-enter-end="translate-x-0" data-transition-leave="transition ease-in-out duration-200 transform" data-transition-leave-start="translate-x-0" data-transition-leave-end="-translate-x-full">
+                <div data-visibility-target="content" class="absolute top-2 right-2 -mr-12 pt-3 hidden" data-transition-enter="transition ease-in-out duration-200" data-transition-enter-start="transform opacity-0" data-transition-enter-end="transform opacity-100" data-transition-leave="transition ease-in duration-200" data-transition-leave-start="transform opacity-100" data-transition-leave-end="transform opacity-0">
+                    <button type="button" data-action="click->visibility#off" class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Close sidebar</span>
+                        <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex-1 h-0 pt-3 pb-4 overflow-y-auto">
+                    <div class="flex-shrink-0 flex items-center px-4">
+                        <a aria-label="Return back home" href="/">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="205" height="59" viewBox="0 0 205 59" fill="none" role="img" aria-labelledby="akn0ykwt8lychihztymt9a30nbj5kjt3" class="h-12 w-auto text-gray-800 dark:text-gray-300">
+                                <title id="akn0ykwt8lychihztymt9a30nbj5kjt3">Odin Logo</title>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68945 34.7331L13.1482 19.2902H30.9833L35.442 34.7331H8.68945Z" fill="#EED9C3"></path>
+                                <ellipse cx="27.7849" cy="27.1223" rx="1.26005" ry="1.24284" fill="#353535"></ellipse>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.446 25.7092C19.446 25.2752 19.0891 24.9233 18.6493 24.9233C17.638 24.9233 15.9034 24.9233 14.8922 24.9233C14.4523 24.9233 14.0955 25.2752 14.0955 25.7092C14.0955 26.3856 14.0955 27.3716 14.0955 28.1426C14.0955 28.7935 14.6305 29.3212 15.2902 29.3212C15.6995 29.3212 16.1763 29.3212 16.6578 29.3212C17.3973 29.3212 18.1062 29.0314 18.6295 28.5155C19.1522 28.0001 19.446 27.3004 19.446 26.5712C19.446 26.2585 19.446 25.9621 19.446 25.7092Z" fill="#A78347"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.0004 4.5308L43.8517 0L39.0002 18L35.0002 22L35.0004 4.5308Z" fill="#E3B261"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.8514 4.5308L0.000132561 0L4.85156 18L8.85156 22L8.8514 4.5308Z" fill="#E3B261"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.442 12.7438C35.442 12.7438 28.7539 8.34589 22.0657 8.34589C15.3776 8.34589 8.68945 12.7438 8.68945 12.7438V25.9373L10.473 29.4556C11.7527 24.5929 17.5445 22.5672 21.576 25.5723L22.0657 25.9373L22.5554 25.5723C26.587 22.5672 32.3788 24.5929 33.6585 29.4556L35.442 25.9373V12.7438Z" fill="#E3B261"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6068 32.5341L14.0398 53.2041L9.12134 49.6858L13.148 34.7331L17.6068 32.5341Z" fill="#D4D4D4"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.5243 32.5341L30.0913 53.2041L35.0098 49.6858L30.9831 34.7331L26.5243 32.5341Z" fill="#D5D5D5"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68933 25.9373L5.12231 39.1309L9.58108 47.9267L13.1481 34.7331L8.68933 25.9373Z" fill="#E6E6E6"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M35.4418 25.9373L39.0088 39.1309L34.55 47.9267L30.983 34.7331L35.4418 25.9373Z" fill="#E6E6E6"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6069 32.5341L13.594 54.0837L22.0656 58.4815L30.5373 54.0837L26.5244 32.5341L22.3983 30.4992L22.0656 30.3352L17.6069 32.5341Z" fill="#E6E6E6"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.6636 33.4137H20.5425C20.5425 33.4137 20.5425 33.9348 20.5425 34.514C20.5425 34.9222 20.707 35.3131 20.9995 35.6016C21.292 35.8901 21.6884 36.0524 22.1022 36.0524C22.1026 36.0524 22.1035 36.0524 22.1039 36.0524C22.5177 36.0524 22.9141 35.8901 23.2066 35.6016C23.4991 35.3131 23.6636 34.9222 23.6636 34.514C23.6636 33.9348 23.6636 33.4137 23.6636 33.4137Z" fill="#353535"></path>
+                                <path d="M68.808 20.384L67.704 20.456C67.368 20.456 67.056 20.456 66.696 20.432C66.504 20.432 66.288 20.6 66.144 20.6L65.688 20.408L63.36 20.288L63.288 22.256L63.576 22.544L65.04 22.496C65.112 22.496 65.256 22.472 65.424 22.424L65.544 22.304L66.072 22.376L66.216 23.36L66.12 24.896L66.264 26.024L66.144 30.92L66.024 34.304L66.24 34.544L65.88 36.056V37.904L67.152 38.096L67.824 37.976L68.52 37.592L68.328 35.888V31.376L68.04 30.92L68.064 30.896L68.28 29.456L68.256 27.608V27.2C68.256 27.032 68.232 26.816 68.232 26.624C68.208 26.48 68.208 25.88 68.208 25.664L68.256 23.888L68.16 23.36L68.304 22.352H69.048L69.768 22.4L70.008 22.472H71.088L71.16 21.344L71.016 20.336L68.808 20.384ZM73.2638 33.992L73.3118 35.504L73.6478 35.864L73.2638 36.32L73.1918 37.928L74.7038 38.072L75.6878 38.024L75.7118 37.136L75.6398 36.056L75.4958 34.784L75.5198 34.712L75.6398 30.536L77.5118 29.744H77.5358L78.9278 29.432L78.9038 29.864L78.9758 30.2L78.9278 33.896L79.2878 34.28L79.0478 34.496L78.8798 37.184L79.1918 38.024H80.5838L81.4718 37.976L81.4238 36.656L81.2558 36.056L81.2078 32.984L81.1598 28.688L81.1118 28.208L81.0398 27.128L81.1598 24.872L80.9438 24.176L81.1838 23.864L81.2078 22.952V22.976L81.3518 21.608L81.4238 20.408L80.0558 20.36L79.1678 20.336L78.8078 21.032L78.9278 21.992L78.9758 24.152L79.0478 26.336L78.9518 26.984L78.6878 27.104L78.2318 27.32L77.2478 27.752L77.0318 28.016L76.6478 27.872L75.6398 28.232L75.5918 28.256L75.3758 25.928L75.4718 24.344L75.2078 24.128L75.4958 23.672L75.6158 22.208L75.7118 20.48L73.6478 20.216L73.0718 20.6L73.2398 22.088L73.1678 22.568L73.2398 24.152L73.4078 25.64L73.3118 27.992L73.4798 30.704L73.2638 33.992ZM90.8258 22.616L90.8738 21.272L90.8498 20.336L88.4738 20.36L87.5378 20.552L87.2018 20.36H85.8338L84.7058 20.504L84.8258 22.208L85.0898 22.52L84.8258 22.928L84.8498 24.152L84.8258 26.024V27.8L84.7538 28.688L84.9458 31.064L84.8498 31.256L84.8738 32.552V33.104L85.0898 33.392L84.8018 34.016L84.7778 35.12L84.8018 35.384L84.6578 37.016L84.7778 38L86.5778 38.024L86.7698 37.904H87.6098L88.9778 38.048L90.5618 38.072L91.1138 37.832L91.2098 36.944L91.2578 35.744L90.0578 35.72L89.4578 35.912L87.5378 35.936L87.3458 35.888L87.1298 35.84L87.0818 33.512L87.0578 33.464L87.1298 33.248L86.9858 32.552L87.0818 30.08H87.4658L88.9778 30.128L90.1538 30.176L90.2018 29.192L90.3458 28.472L90.0338 27.872L88.8098 27.992L87.8738 28.04L86.9858 27.992L86.9378 27.056L86.6978 26.864L86.9618 26.432L87.0818 25.712V23.336L87.1298 22.736V22.472H87.3458L88.6658 22.52L89.0498 22.448L89.1218 22.424L89.6978 22.616H90.8258ZM102.331 20.312L102.115 20.336H101.227L101.179 20.504L101.035 21.224L100.939 21.368L99.6429 24.608L99.7629 24.872L99.3309 25.184L98.0349 28.328L97.8429 28.448L97.8909 29.96L98.4669 31.184L99.3309 33.224L100.051 34.712H100.315L100.243 35.12L101.083 37.208L101.107 38L103.291 38.024L103.339 37.76L103.627 36.992L104.923 33.92L105.475 32.768L105.499 32.384L105.691 32.144L106.867 29.768L106.939 28.448L106.123 26.672L105.475 25.232H105.235L105.115 24.584L103.891 21.584L103.411 20.264L102.331 20.312ZM102.379 34.952L101.323 32.192L100.843 31.208L100.363 30.872L100.603 30.584L100.387 29.888L100.075 29.096L100.051 28.808L100.843 26.744L100.675 26.36L101.011 26.264L102.331 22.784L102.475 23.24L103.027 24.704L103.459 24.968L103.243 25.256L104.179 27.68L104.467 28.496L104.659 29.096L103.483 31.976L103.507 32.408H103.531L103.243 32.696L102.475 35.216L102.379 34.952ZM113.227 35.72L114.067 34.016L116.539 30.224L116.971 29.504L116.947 27.752L116.515 27.2L116.539 27.248L114.715 24.824L114.091 23.72L113.251 22.88L112.987 22.088L111.499 20.048L110.227 20.432L109.195 20.744L109.219 21.632L109.291 22.88L109.531 23.192L109.291 23.648L109.315 29.936L109.459 30.872L109.315 36.248V36.224L109.267 37.832L110.827 38.048L111.619 38.264L113.227 35.72ZM111.451 26.744L111.379 23.264L111.523 23.432L113.899 27.248L114.379 27.632L114.475 28.208L114.907 28.856L114.475 29.552L113.683 30.872L112.675 32.816L112.867 33.032L112.435 33.248L111.379 34.952L111.355 35L111.379 33.704L111.475 28.952L111.091 27.824L111.451 26.744ZM119.431 27.56L119.359 28.88L119.287 29.624V34.112V34.976L119.575 35.384L119.287 35.864L118.951 38L120.055 38.024L120.559 38.048L121.615 37.712L121.639 36.824L121.591 36.368L121.543 36.008V29.36L121.279 29.192L121.495 28.688L121.447 28.088L121.351 27.152L121.423 25.928L121.495 22.784L121.615 22.184L121.735 20.432L120.175 20.336L119.047 20.408L119.167 21.608L119.383 21.728L119.191 22.16L119.263 26.96L119.431 27.56ZM133.115 35.888V35.12L132.947 29.864L132.683 29.072L132.875 28.064L133.115 22.16L133.163 20.528L132.179 20.36L130.787 20.384V22.304L131.027 22.64L130.787 23.384V25.448L129.995 24.152L129.803 24.056L129.203 23.096L127.043 20.12L125.147 20.648V21.896L125.243 24.392L125.339 25.76L125.243 30.752L125.459 31.232L125.267 31.928L125.123 35.336V35.744L125.195 35.96L125.027 37.88L126.059 38.072L127.475 38.024L127.523 36.488L127.451 36.152L127.475 33.656L127.259 32.744L127.379 31.88L127.427 26.408L127.139 26.096L127.115 26.048L127.451 25.184V23.888L128.075 24.752L129.059 26.12L129.755 26.96L130.091 27.488L130.427 27.848L130.811 28.496L130.835 30.992L130.907 31.448L130.835 31.568L130.811 33.872L130.835 36.152L130.811 38.024L131.627 38.072L132.947 38.048L133.259 37.232L133.115 35.888ZM147.393 28.76L148.161 28.016L148.905 27.104L148.953 25.448L146.457 22.808L145.953 22.64L145.857 22.232L143.697 20L142.929 20.288L141.777 20.792L141.825 22.4L141.945 23.384V27.32L141.897 27.44L141.873 33.44L142.161 33.752L141.945 34.496L141.681 37.928L143.073 38.072L144.273 38L144.129 35.024L143.745 34.688L144.129 34.112L144.081 32.456L144.297 32.216L145.905 30.392L147.393 28.76ZM144.105 27.128L143.841 26.648L144.081 25.904L144.057 24.752L144.081 23.048L145.473 24.608L145.689 24.752L145.857 25.088L146.889 26.24L146.505 26.792L146.265 27.392L146.001 27.32L144.801 28.736L144.105 29.48V27.128ZM153.466 30.608L154.426 32.552L154.642 33.104L155.53 34.784L155.818 34.928L155.794 35.336L156.634 37.256L157.21 38.192L159.154 37.112L159.178 36.416L158.386 35.576L157.954 34.664V34.688L157.618 33.992L157.474 33.92V33.608L156.514 31.976C156.346 31.736 156.202 31.616 156.01 31.4V30.992C155.866 30.704 155.578 30.296 155.41 29.96L156.082 29.048L156.49 28.544L157.258 27.632L158.362 26.288L158.53 24.848L157.378 23.792C157.354 23.792 156.97 23.912 156.946 23.888L156.802 23.288L152.986 19.976L151.09 20.744L151.186 22.808L151.306 27.392L151.114 27.872L151.162 29.12L151.258 31.928V32.864L151.474 33.176L151.114 34.112L150.97 37.928L152.554 38.072L153.514 37.688L153.49 35.696L153.418 35.48L153.346 33.08L153.322 30.464L153.466 30.608ZM153.37 28.352L153.274 26.216L153.226 25.952L153.178 25.808L153.082 25.376L153.274 24.92V24.68L153.322 22.832L155.53 25.016L155.698 25.136L156.178 25.736L155.914 26.072C155.602 26.504 155.026 27.248 154.69 27.656L153.49 29.144L153.322 29.24L153.37 28.352ZM164.323 20.312L164.107 20.336H163.219L163.171 20.504L163.027 21.224L162.931 21.368L161.635 24.608L161.755 24.872L161.323 25.184L160.027 28.328L159.835 28.448L159.883 29.96L160.459 31.184L161.323 33.224L162.043 34.712H162.307L162.235 35.12L163.075 37.208L163.099 38L165.283 38.024L165.331 37.76L165.619 36.992L166.915 33.92L167.467 32.768L167.491 32.384L167.683 32.144L168.859 29.768L168.931 28.448L168.115 26.672L167.467 25.232H167.227L167.107 24.584L165.883 21.584L165.403 20.264L164.323 20.312ZM164.371 34.952L163.315 32.192L162.835 31.208L162.355 30.872L162.595 30.584L162.379 29.888L162.067 29.096L162.043 28.808L162.835 26.744L162.667 26.36L163.003 26.264L164.323 22.784L164.467 23.24L165.019 24.704L165.451 24.968L165.235 25.256L166.171 27.68L166.459 28.496L166.651 29.096L165.475 31.976L165.499 32.408H165.523L165.235 32.696L164.467 35.216L164.371 34.952ZM171.71 27.608L171.59 28.928L171.614 30.416L171.638 30.752V31.688L171.542 34.304L171.59 34.52L171.23 35.024L170.174 35.72L169.118 36.152V37.4L170.438 38.384L172.214 36.944L172.19 36.464L172.838 36.368L173.606 35.696L173.99 35.024L173.702 30.896L173.51 30.176L173.774 29.984L173.678 23.288L173.966 21.176L173.654 20.336L171.374 20.384V21.728L171.806 21.968L171.494 22.352L171.566 26.408L171.71 27.608ZM183.502 22.616L183.55 21.272L183.526 20.336L181.15 20.36L180.214 20.552L179.878 20.36H178.51L177.382 20.504L177.502 22.208L177.766 22.52L177.502 22.928L177.526 24.152L177.502 26.024V27.8L177.43 28.688L177.622 31.064L177.526 31.256L177.55 32.552V33.104L177.766 33.392L177.478 34.016L177.454 35.12L177.478 35.384L177.334 37.016L177.454 38L179.254 38.024L179.446 37.904H180.286L181.654 38.048L183.238 38.072L183.79 37.832L183.886 36.944L183.934 35.744L182.734 35.72L182.134 35.912L180.214 35.936L180.022 35.888L179.806 35.84L179.758 33.512L179.734 33.464L179.806 33.248L179.662 32.552L179.758 30.08H180.142L181.654 30.128L182.83 30.176L182.878 29.192L183.022 28.472L182.71 27.872L181.486 27.992L180.55 28.04L179.662 27.992L179.614 27.056L179.374 26.864L179.638 26.432L179.758 25.712V23.336L179.806 22.736V22.472H180.022L181.342 22.52L181.726 22.448L181.798 22.424L182.374 22.616H183.502ZM185.362 30.896L186.226 32.456L187.33 33.488L187.138 33.92L188.962 36.752L189.01 37.04L189.826 38.312L190.642 37.784L191.89 36.752L191.338 35.864L190.09 34.232L188.986 32.36L188.098 30.992L187.882 30.512L187.546 30.176L187.306 29.72L186.946 29.024L187.258 28.448L187.714 27.632L188.506 26.384L189.946 24.248L190.066 23.6L190.474 23.336L191.146 22.4L191.818 21.2L190.018 20L189.178 20.984L189.154 21.176L187.81 23.384V23.48L187.21 24.44V25.016L186.346 25.856L184.786 28.496L184.81 30.032L185.362 30.896ZM198.12 20.384L197.016 20.456C196.68 20.456 196.368 20.456 196.008 20.432C195.816 20.432 195.6 20.6 195.456 20.6L195 20.408L192.672 20.288L192.6 22.256L192.888 22.544L194.352 22.496C194.424 22.496 194.568 22.472 194.736 22.424L194.856 22.304L195.384 22.376L195.528 23.36L195.432 24.896L195.576 26.024L195.456 30.92L195.336 34.304L195.552 34.544L195.192 36.056V37.904L196.464 38.096L197.136 37.976L197.832 37.592L197.64 35.888V31.376L197.352 30.92L197.376 30.896L197.592 29.456L197.568 27.608V27.2C197.568 27.032 197.544 26.816 197.544 26.624C197.52 26.48 197.52 25.88 197.52 25.664L197.568 23.888L197.472 23.36L197.616 22.352H198.36L199.08 22.4L199.32 22.472H200.4L200.472 21.344L200.328 20.336L198.12 20.384Z" fill="currentColor"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <nav aria-label="Sidebar" class="mt-3">
+                        <div class="px-2 space-y-1">
+                            <a class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-gray-700/60 bg-gray-100 text-gray-900 dark:bg-gray-700/60 dark:text-gray-3  00" data-test-id="nav-home" data-turbo-method="get" href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400 group-hover:text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-200 mr-4 h-6 w-6" role="img" aria-labelledby="a5s0e3olnhzxsf9vaniyuayx3jl0nds6">
+                                    <title id="a5s0e3olnhzxsf9vaniyuayx3jl0nds6">Home icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"></path>
+                                </svg>
+                                Home
+
+                            </a>
+                            <a class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-gray-700/60 " data-test-id="nav-all-paths" data-turbo-method="get" href="https://www.theodinproject.com/paths">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400 group-hover:text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-200 mr-4 h-6 w-6" role="img" aria-labelledby="a50r3mwlpsbaudmsgaqlwn7usw6r4ms8">
+                                    <title id="a50r3mwlpsbaudmsgaqlwn7usw6r4ms8">All Paths icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"></path>
+                                </svg>
+                                All Paths
+
+                            </a>
+                            <a class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-gray-700/60 " data-test-id="nav-about" data-turbo-method="get" href="/about">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400 group-hover:text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-200 mr-4 h-6 w-6" role="img" aria-labelledby="anqfzqjpki8svpjafkprn10mq4k0tfn1">
+                                    <title id="anqfzqjpki8svpjafkprn10mq4k0tfn1">About icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"></path>
+                                </svg>
+                                About
+
+                            </a>
+                            <a class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-gray-700/60 " data-test-id="nav-support-us" data-turbo-method="get" href="/support_us">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400 group-hover:text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-200 mr-4 h-6 w-6" role="img" aria-labelledby="aiqs4z3mrwyh5jnpggufsxwuxc9v7w88">
+                                    <title id="aiqs4z3mrwyh5jnpggufsxwuxc9v7w88">Support Us icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"></path>
+                                </svg>
+                                Support Us
+
+                            </a>
+                            <a class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-gray-700/60 " data-test-id="nav-community" data-turbo-method="get" href="https://discord.gg/fbFCkYabZB">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400 group-hover:text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-200 mr-4 h-6 w-6" role="img" aria-labelledby="a7h289g3i40ec7ortdvxwj7qyuxxwfip">
+                                    <title id="a7h289g3i40ec7ortdvxwj7qyuxxwfip">Community icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"></path>
+                                </svg>
+                                Community
+
+                            </a>
+                        </div>
+                        <hr class="border-t border-gray-200 my-4" aria-hidden="true">
+                        <div class="px-2 space-y-1">
+                            <a class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-gray-700/60 " data-test-id="nav-sign-up" data-turbo-method="get" href="/sign_up">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400 group-hover:text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-200 mr-4 h-6 w-6" role="img" aria-labelledby="adtuptl632zk9hv523zfcngo7gsvcm1j">
+                                    <title id="adtuptl632zk9hv523zfcngo7gsvcm1j">Get started icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+                                </svg>
+                                Get started
+
+                            </a>
+                            <turbo-frame id="theme_switcher_mobile">
+                                <a class="text-gray-600 group flex items-center dark:text-gray-300 hover:bg-gray-50 hover:text-gray-900 text-base font-medium py-2 px-2 dark:hover:bg-gray-700/60 dark:hover:text-gray-200" data-turbo-method="put" href="/themes?theme=light">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 h-5 w-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-300 mr-4 h-6 w-6" role="img" aria-labelledby="abj3ji78z26jtpn7r33pszjxd2xjiy3w">
+                                        <title id="abj3ji78z26jtpn7r33pszjxd2xjiy3w">theme icon</title>
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
+                                    </svg>
+                                    Dark mode
+
+                                </a>
+                            </turbo-frame>
+                            <a class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-gray-700/60 " data-test-id="nav-sign-in" data-turbo-method="get" href="/sign_in">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400 group-hover:text-gray-500 dark:text-gray-200 dark:group-hover:text-gray-200 mr-4 h-6 w-6" role="img" aria-labelledby="a5dk58dom7wm11r7aidp585977a2vo6i">
+                                    <title id="a5dk58dom7wm11r7aidp585977a2vo6i">Sign in icon</title>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"></path>
+                                </svg>
+                                Sign in
+
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="flex-shrink-0 w-14" aria-hidden="true">
+            <!-- Force sidebar to shrink to fit close icon -->
+            </div>
+        </div>
+</div>
+<nav class="border-gray-200 bg-white dark:bg-gray-900 dark:border-gray-800 ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+        <div class="flex justify-between">
+            <div class="flex">
+                <div class="flex-shrink-0 flex items-center">
+                    <a class="logo" aria-label="Return back home" href="/">
+                        <img alt="Odin Logo" class="block lg:hidden h-12 w-auto" src="/assets/icons/odin-icon-a34029cd84a741be4da27758dafd7d7ac3729021adea3e0701e310d91e5c1d04.svg"/>
+                    </a>
+                    <a aria-label="Return back home" href="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="205" height="59" viewBox="0 0 205 59" fill="none" role="img" aria-labelledby="a7ozn5wvtpurm56px04njb2qz8l4nkmo" class="hidden lg:block h-12 w-auto text-gray-800 dark:text-gray-300">
+                            <title id="a7ozn5wvtpurm56px04njb2qz8l4nkmo">Odin Logo</title>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68945 34.7331L13.1482 19.2902H30.9833L35.442 34.7331H8.68945Z" fill="#EED9C3"></path>
+                            <ellipse cx="27.7849" cy="27.1223" rx="1.26005" ry="1.24284" fill="#353535"></ellipse>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.446 25.7092C19.446 25.2752 19.0891 24.9233 18.6493 24.9233C17.638 24.9233 15.9034 24.9233 14.8922 24.9233C14.4523 24.9233 14.0955 25.2752 14.0955 25.7092C14.0955 26.3856 14.0955 27.3716 14.0955 28.1426C14.0955 28.7935 14.6305 29.3212 15.2902 29.3212C15.6995 29.3212 16.1763 29.3212 16.6578 29.3212C17.3973 29.3212 18.1062 29.0314 18.6295 28.5155C19.1522 28.0001 19.446 27.3004 19.446 26.5712C19.446 26.2585 19.446 25.9621 19.446 25.7092Z" fill="#A78347"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M35.0004 4.5308L43.8517 0L39.0002 18L35.0002 22L35.0004 4.5308Z" fill="#E3B261"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.8514 4.5308L0.000132561 0L4.85156 18L8.85156 22L8.8514 4.5308Z" fill="#E3B261"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M35.442 12.7438C35.442 12.7438 28.7539 8.34589 22.0657 8.34589C15.3776 8.34589 8.68945 12.7438 8.68945 12.7438V25.9373L10.473 29.4556C11.7527 24.5929 17.5445 22.5672 21.576 25.5723L22.0657 25.9373L22.5554 25.5723C26.587 22.5672 32.3788 24.5929 33.6585 29.4556L35.442 25.9373V12.7438Z" fill="#E3B261"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6068 32.5341L14.0398 53.2041L9.12134 49.6858L13.148 34.7331L17.6068 32.5341Z" fill="#D4D4D4"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M26.5243 32.5341L30.0913 53.2041L35.0098 49.6858L30.9831 34.7331L26.5243 32.5341Z" fill="#D5D5D5"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68933 25.9373L5.12231 39.1309L9.58108 47.9267L13.1481 34.7331L8.68933 25.9373Z" fill="#E6E6E6"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M35.4418 25.9373L39.0088 39.1309L34.55 47.9267L30.983 34.7331L35.4418 25.9373Z" fill="#E6E6E6"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6069 32.5341L13.594 54.0837L22.0656 58.4815L30.5373 54.0837L26.5244 32.5341L22.3983 30.4992L22.0656 30.3352L17.6069 32.5341Z" fill="#E6E6E6"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.6636 33.4137H20.5425C20.5425 33.4137 20.5425 33.9348 20.5425 34.514C20.5425 34.9222 20.707 35.3131 20.9995 35.6016C21.292 35.8901 21.6884 36.0524 22.1022 36.0524C22.1026 36.0524 22.1035 36.0524 22.1039 36.0524C22.5177 36.0524 22.9141 35.8901 23.2066 35.6016C23.4991 35.3131 23.6636 34.9222 23.6636 34.514C23.6636 33.9348 23.6636 33.4137 23.6636 33.4137Z" fill="#353535"></path>
+                            <path d="M68.808 20.384L67.704 20.456C67.368 20.456 67.056 20.456 66.696 20.432C66.504 20.432 66.288 20.6 66.144 20.6L65.688 20.408L63.36 20.288L63.288 22.256L63.576 22.544L65.04 22.496C65.112 22.496 65.256 22.472 65.424 22.424L65.544 22.304L66.072 22.376L66.216 23.36L66.12 24.896L66.264 26.024L66.144 30.92L66.024 34.304L66.24 34.544L65.88 36.056V37.904L67.152 38.096L67.824 37.976L68.52 37.592L68.328 35.888V31.376L68.04 30.92L68.064 30.896L68.28 29.456L68.256 27.608V27.2C68.256 27.032 68.232 26.816 68.232 26.624C68.208 26.48 68.208 25.88 68.208 25.664L68.256 23.888L68.16 23.36L68.304 22.352H69.048L69.768 22.4L70.008 22.472H71.088L71.16 21.344L71.016 20.336L68.808 20.384ZM73.2638 33.992L73.3118 35.504L73.6478 35.864L73.2638 36.32L73.1918 37.928L74.7038 38.072L75.6878 38.024L75.7118 37.136L75.6398 36.056L75.4958 34.784L75.5198 34.712L75.6398 30.536L77.5118 29.744H77.5358L78.9278 29.432L78.9038 29.864L78.9758 30.2L78.9278 33.896L79.2878 34.28L79.0478 34.496L78.8798 37.184L79.1918 38.024H80.5838L81.4718 37.976L81.4238 36.656L81.2558 36.056L81.2078 32.984L81.1598 28.688L81.1118 28.208L81.0398 27.128L81.1598 24.872L80.9438 24.176L81.1838 23.864L81.2078 22.952V22.976L81.3518 21.608L81.4238 20.408L80.0558 20.36L79.1678 20.336L78.8078 21.032L78.9278 21.992L78.9758 24.152L79.0478 26.336L78.9518 26.984L78.6878 27.104L78.2318 27.32L77.2478 27.752L77.0318 28.016L76.6478 27.872L75.6398 28.232L75.5918 28.256L75.3758 25.928L75.4718 24.344L75.2078 24.128L75.4958 23.672L75.6158 22.208L75.7118 20.48L73.6478 20.216L73.0718 20.6L73.2398 22.088L73.1678 22.568L73.2398 24.152L73.4078 25.64L73.3118 27.992L73.4798 30.704L73.2638 33.992ZM90.8258 22.616L90.8738 21.272L90.8498 20.336L88.4738 20.36L87.5378 20.552L87.2018 20.36H85.8338L84.7058 20.504L84.8258 22.208L85.0898 22.52L84.8258 22.928L84.8498 24.152L84.8258 26.024V27.8L84.7538 28.688L84.9458 31.064L84.8498 31.256L84.8738 32.552V33.104L85.0898 33.392L84.8018 34.016L84.7778 35.12L84.8018 35.384L84.6578 37.016L84.7778 38L86.5778 38.024L86.7698 37.904H87.6098L88.9778 38.048L90.5618 38.072L91.1138 37.832L91.2098 36.944L91.2578 35.744L90.0578 35.72L89.4578 35.912L87.5378 35.936L87.3458 35.888L87.1298 35.84L87.0818 33.512L87.0578 33.464L87.1298 33.248L86.9858 32.552L87.0818 30.08H87.4658L88.9778 30.128L90.1538 30.176L90.2018 29.192L90.3458 28.472L90.0338 27.872L88.8098 27.992L87.8738 28.04L86.9858 27.992L86.9378 27.056L86.6978 26.864L86.9618 26.432L87.0818 25.712V23.336L87.1298 22.736V22.472H87.3458L88.6658 22.52L89.0498 22.448L89.1218 22.424L89.6978 22.616H90.8258ZM102.331 20.312L102.115 20.336H101.227L101.179 20.504L101.035 21.224L100.939 21.368L99.6429 24.608L99.7629 24.872L99.3309 25.184L98.0349 28.328L97.8429 28.448L97.8909 29.96L98.4669 31.184L99.3309 33.224L100.051 34.712H100.315L100.243 35.12L101.083 37.208L101.107 38L103.291 38.024L103.339 37.76L103.627 36.992L104.923 33.92L105.475 32.768L105.499 32.384L105.691 32.144L106.867 29.768L106.939 28.448L106.123 26.672L105.475 25.232H105.235L105.115 24.584L103.891 21.584L103.411 20.264L102.331 20.312ZM102.379 34.952L101.323 32.192L100.843 31.208L100.363 30.872L100.603 30.584L100.387 29.888L100.075 29.096L100.051 28.808L100.843 26.744L100.675 26.36L101.011 26.264L102.331 22.784L102.475 23.24L103.027 24.704L103.459 24.968L103.243 25.256L104.179 27.68L104.467 28.496L104.659 29.096L103.483 31.976L103.507 32.408H103.531L103.243 32.696L102.475 35.216L102.379 34.952ZM113.227 35.72L114.067 34.016L116.539 30.224L116.971 29.504L116.947 27.752L116.515 27.2L116.539 27.248L114.715 24.824L114.091 23.72L113.251 22.88L112.987 22.088L111.499 20.048L110.227 20.432L109.195 20.744L109.219 21.632L109.291 22.88L109.531 23.192L109.291 23.648L109.315 29.936L109.459 30.872L109.315 36.248V36.224L109.267 37.832L110.827 38.048L111.619 38.264L113.227 35.72ZM111.451 26.744L111.379 23.264L111.523 23.432L113.899 27.248L114.379 27.632L114.475 28.208L114.907 28.856L114.475 29.552L113.683 30.872L112.675 32.816L112.867 33.032L112.435 33.248L111.379 34.952L111.355 35L111.379 33.704L111.475 28.952L111.091 27.824L111.451 26.744ZM119.431 27.56L119.359 28.88L119.287 29.624V34.112V34.976L119.575 35.384L119.287 35.864L118.951 38L120.055 38.024L120.559 38.048L121.615 37.712L121.639 36.824L121.591 36.368L121.543 36.008V29.36L121.279 29.192L121.495 28.688L121.447 28.088L121.351 27.152L121.423 25.928L121.495 22.784L121.615 22.184L121.735 20.432L120.175 20.336L119.047 20.408L119.167 21.608L119.383 21.728L119.191 22.16L119.263 26.96L119.431 27.56ZM133.115 35.888V35.12L132.947 29.864L132.683 29.072L132.875 28.064L133.115 22.16L133.163 20.528L132.179 20.36L130.787 20.384V22.304L131.027 22.64L130.787 23.384V25.448L129.995 24.152L129.803 24.056L129.203 23.096L127.043 20.12L125.147 20.648V21.896L125.243 24.392L125.339 25.76L125.243 30.752L125.459 31.232L125.267 31.928L125.123 35.336V35.744L125.195 35.96L125.027 37.88L126.059 38.072L127.475 38.024L127.523 36.488L127.451 36.152L127.475 33.656L127.259 32.744L127.379 31.88L127.427 26.408L127.139 26.096L127.115 26.048L127.451 25.184V23.888L128.075 24.752L129.059 26.12L129.755 26.96L130.091 27.488L130.427 27.848L130.811 28.496L130.835 30.992L130.907 31.448L130.835 31.568L130.811 33.872L130.835 36.152L130.811 38.024L131.627 38.072L132.947 38.048L133.259 37.232L133.115 35.888ZM147.393 28.76L148.161 28.016L148.905 27.104L148.953 25.448L146.457 22.808L145.953 22.64L145.857 22.232L143.697 20L142.929 20.288L141.777 20.792L141.825 22.4L141.945 23.384V27.32L141.897 27.44L141.873 33.44L142.161 33.752L141.945 34.496L141.681 37.928L143.073 38.072L144.273 38L144.129 35.024L143.745 34.688L144.129 34.112L144.081 32.456L144.297 32.216L145.905 30.392L147.393 28.76ZM144.105 27.128L143.841 26.648L144.081 25.904L144.057 24.752L144.081 23.048L145.473 24.608L145.689 24.752L145.857 25.088L146.889 26.24L146.505 26.792L146.265 27.392L146.001 27.32L144.801 28.736L144.105 29.48V27.128ZM153.466 30.608L154.426 32.552L154.642 33.104L155.53 34.784L155.818 34.928L155.794 35.336L156.634 37.256L157.21 38.192L159.154 37.112L159.178 36.416L158.386 35.576L157.954 34.664V34.688L157.618 33.992L157.474 33.92V33.608L156.514 31.976C156.346 31.736 156.202 31.616 156.01 31.4V30.992C155.866 30.704 155.578 30.296 155.41 29.96L156.082 29.048L156.49 28.544L157.258 27.632L158.362 26.288L158.53 24.848L157.378 23.792C157.354 23.792 156.97 23.912 156.946 23.888L156.802 23.288L152.986 19.976L151.09 20.744L151.186 22.808L151.306 27.392L151.114 27.872L151.162 29.12L151.258 31.928V32.864L151.474 33.176L151.114 34.112L150.97 37.928L152.554 38.072L153.514 37.688L153.49 35.696L153.418 35.48L153.346 33.08L153.322 30.464L153.466 30.608ZM153.37 28.352L153.274 26.216L153.226 25.952L153.178 25.808L153.082 25.376L153.274 24.92V24.68L153.322 22.832L155.53 25.016L155.698 25.136L156.178 25.736L155.914 26.072C155.602 26.504 155.026 27.248 154.69 27.656L153.49 29.144L153.322 29.24L153.37 28.352ZM164.323 20.312L164.107 20.336H163.219L163.171 20.504L163.027 21.224L162.931 21.368L161.635 24.608L161.755 24.872L161.323 25.184L160.027 28.328L159.835 28.448L159.883 29.96L160.459 31.184L161.323 33.224L162.043 34.712H162.307L162.235 35.12L163.075 37.208L163.099 38L165.283 38.024L165.331 37.76L165.619 36.992L166.915 33.92L167.467 32.768L167.491 32.384L167.683 32.144L168.859 29.768L168.931 28.448L168.115 26.672L167.467 25.232H167.227L167.107 24.584L165.883 21.584L165.403 20.264L164.323 20.312ZM164.371 34.952L163.315 32.192L162.835 31.208L162.355 30.872L162.595 30.584L162.379 29.888L162.067 29.096L162.043 28.808L162.835 26.744L162.667 26.36L163.003 26.264L164.323 22.784L164.467 23.24L165.019 24.704L165.451 24.968L165.235 25.256L166.171 27.68L166.459 28.496L166.651 29.096L165.475 31.976L165.499 32.408H165.523L165.235 32.696L164.467 35.216L164.371 34.952ZM171.71 27.608L171.59 28.928L171.614 30.416L171.638 30.752V31.688L171.542 34.304L171.59 34.52L171.23 35.024L170.174 35.72L169.118 36.152V37.4L170.438 38.384L172.214 36.944L172.19 36.464L172.838 36.368L173.606 35.696L173.99 35.024L173.702 30.896L173.51 30.176L173.774 29.984L173.678 23.288L173.966 21.176L173.654 20.336L171.374 20.384V21.728L171.806 21.968L171.494 22.352L171.566 26.408L171.71 27.608ZM183.502 22.616L183.55 21.272L183.526 20.336L181.15 20.36L180.214 20.552L179.878 20.36H178.51L177.382 20.504L177.502 22.208L177.766 22.52L177.502 22.928L177.526 24.152L177.502 26.024V27.8L177.43 28.688L177.622 31.064L177.526 31.256L177.55 32.552V33.104L177.766 33.392L177.478 34.016L177.454 35.12L177.478 35.384L177.334 37.016L177.454 38L179.254 38.024L179.446 37.904H180.286L181.654 38.048L183.238 38.072L183.79 37.832L183.886 36.944L183.934 35.744L182.734 35.72L182.134 35.912L180.214 35.936L180.022 35.888L179.806 35.84L179.758 33.512L179.734 33.464L179.806 33.248L179.662 32.552L179.758 30.08H180.142L181.654 30.128L182.83 30.176L182.878 29.192L183.022 28.472L182.71 27.872L181.486 27.992L180.55 28.04L179.662 27.992L179.614 27.056L179.374 26.864L179.638 26.432L179.758 25.712V23.336L179.806 22.736V22.472H180.022L181.342 22.52L181.726 22.448L181.798 22.424L182.374 22.616H183.502ZM185.362 30.896L186.226 32.456L187.33 33.488L187.138 33.92L188.962 36.752L189.01 37.04L189.826 38.312L190.642 37.784L191.89 36.752L191.338 35.864L190.09 34.232L188.986 32.36L188.098 30.992L187.882 30.512L187.546 30.176L187.306 29.72L186.946 29.024L187.258 28.448L187.714 27.632L188.506 26.384L189.946 24.248L190.066 23.6L190.474 23.336L191.146 22.4L191.818 21.2L190.018 20L189.178 20.984L189.154 21.176L187.81 23.384V23.48L187.21 24.44V25.016L186.346 25.856L184.786 28.496L184.81 30.032L185.362 30.896ZM198.12 20.384L197.016 20.456C196.68 20.456 196.368 20.456 196.008 20.432C195.816 20.432 195.6 20.6 195.456 20.6L195 20.408L192.672 20.288L192.6 22.256L192.888 22.544L194.352 22.496C194.424 22.496 194.568 22.472 194.736 22.424L194.856 22.304L195.384 22.376L195.528 23.36L195.432 24.896L195.576 26.024L195.456 30.92L195.336 34.304L195.552 34.544L195.192 36.056V37.904L196.464 38.096L197.136 37.976L197.832 37.592L197.64 35.888V31.376L197.352 30.92L197.376 30.896L197.592 29.456L197.568 27.608V27.2C197.568 27.032 197.544 26.816 197.544 26.624C197.52 26.48 197.52 25.88 197.52 25.664L197.568 23.888L197.472 23.36L197.616 22.352H198.36L199.08 22.4L199.32 22.472H200.4L200.472 21.344L200.328 20.336L198.12 20.384Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:ml-6 md:flex sm:items-center">
+                <div class="hidden md:ml-6 md:flex sm:space-x-8">
+                    <a class=" text-sm border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  border-b-2 font-medium " data-test-id="nav-all-paths" data-turbo-method="get" href="https://www.theodinproject.com/paths">All Paths</a>
+                    <a class=" text-sm border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  border-b-2 font-medium " data-test-id="nav-about" data-turbo-method="get" href="/about">About</a>
+                    <a class=" text-sm border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  border-b-2 font-medium " data-test-id="nav-community" data-turbo-method="get" href="https://discord.gg/fbFCkYabZB">Community</a>
+                    <a class=" text-sm border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  border-b-2 font-medium " data-test-id="nav-support-us" data-turbo-method="get" href="/support_us">Support us</a>
+                    <a class=" text-sm border-transparent text-gray-500 dark:text-gray-300 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1  border-b-2 font-medium " data-test-id="nav-sign-in" data-turbo-method="get" href="/sign_in">Sign in</a>
+                    <turbo-frame class="flex items-center justify-center w-6" id="theme_switcher">
+                        <a class="text-gray-600 group flex items-center dark:text-gray-300 py-2 px-3" data-turbo-method="put" href="/themes?theme=light">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 h-5 w-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-300 group-hover:text-gray-700" role="img" aria-labelledby="ajjdorcdckzb7t6abfvqxj83iiollcvy">
+                                <title id="ajjdorcdckzb7t6abfvqxj83iiollcvy">theme icon</title>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"></path>
+                            </svg>
+                        </a>
+                    </turbo-frame>
+                    <a class="button button--primary md:px-2 md:py-2 lg:px-4 text-sm" data-test-id="nav-sign-up" href="/sign_up">Get Started</a>
+                </div>
+            </div>
+            <div class="-mr-2 flex items-center md:hidden" data-controller="open-menu" data-open-menu-visibility-outlet=".off-canvas-menu">
+                <button type="button" data-action="open-menu#open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gold-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open mobile menu</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 block h-6 w-6" role="img" aria-labelledby="a1bhiyicts8npnfix0e7ut8befgbya7e">
+                        <title id="a1bhiyicts8npnfix0e7ut8befgbya7e">Open mobile menu button</title>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="flash-messages"></div>
+<turbo-frame id="modal"></turbo-frame>
+<div id="home-page">
+    <div class="w-full text-center bg-white dark:bg-gray-900 text-">
+        <header class="page-container pb-4">
+            <div class="max-w-4xl mx-auto sm:pt-16">
+                <h1 class="text-4xl sm:text-6xl text-gray-700 dark:text-gray-200 font-medium mx-auto pb-6 tracking-tighter">
+                    Your <span class="text-gold-600 dark:text-gold-600">Career in Web Development</span>
+                    <span class="block font-medium">Starts Here</span>
+                </h1>
+                <div class="text-gray-600 dark:text-gray-300/80 pb-8 max-w-xl mx-auto">
+                    <p class="mb-4 text-xl text-gray-500 dark:text-gray-400">Our full stack curriculum is free and supported by a passionate open source community.</p>
+                </div>
+            </div>
+            <a class="button button--secondary text-base" href="https://www.theodinproject.com/paths">View Full Curriculum</a>
+        </header>
+        <img alt="home-page-banner" class="w-full h-full" src="/assets/home-isometric-68a769acd8c1f2c43991e3d6b24c658bf5e78b59fbca20aba5c7a97850948269.svg"/>
+    </div>
+    <div class="dark:bg-gray-800">
+        <div class="page-container py-20">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl text-gray-800 dark:text-gray-200 font-medium mb-5">How it works</h2>
+                <p class="sm:text-lg">This is the website we wish we had when we were learning on our own. We scour the internet looking for only the best resources to supplement your learning and present them in a logical order.</p>
+            </div>
+            <div class="flex flex-col md:flex-row max-w-5xl mx-auto text-center">
+                <div class="p-5 flex-1">
+                    <img class="h-20 sm:h-32 md:h-40 inline" alt="" src="/assets/img-learn-aded43a474618b12bf884b2577ef4548962b3d8e8ef5381de0bc6f4f86f8b2b3.svg"/>
+                    <h3 class='font-medium text-xl mt-8 mb-4'>Learn</h3>
+                    <div class="px-8 sm:px-16 md:px-0 dark:text-gray-400">
+                        <p>Learn from a curriculum with the best curated online tutorials, blogs, and courses.</p>
+                    </div>
+                </div>
+                <div class="p-5 flex-1">
+                    <img class="h-20 sm:h-32 md:h-40 inline" alt="" src="/assets/img-build-097e94bec94feb4b9152f9f95c197be4974f9921ce6fe8fc6ed86541933b3c14.svg"/>
+                    <h3 class='font-medium text-xl mt-8 mb-4'>Build</h3>
+                    <div class="px-8 sm:px-16 md:px-0 dark:text-gray-400">
+                        <p>Build dozens of portfolio-worthy projects along the way, from simple scripts to full programs and deployed websites.</p>
+                    </div>
+                </div>
+                <div class="p-5 flex-1">
+                    <img class="h-20 sm:h-32 md:h-40 inline" alt="" src="/assets/img-connect-fa7fdbed3b8a50275b5a79a293133b0a4b7b0c618230c6c7cad978c9e13122db.svg"/>
+                    <h3 class='font-medium text-xl mt-8 mb-4'>Connect</h3>
+                    <div class="px-8 sm:px-16 md:px-0 dark:text-gray-400">
+                        <p>You &#39;re not alone. Learn and get help from our friendly community of beginner and experienced developers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-gray-100 dark:bg-gray-900">
+        <div class="page-container py-20">
+            <h2 class="font-medium text-3xl pb-12 text-center text-gray-800 dark:text-gray-200">Learn everything you need to know</h2>
+            <div class="flex flex-row flex-wrap">
+                <div class="w-full lg:w-5/6 mx-auto">
+                    <div class="flex flex-row flex-wrap justify-center mb-4">
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-javascript/courses/intermediate-html-and-css">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-html-css-91bc8d9c7ebb2e2f73eeb302c38a92d9ba6f182301dbd1868d7198fcc8376aeb.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">Intermediate HTML and CSS
+              </h3>
+                        </a>
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-javascript/courses/advanced-html-and-css">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-html-css-91bc8d9c7ebb2e2f73eeb302c38a92d9ba6f182301dbd1868d7198fcc8376aeb.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">Advanced HTML and CSS
+              </h3>
+                        </a>
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-ruby-on-rails/courses/ruby">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-ruby-d91c1849066ed424531394e9d693dd99aaef49bcee15a96f462a1ae54c359af0.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">Ruby
+              </h3>
+                        </a>
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-ruby-on-rails/courses/ruby-on-rails">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-ruby-on-rails-0100b2e2593cbeb4d87e92e9fc9930448581ef43b8ab175d5cfef2b6e7e3f29c.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">Ruby on Rails
+              </h3>
+                        </a>
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-ruby-on-rails/courses/databases">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-database-feffd1ceb24267152793e33ea95e98ffeb3d203fd62d77302ac165dcfc421349.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">Databases
+              </h3>
+                        </a>
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-javascript/courses/nodejs">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-nodejs-1432a58382afd13f5bf55d4e5eda07244a3aa5fae9cee98ea034f17d6a09d503.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">NodeJS
+              </h3>
+                        </a>
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-javascript/courses/javascript">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-javascript-626af7075a7914bc4f30bd941268ed883785c3fb29b3e9d023eb5ab6450353bb.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">JavaScript
+              </h3>
+                        </a>
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-javascript/courses/getting-hired">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-getting-hired-03b3463749a1cd7dd5358c585b0c35c2878bbde91aa0800f641992eeb69f7c66.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">Getting Hired
+              </h3>
+                        </a>
+                        <a class="rounded-lg w-60 sm:w-56 bg-white dark:bg-gray-800 dark:border dark:border-gray-700 py-6 px-10 flex flex-col items-center text-center hover:shadow-lg m-4" href="/paths/full-stack-javascript/courses/react">
+                            <img alt="" class="h-20 w-20 sm:h-40 sm:w-40" src="/assets/badge-react-d347c579ca6df9afc0ef4127bb4fe6dc4002be06cb241f4d70b37c412f56cec2.svg"/>
+                            <h3 class="font-semibold text-xl mt-4 flex grow items-center">React
+              </h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-8">
+                <a class="button button--secondary text-base" href="https://www.theodinproject.com/paths">Explore curriculum</a>
+            </div>
+        </div>
+    </div>
+    <div class="w-full bg-gradient-to-b from-white to-gray-100 dark:bg-gray-800/30 dark:bg-none">
+        <div class="page-container py-20">
+            <div class="text-center">
+                <h2 class="font-medium text-3xl text-gray-800 dark:text-gray-200">Success Stories</h2>
+            </div>
+            <div class="max-w-7xl mx-auto mt-8 sm:mt-16 flex flex-nowrap xl:flex-wrap flex-col xl:flex-row items-center xl:items-start">
+                <div class="px-6 sm:px-0 max-w-xl xl:max-w-none xl:w-1/2 flex pb-9">
+                    <div class="w-16 sm:w-24 text-center pt-4 sm:flex justify-center">
+                        <img alt="" class="w-12 h-12 rounded-full shadow-inner" src="/assets/success_stories/rob_pando-6f356379c151a50217e4e81a67f3c22bfba6a759264669aeabfd239701568f63.jpg"/>
+                    </div>
+                    <div class="flex-1">
+                        <p>
+                            <a class="underline hover:no-underline text-gray-900 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300" href="/success_stories.307#success_story_307">Rob Pando</a>
+                        </p>
+                        <div class="text-lg">
+                            <p>TOP was a perfect match for my learning style. Not walking me through an entire project but actually forcing me to figure it out on my own, by pointing me...
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 sm:px-0 max-w-xl xl:max-w-none xl:w-1/2 flex pb-9">
+                    <div class="w-16 sm:w-24 text-center pt-4 sm:flex justify-center">
+                        <img alt="" class="w-12 h-12 rounded-full shadow-inner" src="/assets/success_stories/cody_loyd-c885053caab6e551611a18df724fb6b9c8f3a4548668048be0759a8b6d7e74bb.jpg"/>
+                    </div>
+                    <div class="flex-1">
+                        <p>
+                            <a class="underline hover:no-underline text-gray-900 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300" href="/success_stories.309#success_story_309">Cody Loyd</a>
+                        </p>
+                        <div class="text-lg">
+                            <p>Before I started the Odin Project I had literally ZERO programming experience. After almost exactly a year of working through the program, I was offered a job as a front...
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 sm:px-0 max-w-xl xl:max-w-none xl:w-1/2 flex pb-9">
+                    <div class="w-16 sm:w-24 text-center pt-4 sm:flex justify-center">
+                        <img alt="" class="w-12 h-12 rounded-full shadow-inner" src="/assets/success_stories/andrej_dragojevic-bcd48746a443efaac8fbebccac7ed0d1d946b331bbd01855cab5772d6ada86f5.jpg"/>
+                    </div>
+                    <div class="flex-1">
+                        <p>
+                            <a class="underline hover:no-underline text-gray-900 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300" href="/success_stories.311#success_story_311">Andrej Dragojević</a>
+                        </p>
+                        <div class="text-lg">
+                            <p>An incredible self-paced curriculum that consists of the best resources for learning programming on the web! It was an invaluable resource on my path to a becoming a software developer.</p>
+                            ...
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 sm:px-0 max-w-xl xl:max-w-none xl:w-1/2 flex pb-9">
+                    <div class="w-16 sm:w-24 text-center pt-4 sm:flex justify-center">
+                        <img alt="" class="w-12 h-12 rounded-full shadow-inner" src="/assets/success_stories/skip-ee50be4677383781878c07fa0c6cf523e6151f4988b67b9e8e6666fa12381a0a.jpg"/>
+                    </div>
+                    <div class="flex-1">
+                        <p>
+                            <a class="underline hover:no-underline text-gray-900 hover:text-gray-700 dark:text-gray-200 dark:hover:text-gray-300" href="/success_stories.312#success_story_312">Skip Gibson</a>
+                        </p>
+                        <div class="text-lg">
+                            <p>Before I found The Odin Project I had very little direction with my learning, jumping from topic to topic then trying to piece things together as I went.</p>
+                            <p>Having this...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <a class="dark:text-gray-400 underline text-lg pt-4 hover:text-gray-800 dark:hover:text-gray-300" href="/success_stories">Read more success stories</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-gray-100 dark:bg-gray-800/30">
+    <div class="mx-auto max-w-xl px-8 py-20 xs:pt-24 lg:px-8 text-center">
+        <div>
+            <div class="flex-1 mb-6">
+                <h1 class="text-3xl mb-4 font-semibold text-gray-800 dark:text-gray-200">Support us!</h1>
+                <h2 class="text-sm text-gray-500 dark:text-gray-400">The Odin Project is funded by the community. Join us in empowering learners around the globe by supporting The Odin Project!</h2>
+            </div>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a class="button button--secondary" href="/support_us">Learn more</a>
+                <a class="button button--primary relative" target="_blank" href="https://opencollective.com/theodinproject/donate?amount=5">
+                    <span class="mr-4">Donate now</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-3 h-4 w-4 ml-2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-white dark:bg-gray-900" aria-labelledby="footer-heading">
+    <h2 id="footer-heading" class="sr-only">Footer</h2>
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-8 sm:pt-12 lg:px-8">
+        <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div class="space-y-6">
+                <a aria-label="Return back home" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="205" height="59" viewBox="0 0 205 59" fill="none" role="img" aria-labelledby="abt267bdgpoah5s4apsab87vzueuqpi1" class="block h-12 w-auto text-gray-800 dark:text-gray-300">
+                        <title id="abt267bdgpoah5s4apsab87vzueuqpi1">Odin Logo</title>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68945 34.7331L13.1482 19.2902H30.9833L35.442 34.7331H8.68945Z" fill="#EED9C3"></path>
+                        <ellipse cx="27.7849" cy="27.1223" rx="1.26005" ry="1.24284" fill="#353535"></ellipse>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.446 25.7092C19.446 25.2752 19.0891 24.9233 18.6493 24.9233C17.638 24.9233 15.9034 24.9233 14.8922 24.9233C14.4523 24.9233 14.0955 25.2752 14.0955 25.7092C14.0955 26.3856 14.0955 27.3716 14.0955 28.1426C14.0955 28.7935 14.6305 29.3212 15.2902 29.3212C15.6995 29.3212 16.1763 29.3212 16.6578 29.3212C17.3973 29.3212 18.1062 29.0314 18.6295 28.5155C19.1522 28.0001 19.446 27.3004 19.446 26.5712C19.446 26.2585 19.446 25.9621 19.446 25.7092Z" fill="#A78347"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.0004 4.5308L43.8517 0L39.0002 18L35.0002 22L35.0004 4.5308Z" fill="#E3B261"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.8514 4.5308L0.000132561 0L4.85156 18L8.85156 22L8.8514 4.5308Z" fill="#E3B261"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.442 12.7438C35.442 12.7438 28.7539 8.34589 22.0657 8.34589C15.3776 8.34589 8.68945 12.7438 8.68945 12.7438V25.9373L10.473 29.4556C11.7527 24.5929 17.5445 22.5672 21.576 25.5723L22.0657 25.9373L22.5554 25.5723C26.587 22.5672 32.3788 24.5929 33.6585 29.4556L35.442 25.9373V12.7438Z" fill="#E3B261"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6068 32.5341L14.0398 53.2041L9.12134 49.6858L13.148 34.7331L17.6068 32.5341Z" fill="#D4D4D4"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M26.5243 32.5341L30.0913 53.2041L35.0098 49.6858L30.9831 34.7331L26.5243 32.5341Z" fill="#D5D5D5"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68933 25.9373L5.12231 39.1309L9.58108 47.9267L13.1481 34.7331L8.68933 25.9373Z" fill="#E6E6E6"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M35.4418 25.9373L39.0088 39.1309L34.55 47.9267L30.983 34.7331L35.4418 25.9373Z" fill="#E6E6E6"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6069 32.5341L13.594 54.0837L22.0656 58.4815L30.5373 54.0837L26.5244 32.5341L22.3983 30.4992L22.0656 30.3352L17.6069 32.5341Z" fill="#E6E6E6"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.6636 33.4137H20.5425C20.5425 33.4137 20.5425 33.9348 20.5425 34.514C20.5425 34.9222 20.707 35.3131 20.9995 35.6016C21.292 35.8901 21.6884 36.0524 22.1022 36.0524C22.1026 36.0524 22.1035 36.0524 22.1039 36.0524C22.5177 36.0524 22.9141 35.8901 23.2066 35.6016C23.4991 35.3131 23.6636 34.9222 23.6636 34.514C23.6636 33.9348 23.6636 33.4137 23.6636 33.4137Z" fill="#353535"></path>
+                        <path d="M68.808 20.384L67.704 20.456C67.368 20.456 67.056 20.456 66.696 20.432C66.504 20.432 66.288 20.6 66.144 20.6L65.688 20.408L63.36 20.288L63.288 22.256L63.576 22.544L65.04 22.496C65.112 22.496 65.256 22.472 65.424 22.424L65.544 22.304L66.072 22.376L66.216 23.36L66.12 24.896L66.264 26.024L66.144 30.92L66.024 34.304L66.24 34.544L65.88 36.056V37.904L67.152 38.096L67.824 37.976L68.52 37.592L68.328 35.888V31.376L68.04 30.92L68.064 30.896L68.28 29.456L68.256 27.608V27.2C68.256 27.032 68.232 26.816 68.232 26.624C68.208 26.48 68.208 25.88 68.208 25.664L68.256 23.888L68.16 23.36L68.304 22.352H69.048L69.768 22.4L70.008 22.472H71.088L71.16 21.344L71.016 20.336L68.808 20.384ZM73.2638 33.992L73.3118 35.504L73.6478 35.864L73.2638 36.32L73.1918 37.928L74.7038 38.072L75.6878 38.024L75.7118 37.136L75.6398 36.056L75.4958 34.784L75.5198 34.712L75.6398 30.536L77.5118 29.744H77.5358L78.9278 29.432L78.9038 29.864L78.9758 30.2L78.9278 33.896L79.2878 34.28L79.0478 34.496L78.8798 37.184L79.1918 38.024H80.5838L81.4718 37.976L81.4238 36.656L81.2558 36.056L81.2078 32.984L81.1598 28.688L81.1118 28.208L81.0398 27.128L81.1598 24.872L80.9438 24.176L81.1838 23.864L81.2078 22.952V22.976L81.3518 21.608L81.4238 20.408L80.0558 20.36L79.1678 20.336L78.8078 21.032L78.9278 21.992L78.9758 24.152L79.0478 26.336L78.9518 26.984L78.6878 27.104L78.2318 27.32L77.2478 27.752L77.0318 28.016L76.6478 27.872L75.6398 28.232L75.5918 28.256L75.3758 25.928L75.4718 24.344L75.2078 24.128L75.4958 23.672L75.6158 22.208L75.7118 20.48L73.6478 20.216L73.0718 20.6L73.2398 22.088L73.1678 22.568L73.2398 24.152L73.4078 25.64L73.3118 27.992L73.4798 30.704L73.2638 33.992ZM90.8258 22.616L90.8738 21.272L90.8498 20.336L88.4738 20.36L87.5378 20.552L87.2018 20.36H85.8338L84.7058 20.504L84.8258 22.208L85.0898 22.52L84.8258 22.928L84.8498 24.152L84.8258 26.024V27.8L84.7538 28.688L84.9458 31.064L84.8498 31.256L84.8738 32.552V33.104L85.0898 33.392L84.8018 34.016L84.7778 35.12L84.8018 35.384L84.6578 37.016L84.7778 38L86.5778 38.024L86.7698 37.904H87.6098L88.9778 38.048L90.5618 38.072L91.1138 37.832L91.2098 36.944L91.2578 35.744L90.0578 35.72L89.4578 35.912L87.5378 35.936L87.3458 35.888L87.1298 35.84L87.0818 33.512L87.0578 33.464L87.1298 33.248L86.9858 32.552L87.0818 30.08H87.4658L88.9778 30.128L90.1538 30.176L90.2018 29.192L90.3458 28.472L90.0338 27.872L88.8098 27.992L87.8738 28.04L86.9858 27.992L86.9378 27.056L86.6978 26.864L86.9618 26.432L87.0818 25.712V23.336L87.1298 22.736V22.472H87.3458L88.6658 22.52L89.0498 22.448L89.1218 22.424L89.6978 22.616H90.8258ZM102.331 20.312L102.115 20.336H101.227L101.179 20.504L101.035 21.224L100.939 21.368L99.6429 24.608L99.7629 24.872L99.3309 25.184L98.0349 28.328L97.8429 28.448L97.8909 29.96L98.4669 31.184L99.3309 33.224L100.051 34.712H100.315L100.243 35.12L101.083 37.208L101.107 38L103.291 38.024L103.339 37.76L103.627 36.992L104.923 33.92L105.475 32.768L105.499 32.384L105.691 32.144L106.867 29.768L106.939 28.448L106.123 26.672L105.475 25.232H105.235L105.115 24.584L103.891 21.584L103.411 20.264L102.331 20.312ZM102.379 34.952L101.323 32.192L100.843 31.208L100.363 30.872L100.603 30.584L100.387 29.888L100.075 29.096L100.051 28.808L100.843 26.744L100.675 26.36L101.011 26.264L102.331 22.784L102.475 23.24L103.027 24.704L103.459 24.968L103.243 25.256L104.179 27.68L104.467 28.496L104.659 29.096L103.483 31.976L103.507 32.408H103.531L103.243 32.696L102.475 35.216L102.379 34.952ZM113.227 35.72L114.067 34.016L116.539 30.224L116.971 29.504L116.947 27.752L116.515 27.2L116.539 27.248L114.715 24.824L114.091 23.72L113.251 22.88L112.987 22.088L111.499 20.048L110.227 20.432L109.195 20.744L109.219 21.632L109.291 22.88L109.531 23.192L109.291 23.648L109.315 29.936L109.459 30.872L109.315 36.248V36.224L109.267 37.832L110.827 38.048L111.619 38.264L113.227 35.72ZM111.451 26.744L111.379 23.264L111.523 23.432L113.899 27.248L114.379 27.632L114.475 28.208L114.907 28.856L114.475 29.552L113.683 30.872L112.675 32.816L112.867 33.032L112.435 33.248L111.379 34.952L111.355 35L111.379 33.704L111.475 28.952L111.091 27.824L111.451 26.744ZM119.431 27.56L119.359 28.88L119.287 29.624V34.112V34.976L119.575 35.384L119.287 35.864L118.951 38L120.055 38.024L120.559 38.048L121.615 37.712L121.639 36.824L121.591 36.368L121.543 36.008V29.36L121.279 29.192L121.495 28.688L121.447 28.088L121.351 27.152L121.423 25.928L121.495 22.784L121.615 22.184L121.735 20.432L120.175 20.336L119.047 20.408L119.167 21.608L119.383 21.728L119.191 22.16L119.263 26.96L119.431 27.56ZM133.115 35.888V35.12L132.947 29.864L132.683 29.072L132.875 28.064L133.115 22.16L133.163 20.528L132.179 20.36L130.787 20.384V22.304L131.027 22.64L130.787 23.384V25.448L129.995 24.152L129.803 24.056L129.203 23.096L127.043 20.12L125.147 20.648V21.896L125.243 24.392L125.339 25.76L125.243 30.752L125.459 31.232L125.267 31.928L125.123 35.336V35.744L125.195 35.96L125.027 37.88L126.059 38.072L127.475 38.024L127.523 36.488L127.451 36.152L127.475 33.656L127.259 32.744L127.379 31.88L127.427 26.408L127.139 26.096L127.115 26.048L127.451 25.184V23.888L128.075 24.752L129.059 26.12L129.755 26.96L130.091 27.488L130.427 27.848L130.811 28.496L130.835 30.992L130.907 31.448L130.835 31.568L130.811 33.872L130.835 36.152L130.811 38.024L131.627 38.072L132.947 38.048L133.259 37.232L133.115 35.888ZM147.393 28.76L148.161 28.016L148.905 27.104L148.953 25.448L146.457 22.808L145.953 22.64L145.857 22.232L143.697 20L142.929 20.288L141.777 20.792L141.825 22.4L141.945 23.384V27.32L141.897 27.44L141.873 33.44L142.161 33.752L141.945 34.496L141.681 37.928L143.073 38.072L144.273 38L144.129 35.024L143.745 34.688L144.129 34.112L144.081 32.456L144.297 32.216L145.905 30.392L147.393 28.76ZM144.105 27.128L143.841 26.648L144.081 25.904L144.057 24.752L144.081 23.048L145.473 24.608L145.689 24.752L145.857 25.088L146.889 26.24L146.505 26.792L146.265 27.392L146.001 27.32L144.801 28.736L144.105 29.48V27.128ZM153.466 30.608L154.426 32.552L154.642 33.104L155.53 34.784L155.818 34.928L155.794 35.336L156.634 37.256L157.21 38.192L159.154 37.112L159.178 36.416L158.386 35.576L157.954 34.664V34.688L157.618 33.992L157.474 33.92V33.608L156.514 31.976C156.346 31.736 156.202 31.616 156.01 31.4V30.992C155.866 30.704 155.578 30.296 155.41 29.96L156.082 29.048L156.49 28.544L157.258 27.632L158.362 26.288L158.53 24.848L157.378 23.792C157.354 23.792 156.97 23.912 156.946 23.888L156.802 23.288L152.986 19.976L151.09 20.744L151.186 22.808L151.306 27.392L151.114 27.872L151.162 29.12L151.258 31.928V32.864L151.474 33.176L151.114 34.112L150.97 37.928L152.554 38.072L153.514 37.688L153.49 35.696L153.418 35.48L153.346 33.08L153.322 30.464L153.466 30.608ZM153.37 28.352L153.274 26.216L153.226 25.952L153.178 25.808L153.082 25.376L153.274 24.92V24.68L153.322 22.832L155.53 25.016L155.698 25.136L156.178 25.736L155.914 26.072C155.602 26.504 155.026 27.248 154.69 27.656L153.49 29.144L153.322 29.24L153.37 28.352ZM164.323 20.312L164.107 20.336H163.219L163.171 20.504L163.027 21.224L162.931 21.368L161.635 24.608L161.755 24.872L161.323 25.184L160.027 28.328L159.835 28.448L159.883 29.96L160.459 31.184L161.323 33.224L162.043 34.712H162.307L162.235 35.12L163.075 37.208L163.099 38L165.283 38.024L165.331 37.76L165.619 36.992L166.915 33.92L167.467 32.768L167.491 32.384L167.683 32.144L168.859 29.768L168.931 28.448L168.115 26.672L167.467 25.232H167.227L167.107 24.584L165.883 21.584L165.403 20.264L164.323 20.312ZM164.371 34.952L163.315 32.192L162.835 31.208L162.355 30.872L162.595 30.584L162.379 29.888L162.067 29.096L162.043 28.808L162.835 26.744L162.667 26.36L163.003 26.264L164.323 22.784L164.467 23.24L165.019 24.704L165.451 24.968L165.235 25.256L166.171 27.68L166.459 28.496L166.651 29.096L165.475 31.976L165.499 32.408H165.523L165.235 32.696L164.467 35.216L164.371 34.952ZM171.71 27.608L171.59 28.928L171.614 30.416L171.638 30.752V31.688L171.542 34.304L171.59 34.52L171.23 35.024L170.174 35.72L169.118 36.152V37.4L170.438 38.384L172.214 36.944L172.19 36.464L172.838 36.368L173.606 35.696L173.99 35.024L173.702 30.896L173.51 30.176L173.774 29.984L173.678 23.288L173.966 21.176L173.654 20.336L171.374 20.384V21.728L171.806 21.968L171.494 22.352L171.566 26.408L171.71 27.608ZM183.502 22.616L183.55 21.272L183.526 20.336L181.15 20.36L180.214 20.552L179.878 20.36H178.51L177.382 20.504L177.502 22.208L177.766 22.52L177.502 22.928L177.526 24.152L177.502 26.024V27.8L177.43 28.688L177.622 31.064L177.526 31.256L177.55 32.552V33.104L177.766 33.392L177.478 34.016L177.454 35.12L177.478 35.384L177.334 37.016L177.454 38L179.254 38.024L179.446 37.904H180.286L181.654 38.048L183.238 38.072L183.79 37.832L183.886 36.944L183.934 35.744L182.734 35.72L182.134 35.912L180.214 35.936L180.022 35.888L179.806 35.84L179.758 33.512L179.734 33.464L179.806 33.248L179.662 32.552L179.758 30.08H180.142L181.654 30.128L182.83 30.176L182.878 29.192L183.022 28.472L182.71 27.872L181.486 27.992L180.55 28.04L179.662 27.992L179.614 27.056L179.374 26.864L179.638 26.432L179.758 25.712V23.336L179.806 22.736V22.472H180.022L181.342 22.52L181.726 22.448L181.798 22.424L182.374 22.616H183.502ZM185.362 30.896L186.226 32.456L187.33 33.488L187.138 33.92L188.962 36.752L189.01 37.04L189.826 38.312L190.642 37.784L191.89 36.752L191.338 35.864L190.09 34.232L188.986 32.36L188.098 30.992L187.882 30.512L187.546 30.176L187.306 29.72L186.946 29.024L187.258 28.448L187.714 27.632L188.506 26.384L189.946 24.248L190.066 23.6L190.474 23.336L191.146 22.4L191.818 21.2L190.018 20L189.178 20.984L189.154 21.176L187.81 23.384V23.48L187.21 24.44V25.016L186.346 25.856L184.786 28.496L184.81 30.032L185.362 30.896ZM198.12 20.384L197.016 20.456C196.68 20.456 196.368 20.456 196.008 20.432C195.816 20.432 195.6 20.6 195.456 20.6L195 20.408L192.672 20.288L192.6 22.256L192.888 22.544L194.352 22.496C194.424 22.496 194.568 22.472 194.736 22.424L194.856 22.304L195.384 22.376L195.528 23.36L195.432 24.896L195.576 26.024L195.456 30.92L195.336 34.304L195.552 34.544L195.192 36.056V37.904L196.464 38.096L197.136 37.976L197.832 37.592L197.64 35.888V31.376L197.352 30.92L197.376 30.896L197.592 29.456L197.568 27.608V27.2C197.568 27.032 197.544 26.816 197.544 26.624C197.52 26.48 197.52 25.88 197.52 25.664L197.568 23.888L197.472 23.36L197.616 22.352H198.36L199.08 22.4L199.32 22.472H200.4L200.472 21.344L200.328 20.336L198.12 20.384Z" fill="currentColor"></path>
+                    </svg>
+                </a>
+                <p class="text-sm leading-6 text-gray-600 dark:text-gray-300">High quality coding education maintained by an open source community.
+        </p>
+                <div class="flex space-x-6">
+                    <a class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400" href="https://github.com/TheOdinProject">
+                        <span class="sr-only">GitHub</span>
+                        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" role="img" aria-labelledby="ap3un71rapzpe7s2gqv7e7iz67hlbak8 a9mv3sqilsnd5ek0j389d23gk9s89xo4" class="h-6 w-6 fill-current hover:fill-black dark:hover:fill-white transition duration-500">
+                            <title id="ap3un71rapzpe7s2gqv7e7iz67hlbak8">GitHub</title>
+                            <desc id="a9mv3sqilsnd5ek0j389d23gk9s89xo4">GitHub logo</desc>
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400" href="https://discord.gg/fbFCkYabZB">
+                        <span class="sr-only">Discord</span>
+                        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" role="img" aria-labelledby="abb5cufa19yb4yq6kuoocpljsjy72xg7 alb355k50mfii005xiooqaf6xg2m6xhh" class="h-6 w-6 fill-current hover:fill-[#7289d9] transition duration-500">
+                            <title id="abb5cufa19yb4yq6kuoocpljsjy72xg7">Discord</title>
+                            <desc id="alb355k50mfii005xiooqaf6xg2m6xhh">Discord logo</desc>
+                            <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path>
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400" href="https://www.facebook.com/theodinproject/">
+                        <span class="sr-only">Facebook</span>
+                        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" role="img" aria-labelledby="a21ujreems8c2izqlioel5j6y22ob4o7 af21uwruxmdnkawbfk2zz7gy6bxhjwq5" class="h-6 w-6 fill-current hover:fill-[#4267B2] transition duration-500">
+                            <title id="a21ujreems8c2izqlioel5j6y22ob4o7">Facebook</title>
+                            <desc id="af21uwruxmdnkawbfk2zz7gy6bxhjwq5">Facebook logo</desc>
+                            <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400" href="https://twitter.com/TheOdinProject">
+                        <span class="sr-only">Twitter</span>
+                        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" role="img" aria-labelledby="aojhdgcaw48fgyrckepqy6wnypg1gu9o aso0t320y714av2neo6feqpv7d5qxbil" class="h-6 w-6 fill-current hover:fill-[#1DA1F2] transition duration-500">
+                            <title id="aojhdgcaw48fgyrckepqy6wnypg1gu9o">Twitter</title>
+                            <desc id="aso0t320y714av2neo6feqpv7d5qxbil">Twitter logo</desc>
+                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">About us</h3>
+                        <ul role="list" class="mt-4 space-y-3">
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" href="/about">About</a>
+                            </li>
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" href="/team">Team</a>
+                            </li>
+                            <li>
+                                <a target="_blank" rel="noreferrer" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" href="/blog">Blog</a>
+                            </li>
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" href="/success_stories">Success Stories</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-10 md:mt-0">
+                        <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Support</h3>
+                        <ul role="list" class="mt-4 space-y-3">
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" data-test-id="faq-link" href="/faq">FAQ</a>
+                            </li>
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" href="/contributing">Contribute</a>
+                            </li>
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" href="/about#contact-us">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Guides</h3>
+                        <ul role="list" class="mt-4 space-y-3">
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" data-test-id="faq-link" href="/guides/community">Community guides</a>
+                            </li>
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" data-test-id="faq-link" href="/guides/installations">Installation guides</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-10 md:mt-0">
+                        <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Legal</h3>
+                        <ul role="list" class="mt-4 space-y-3">
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" href="/terms_of_use">Terms</a>
+                            </li>
+                            <li>
+                                <a class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" href="/privacy-policy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-16 border-t border-gray-900/10 dark:border-white/10 pt-8 sm:mt-20 lg:mt-24">
+            <p class="text-xs leading-5 text-gray-600 dark:text-gray-300">&copy;2024 The Odin Project. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body></html>

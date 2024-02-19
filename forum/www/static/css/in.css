@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #8f66db;
+    --secondary-color: #e4e2e2;
+    --body-bg: #fff;
+    --body-bg-shaded: #f7f7f7;
+    --body-bg-light: #fff;
+    --body-bg-faded: rgba(255, 255, 255, 0.93);
+    --text-color: #111;
+    --link-color: #8c5de4;
+    --heading-color: #111;
+    --muted-color: #857a7a;
+    --muted-color-light: #9d9595;
+    --muted-color-dark: #000;
+    --shadow-color: rgba(0, 0, 0, 0.35);
+    --control-bg: #eeecec;
+    --control-bg-light: #f5f4f4;
+    --control-bg-shaded: #e4e2e2;
+    --control-color: #857a7a;
+    --error-color: #d83e3e;
+    --text-on-dark: #fff;
+    --text-on-light: #1b1818;
+    --yiq-threshold: 150;
+    --header-bg: #fff;
+    --header-color: #8f66db;
+    --header-control-bg: #eeecec;
+    --header-control-color: #857a7a;
+    --overlay-bg: rgba(228, 226, 226, 0.9);
+    --code-bg: #f7f7f7;
+    --code-color: #5e5e5e;
+    --alert-bg: #fff2ae;
+    --alert-color: #ad6c00;
+    --alert-error-bg: #d83e3e;
+    --alert-error-color: #fff;
+    --alert-success-bg: #b4f1af;
+    --alert-success-color: #33722d;
+    --switch-on-color: #58a400;
+    --switch-off-color: #d0021b;
+    --enabled-color: #2ECC40;
+    --disabled-color: #FF4136;
+    --validation-error-color: #d83e3e;
+    --avatar-bg: var(--control-bg);
+    --badge-bg: var(--muted-color);
+    --badge-color: #fff;
+    --badge-hidden-bg: #888;
+    --usercard-bg: var(--control-bg);
+    --hero-bg: #eeecec;
+    --hero-color: #857a7a;
+    --tooltip-bg: rgba(0, 0, 0, 0.9);
+    --tooltip-color: #fff;
+    --online-user-circle-color: #7fba00;
+    --discussion-title-color: #7c7c7c;
+    --discussion-list-item-bg-hover: #f6f6f6;
+    --button-color: #857a7a;
+    --button-bg: #eeecec;
+    --button-bg-hover: #e2dfdf;
+    --button-bg-active: #d5d2d2;
+    --button-bg-disabled: #eeecec;
+    --button-primary-color: #fff;
+    --button-primary-bg: #8f66db;
+    --button-primary-bg-hover: #8051d6;
+    --button-primary-bg-active: #713dd1;
+    --button-primary-bg-disabled: #8f66db;
+    --control-danger-color: #d66;
+    --control-danger-bg: #fdd;
+    --control-danger-bg-hover: #ffc3c3;
+    --control-danger-bg-active: #faa;
+    --control-danger-bg-disabled: #fdd;
+    --muted-more-color: #aaa;
+    --muted-more-bg: rgba(170, 170, 170, 0.3);
+    --muted-more-bg-hover: rgba(157, 157, 157, 0.35);
+    --muted-more-bg-active: rgba(145, 145, 145, 0.4);
+    --muted-more-bg-disabled: rgba(170, 170, 170, 0.3);
+    --button-inverted-color: #857a7a;
+    --button-inverted-bg: #fff;
+    --button-inverted-bg-hover: #f2f2f2;
+    --button-inverted-bg-active: #e6e6e6;
+    --button-inverted-bg-disabled: #fff;
+    --light-content-color: #fff;
+    --light-content-control-color: #fff;
+    --light-content-control-bg: rgba(0, 0, 0, 0.1);
+    --light-content-control-bg-shaded: rgba(0, 0, 0, 0.2);
+    --light-content-control-bg-fadedin: rgba(0, 0, 0, 0.15);
+    --header-colored-color: #8f66db;
+    --header-colored-control-color: #857a7a;
+    --header-colored-control-bg: #eeecec;
+    --header-colored-control-bg-shaded: #e2dfdf;
+    --header-colored-control-bg-fadedin: #eeecec;
+    --border-radius: 4px;
+    --drawer-width: 270px;
+    --pane-width: 400px;
+    --header-height: 52px;
+    --header-height-phone: 46px;
+    --zindex-header: 1000;
+    --zindex-pane: 1010;
+    --zindex-composer: 1020;
+    --zindex-dropdown: 1030;
+    --zindex-modal-background: 1040;
+    --zindex-modal: 1050;
+    --zindex-alerts: 1060;
+    --zindex-tooltip: 1070;
+    --Sandbox-screen: none;
+    --screen-phone-max: 767.98px;
+    --screen-tablet: 768px;
+    --screen-tablet-max: 991.98px;
+    --screen-desktop: 992px;
+    --screen-desktop-max: 1099.98px;
+    --screen-desktop-hd: 1100px
+}
+
+.App {
+    position: relative !important;
+    padding-top: var(--header-height);
+    padding-bottom: 50px;
+    min-height: 100vh
+}
+
+        .App-navigation {
+        display: none
+    }
+    .affix .App-navigation {
+        position: fixed
+    }
+
+    .scrolled .App-navigation {
+        box-shadow: 0 2px 6px var(--shadow-color)
+    }
+
+@media (min-width: 992px) and (max-width: 1099.98px) {
+    :root {
+        --Sandbox-screen: desktop
+    }
+}
+
+@media (min-width: 1100px) {
+    :root {
+        --Sandbox-screen: desktop-hd
+    }
+}

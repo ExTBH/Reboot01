@@ -1,0 +1,807 @@
+<html dir="ltr"
+    lang="en"><script>window._wordtune_extension_installed = true;</script><head>
+        <meta charset="utf-8">
+        <title>Flarum/demo</title>
+
+        <link rel="stylesheet"
+            href="https://demo.flarum.site/assets/forum.css?v=40f4182f">
+        <link rel="canonical" href="https://demo.flarum.site">
+        <link rel="preload"
+            href="https://demo.flarum.site/assets/forum.css?v=40f4182f"
+            as="style">
+        <link rel="preload"
+            href="https://demo.flarum.site/assets/forum.js?v=8939365a"
+            as="script">
+        <link rel="preload"
+            href="https://demo.flarum.site/assets/forum-en.js?v=a50986b6"
+            as="script">
+        <link rel="preload"
+            href="https://demo.flarum.site/assets/fonts/fa-solid-900.woff2"
+            as="font" type="font/woff2" crossorigin>
+        <link rel="preload"
+            href="https://demo.flarum.site/assets/fonts/fa-regular-400.woff2"
+            as="font" type="font/woff2" crossorigin>
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <meta name="description" content="demo demo installation of Flarum">
+        <meta name="theme-color" content="#8f66db">
+        <style type="text/css">.lf-progress {
+-webkit-appearance: none;
+-moz-apperance: none;
+width: 100%;
+/* margin: 0 10px; */
+height: 4px;
+border-radius: 3px;
+cursor: pointer;
+}
+.lf-progress:focus {
+outline: none;
+border: none;
+}
+.lf-progress::-moz-range-track {
+cursor: pointer;
+background: none;
+border: none;
+outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+-webkit-appearance: none !important;
+height: 13px;
+width: 13px;
+border: 0;
+border-radius: 50%;
+background: #0fccce;
+cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+-moz-appearance: none !important;
+height: 13px;
+width: 13px;
+border: 0;
+border-radius: 50%;
+background: #0fccce;
+cursor: pointer;
+}
+.lf-progress::-ms-track {
+width: 100%;
+height: 3px;
+cursor: pointer;
+background: transparent;
+border-color: transparent;
+color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+background: #ccc;
+border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+background: #ccc;
+border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+border: 0;
+height: 15px;
+width: 15px;
+border-radius: 50%;
+background: #0fccce;
+cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+background: #ccc;
+}
+.lf-player-container :focus {
+outline: 0;
+}
+.lf-popover {
+position: relative;
+}
+
+.lf-popover-content {
+display: inline-block;
+position: absolute;
+opacity: 1;
+visibility: visible;
+transform: translate(0, -10px);
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+opacity: 0;
+visibility: hidden;
+transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+display: flex;
+align-items: center;
+}
+.lf-player-btn {
+cursor: pointer;
+fill: #999;
+width: 14px;
+}
+
+.lf-player-btn.active {
+fill: #555;
+}
+
+.lf-popover {
+position: relative;
+}
+
+.lf-popover-content {
+display: inline-block;
+position: absolute;
+background-color: #ffffff;
+opacity: 1;
+
+transform: translate(0, -10px);
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+padding: 10px;
+}
+
+.lf-popover-content.hidden {
+opacity: 0;
+visibility: hidden;
+transform: translate(0, 0px);
+}
+
+.lf-arrow {
+position: absolute;
+z-index: -1;
+content: '';
+bottom: -9px;
+border-style: solid;
+border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+left: 0;
+right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+right: 0;
+left: unset;
+}
+
+.lf-text-input {
+border: 1px #ccc solid;
+border-radius: 5px;
+padding: 3px;
+width: 60px;
+margin: 0;
+}
+
+.lf-color-picker {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 90px;
+}
+
+.lf-color-selectors {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.lf-color-component {
+display: flex;
+flex-direction: row;
+font-size: 12px;
+align-items: center;
+justify-content: center;
+}
+
+.lf-color-component strong {
+width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+width: 50px;
+margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+font-size: 12px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+padding-left: 5px;
+}
+
+.lf-preview {
+height: 60px;
+width: 60px;
+}
+
+.lf-popover-snapshot {
+width: 150px;
+}
+.lf-popover-snapshot h5 {
+margin: 5px 0 10px 0;
+font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+display: block;
+text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+content: '⥼';
+margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+display: block;
+margin-top: 10px;
+color: #999;
+}
+.lf-player-controls > div {
+margin-right: 5px;
+margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+margin-right: 0px;
+}
+</style><style></style>
+        <style></style><style>@font-face {
+font-family: "wticons";
+font-display: block;
+src: url(data:font/woff2;charset=utf-8;base64,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) format("woff2");
+}
+
+.wticons {
+line-height: 1;
+}
+
+.wticons:before {
+font-family: wticons !important;
+font-style: normal;
+font-weight: normal !important;
+vertical-align: top;
+}
+
+.wticon-account:before {
+content: "\f101";
+}
+.wticon-add:before {
+content: "\f102";
+}
+.wticon-BlackFridayStar:before {
+content: "\f103";
+}
+.wticon-cardResizeDrag:before {
+content: "\f104";
+}
+.wticon-casual:before {
+content: "\f105";
+}
+.wticon-check:before {
+content: "\f106";
+}
+.wticon-checkSmall:before {
+content: "\f107";
+}
+.wticon-chevron:before {
+content: "\f108";
+}
+.wticon-copy:before {
+content: "\f109";
+}
+.wticon-copySmall:before {
+content: "\f10a";
+}
+.wticon-dismiss:before {
+content: "\f10b";
+}
+.wticon-downChevron:before {
+content: "\f10c";
+}
+.wticon-error:before {
+content: "\f10d";
+}
+.wticon-expand:before {
+content: "\f10e";
+}
+.wticon-feedback:before {
+content: "\f10f";
+}
+.wticon-filledDownArrow:before {
+content: "\f110";
+}
+.wticon-find:before {
+content: "\f111";
+}
+.wticon-formal:before {
+content: "\f112";
+}
+.wticon-gift:before {
+content: "\f113";
+}
+.wticon-grayLogo:before {
+content: "\f114";
+}
+.wticon-grayW:before {
+content: "\f115";
+}
+.wticon-ignore:before {
+content: "\f116";
+}
+.wticon-info:before {
+content: "\f117";
+}
+.wticon-leftChevron:before {
+content: "\f118";
+}
+.wticon-logo:before {
+content: "\f119";
+}
+.wticon-love:before {
+content: "\f11a";
+}
+.wticon-noRecommendations:before {
+content: "\f11b";
+}
+.wticon-paragraphRewrite:before {
+content: "\f11c";
+}
+.wticon-paste:before {
+content: "\f11d";
+}
+.wticon-pin:before {
+content: "\f11e";
+}
+.wticon-premium:before {
+content: "\f11f";
+}
+.wticon-premiumDetail:before {
+content: "\f120";
+}
+.wticon-premiumFull:before {
+content: "\f121";
+}
+.wticon-recommendationLight:before {
+content: "\f122";
+}
+.wticon-recommendationLightCard:before {
+content: "\f123";
+}
+.wticon-recommendationLightNoSuggestions:before {
+content: "\f124";
+}
+.wticon-refine:before {
+content: "\f125";
+}
+.wticon-rewrite:before {
+content: "\f126";
+}
+.wticon-rightChevron:before {
+content: "\f127";
+}
+.wticon-rocket:before {
+content: "\f128";
+}
+.wticon-sentenceExamples:before {
+content: "\f129";
+}
+.wticon-settings:before {
+content: "\f12a";
+}
+.wticon-shorten:before {
+content: "\f12b";
+}
+.wticon-tutorial:before {
+content: "\f12c";
+}
+.wticon-unlock:before {
+content: "\f12d";
+}
+.wticon-warn:before {
+content: "\f12e";
+}
+.wticon-WordtuneButton:before {
+content: "\f12f";
+}
+.wticon-x:before {
+content: "\f130";
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zaGFyZWQvSWNvbnMuZm9udC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtDQUNDLHNCQUFzQjtDQUN0QixtQkFBbUI7Q0FDbkIsNERBQWlwVDtBQUNscFQ7O0FBRUE7Q0FDQyxjQUFjO0FBQ2Y7O0FBRUE7Q0FDQywrQkFBK0I7Q0FDL0Isa0JBQWtCO0NBQ2xCLDhCQUE4QjtDQUM5QixtQkFBbUI7QUFDcEI7O0FBRUE7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XG5cdGZvbnQtZmFtaWx5OiBcInd0aWNvbnNcIjtcblx0Zm9udC1kaXNwbGF5OiBibG9jaztcblx0c3JjOiB1cmwoXCJkYXRhOmZvbnQvd29mZjI7Y2hhcnNldD11dGYtODtiYXNlNjQsZDA5R01nQUJBQUFBQUJ5OEFBc0FBQUFBTm53QUFCeHNBQUVBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUhJbE9CbUFBakN3S3hYeTVLUUUyQWlRRGdrd0xnU2dBQkNBRmhBb0hoV3didmk1MUJHd2NZQ1BNWDkxUmxPeE5VZmIvZjF3NkRqTjhVd1VIcEduSkhDaHlOV1VlYTROS0dBVlBrM0NEUExiNElVUkhRc1FpRnNla3dDME5LNkxZZ3FUWThZek9iYS8zRXRJNDNUMFAvVE1LK05TQjJSdm1rd3lsaElmL3VjOXV3a01BNFEvSnpMeVBXR0JXUGRWQXd0ZW9MZ2k5WjRWYXRqdHZ2MWxKWVN5QjZoZXNzcTlNQnlvanJ2bkppTml0YjVkTHNzZms3ZTBMTFROZUFkb1JkK0JmYmhzQVBMemQzdTgrVW5SUlcwdkRRS096QXcwSUF2MWJRN1ROKzM4a0JmOXBrNUtZeVVDMGtiWXdLR3VPWVM1S3A3MUlZeFhtcXB5TGJsY1ZFa1ZYZHMzczNwdVBOTVFIUW1FTGFDaTJKdU4rM2dnRksvS2ZiMkJUMVVwcHE0YkpiY3hQcVUzK2kyZVlCQ25HRk1BREljdktBTHRGK1pNZ1piNVQrQXI3UmNEUW5HbVRSOHFBV0NnaWkwcmU1ZFAvWEs2VTlnZnBqU2pMS0o5UnZ3TkVCNlNBWlBxRTdRajdRMVF2aDJwcWNtcktzSFhUWS9oNDFsb1ZiOWFJUEFhcGpSSlA5TytjV1VKRUk0MUt5SlJFWFpKSnVvdWJNem96UmlGeGNZRWkvZHlKaS9EQVdQTjcybks3dFdPM0lSa2hLVVBtTjZYajM1ZUNCRHJ0T3lDZnViZi9TNzNqc3RMU0pGVzZ1WVNQeWFWeDI4T1NtZGlwSlRFU3N3VGxCUWFzeS9uTlgrRXVMV3BJRlZJbjJyQUQxMXZZTGVWMnZ4eXhrZWxHU1F3Mm04UGw4Y2tVZ1lDaDM2Nk1VMjU1NFYxUUwwc29jRVJJaWFTSjVPTU1XYklNblhJRVc4S2hQRXRjWEtjT2pxSURrWmdNcGJ3TFFnNlBSbWRKY2FPQk9zMUUvdzZxWnRvUzFRNmRKODZSczRJeVpZQmp5Y25ZSEhsNWdpZGc4VVZtY1VwRjJtWSthSDJPVUZRRGtwTVhuOVd0aTZQRVU3YW1laGREaFBNclRsK3I2Qk5uMVl1VEprakFjaW5FRnh0U1h0NjhUZU82Q0JXK09UemhCc2x5T2xOeEZBanZ2cXN0NzRwdi9lNFB5K1lqOTNXUnJCeGZrL09ndUxLeW5UQ0xvOXUvWkV6YlZPN0U3VjgwcExycG1tNjkyVnpTcmpJSUpXOW9mY0lLM2ZYcEl4NWhuZDVWV1BTcXRIVERSdW15dkk3SVNCaWo4bFE0SlhTdnNxL0lza1Bwb1FscjRieXIzUlRhMEc4bDlsZTBuVmJMUGt0ZVVkd1haSk5aRi9ZdFVMSlN0dnBiZjBlb3daclJUbG8xek95Ny9RL1VPd2FQMU1ZSzJvWWhxcWdiODliMTJsZHh6VE52RS9wOVJ5elpGU25LOWNCWlBFRG05VGptbWhkeDVXVnNvYTI5NHhaMHlVbVNPeVRvdWRsa2FPYUJqYlErWVpiaWhsYWkycVhXckhoVW5kNmdTN2pQN0tSeFFpRFRvMDAxdjVHU3ZwaVZtNnI5Rnc5Mmlpa2NrSGpBU2VJSmpKTTl2WElTOE1NQkVXSkRoMDBVajJSQW53c1VTaUFtN3ZLbENpbFpSU1VWRGVvUytFd2owSlB5RHdLOGYzbjEwaGNyWkpCcGpmUzBHcys5WGZxVktIbi9CYzZranRud05ndnB6d01OS0dBN0pDYkp2WHlvdEVaNVU3WXBPbVhYUXcwZEdOWlBvY3FwcUdrNzZiWkgzcFNjL2lyVnRPNGJ2dXl1SndYTk1WVWt3Mll6ZXY3NjdFc29nWnFZc295V3BMcW1JNGNhTEZXMndHaGFXVG1SaExoOHJ5ZEZZYWNxcm9KU3VDZHBVdERGYWloMGJ6QjE2TlNsVzgvOTg5R24zNEJCUTRhTkdEVm0zSVJKVTZiTm1EVm4zb0pGUzVhdFdMVm0zWVpOVzdidDJMVm5IeDVZcUdrYXRaNWlLUDhCNEd1cTRHZ0gzQ1JFVHRhbGlHRHovUU9ETjFjcHYrU1Avd2dQaStTQldrRTBhVGRBK1JuYkJtSXhyeHBJS1FiU3k4c2dNNXhWQytTVUJKVkMzVXlDUWxNbFFlR29yZ1E2QkNmVkFKZGxnU3VxZ3F1eXdUVUY0TG9FdUtFS3VLa3N1S1VjdUswSTNGVUMzRk1jM0ZjZVBKQUhIc29CajFRRVR4U0NwMHFCWi9MQmM3bmdoUXJncFVyZ2xmYkJheDJBTjNOcC9BL0NpeUVBd3dCR0FJd0NHQU13RG1BQ3dDU0FLUURUQUdZQXpBS1lBekFQWUFIQUlvQWxBTXNBVmdDc0FsZ0RzQTVnQThBbWdDMEEyd0IyQU93QzJBT3dEK0FBd0NHQUl3REhBRTRBbkFJNEEzQU80QUxBSllBckFOY0FiZ0RjQXJnRGNBL2dnUUZTQSs1ZCtBNzRCcnB1Nkoya2RlbU5heWluakFPWlNzcFMrWDVwV3FZZHlBeTlzNEphbGxkbWVaT0VSbUlWbVBlSlJVRVRTNHFSKzA1ZldGSjZKS3lId29sZ3NERTRjc3hJNjR5cERjNmpEWTNVZzBFOVlsWlhvekVvMEtJM3RhR2sxakJxMU9qUnRTSVlIb05xYXNlRUdocnFSdDZMamtZamxPS0tQNmszbndXYldtTFJrY0hhV2sycmJ0YTBZQ3daVTVQb1F0cXNHVVNOd1RhSzFoODBmbEVmeGcxSWk4ZFhkWVhIeENJNE9MTEZ3QzN6N2NoUVJwSlNUWENyUEtHWVB5Rm81WC9lVnB4OWYvcDlPZlh1MUllcDZ4VW9mRitWeTRDWDlvczdYOVNuVy96bVIvbjV0bFpBam5obERQMDNDTzdsNWJMeWZWR3B5RklwSTJtbGJBMXlVdEpZUThvcUoydEFNRDg1QmVzQStuZnQvRFpEcVlEN1hTU1RkaFlBMVBjVVZQRmZ1RWEvS3lncWhDQkdkWDBXUWFlcXBRdGgzWERwQ04xb0hkbU12cmwvbVg4aVpaRTB5NFJCcUFvRnhJdDlJYW41empNY1ZpOWdRRHpmR2dxRU0rSmpPQkMyTnB3OUdBNkV1amNUUStmSkptWnRvZDN2RDlnQmgrNDRDWHVLTC9iMkNmcDZ2V3o4NjhMS3EzWE8vK1RIRXYrTWJIT0Z5WkFzaWlHTXFUdS9VTHBGYkRzazJ5anpWSUZyQkU5QzhnaFpEdGZzVEhVVFdrRm1YWVVFZHZsZFdCVkFGYzlUTlNTS01zOExtUEw4ZlZNcnFrRFduenBoc1F4OU04V0hEUXZBMWJOWStSdXNndXJ3eEQraTRhZ0NPRWlsVjVoRk5IMmRiakpMTnplWTlrU0hJWVdJTUFRb0FoTXppRjZvSUNSTENZTGt3NXNBMUFGM2dHQUk4RnVQdm9IS2x6c1cvdVQyNS8xaUVHUFZEeXpVUFhRamxydGdXQlNwdmxRMm9ybEdyMUg4WGtuWjV5SThXbGgyYnhwVzR4N3NkOFkrc25wanZmSmVCOXBRbjJabkFUOWdwN1I4d3AvanhUMG9YTU5Gc084Z3JtcXhLdHllZEVEb1FBdWRCeUFFdDJIZ3A3VUFzN1dzcmV0ZWhwZ1FHZ2JqbXBaZFQ4NWp2b29NdzBVZWZwcEIwblV2dzJaaEdBaHQzb1cyQzgzSWUzR0lqblhIMFJOZ25FNEZxL1dPNGJvVkp1UjlYa1YzNWhVQXFxdHEya2NONCtMNG9zdGNEQXBqQU1tZi9KZjZBeTlTSWFDRkNacmNnaWorcTVYTTZKcGVlVjRXMXdoWDJ0eFJIbVFSRjhrc0FBaGlrTU9LNGJlNG5ja2ZpMjNsNkpHdE9nd2dxVnZnSTB3cytCckJIRmNGRk5qdHVFcWdoV21wZ29VY3JFemQ3cXRJVmdYUUp2WnpISzA3QjU5TnVnVTZPcjd6VThPcVBLc25DcTZSUzUwZUZMUEpsV0Q3QnhUSTFNeGNQSGMxN2huQ2NEL0RsVjJ6WXpmWlNQYlM1YWl1NVpON3NMbXVvdFkxUmJ3Vjl1cUFKRktETFFzejJBbkpITThjTWowUFFxZHljd0JveVVZNDZOR2RIcWRmRlEwZTdJQjZ3dXVaZC84RDB4c3loK0tlR2MvRnI3Ym1pSGU1VmhlY2ZZSXFUSE9OQzgyNXpIdzBGNEVhZUhTQXFrTVdEbGVGZGh5NkNDL21IbllXT1RnSVp4bVliS3Nqc0ZCbkhLNFJ5L21HYkFZOVFDVlBuWEJSVHBTc25xZ0hSRC9laTluYnFXMzd3TG5JdVVTSk5HK2pyemFjZ3RpWHpJUTJmK2tQeEF6UU9UTnA5L1hKZ2FJaDQ0ZGFqdWVhV2R3aklMbTIwTXQzSXRzMlhET1h1OUhJZkJMMFdIUjAvNHRjTWlpUTNpWXd6aFdyT1lNZHBuR2g0amRmbkpBenZjelV2eDFNUk1EckgzYXVsTkx5Z094R2NiQmpsV2I4RHZNcHZCRDdUaXZJZmI5Ly9mNDdIK2pUeWw0aDRRbjU4U2EvMVZXWVY5aWttMzg2WG5UY3VETmtUd2JKajZuTzhjWFBSUGcrVnAvU1ExOXdPTy9iT1R5M21zbHYzTGo1ZC92ejhhdGNwNXI5cllXMFFJQTcyQU04WEdNMXhTS1FZem5OYUI5TldVZmE5OWNFcS9lTVhoUThLQlNTUlFqeTUzV0dUSFlsSUd0dEJ5K2J4QlZrV3p5WEVPcmFHaUdpYUZsZjBzb1k1QXdmMXZwR1Vyalh3Uy9VczczTlNRR0MvTlluSEtiRHdqVENvQTFZbzVFTjdkclpEd1RyYUw4WUxPRmVJTGx0UndCVEVJWXdCTUpValJ0bUV1N3Zib0hrdkZTU2xRcjhndmE5L25CSkhETXhPbUhkRENTZml4YzRvMzRCL2pSWkl0VVZPdkFjaWovcUYwOFZQbUhsdDdxOW4wUE9sL3QrNlNpK2NqZ0xhd0MzVWJWMGR6QnZzS2xGOU90V3o2WFV3ZnpiOXNQRksyZmNEZGFOckxrR3YzQ2lCOWJVSm1HRGxwazIxNmQxY1FWYkY1anpHWGpFdXhpajdvQTNyNkJQSTlsb2o2NGZLcWdkZ05FRHZJQ3hHb0lRN1RraURIaTFEaFRBUTRJN1dzZ1pETkJwK0NQTUVCSnJJejNGTnBHZEVHMkZkbnVEUGMzamxTTXZPdzdoenlmL3dmNDIrR0hudDhidDU1L2x4NmMzQVM4dkEzV0ZiSnM1SHM1K1B2NzFXWVMwY0xqYjBmNTkybGJuWXdmTkhZc2Y4WWkvV3RvT0wxbE82ZmxqbGlFWlQrbEgxQnRDYkZrVUpxT3VPQ0ZuUHB5Yjczd3k0OEVzZjhtMkp4MHZKdHlBWDFlV3lZbUJnNFlReTc4ZUJrV01qS0xRVmVHZzZFMzcwNW41Wks3anhvTDJoM09mbGxyMnlGTHBWbHhWVms5aDkvU2JUeGE4bUxEVERvcEtKVnlzeXZDSTVUaTI1SStrUWZOSndtMkVwR3ZRKyszcnlIWERUYStJVTljMW1ZY2JudjdRT09aNUdDc0hXUGZTRVhLY0x1NGVJb3dtTnA3TUxyWk5wNGhNN1V2TnBKMVdJc3VqamFTTHpTcU1uV1poTm1Pd1k0NDFnVGJuYUdNU0w3aHlJL3laZWlHZXk2Y0hpSzNaY2dTZjQ0Vko4bE9JZWFJb2cySkszVkhqUEdGUWZJNXh3Wm05RnJBWVpBQUhFS0ZzRzZIUVl0MElpdGZmNWNlWEFCK1NhZ0NReklPcTc1b09vOEFPY3gyUmo3Y1RZckFkWU5nZGFMdnlvdC9jVXI1VXU2RzFOQ0MzTWpNdXJvSmtBUFMvdUh4ZXN1N1M3S0tyZHV2a25Fc01nV3p2SHVRU0VPS2lJODhlUFdoZTByNTlYZGVham81eTU5cDduYWtkcTlkOHJKMTNIUWhjSDNTdXU5ZHA3bGl6cG1OZDE5Ly81MTc1dStKUG1hSk5wK0tYNWM3MnNRWWxKdFRWSmN4eTROYkVvTzFhME0zN2xxWkoreGEvV2hHZ1FwZTZWZlVOK29aNkhiYkFWZmVVaVRKWlpsV2NQVkNQdjFIckZPYndSNC9pNXdqNzFkWTJlTUIzZEE3ZktheVZCUWdpYTJvb2dSTTQ5Vkx4VWoydVpmVkVBNVhnNXMxVXN6Y0E4MzBQeHZZb0x5ZXZtbnJWNUx0RW1pVmJGMXNjRTFNY2wyeXBXTTJkM3pGd3g0NlZ1cTV2cm5zM0JyRm1yY09WNFBRUmtERVFsQnRXcldwNmNQL0JnMFpRbFR0dDJvZTllK2ZNL1ErcWVWOVVYTjY5bnpRSllITlZ6aGhuVzNTYkozYStRc3ZGdUs4Q2Q4cTM5L3ZFdWF4dDB3SnB1Y3JKeFR6Ym90dWRXZEdsNWJLN3RlMU83NjQyUG5qdzhFRTFJUStyNFo1VUR4K0NMZU1QcEtGZHYvVEJ6WHNzb1duQndXbWhsZ01FMm5kYXNDWDBnT0NJMldDS2RidE4wUnZNWWszNlY0MjRMZmIrbWk3V3RPVThCM2ZZSk80YTRScEg1bldzV2xpTlhYWTQyb1Zod3E1dFBzRjI1YkhMSkpuQVFWMkNvejNYVVJwUW5rUEhYU0EveXBmN052a2FwazU5SGZNajJrMzh6cE5HWXpQTlFIczlvWUpHOTV2RDdKSm16YTVsbEljdzFycjJTSWQyWGRZeVh0VFN0VXdnTWwxTVBRVXhjdWZHVFExRE9UcmpzSWgrcXJ5OGNGZmtvMzdoQWhkc3FYUjRCS2pQdXVlbENlTURZelp1eEVUWU9hbXk5eDU3TDVQVVlKQ2FlblVTYUpUTUlETjFRcFFaQlVwR3lYd21OZll5alhkV0NGTUdPaHc2aDlFMDBEemM2RWgwc0ZJS1I0cmMzRkFOSGw4cGM1dG1uVDdnK0hJUUNGK21iQ2NWamsxUWh5NEtOYW5Ia2d2YmZQOXNTcVJ2VGE4eTdFOGF0OHRuMHgvZlJ6NlVUVDRXS3ptVTM5c29JZTd0N21vS0tlY2RXSDdUMVlTRGZoVWN3OVBZb0NNOVRLYTV3UlRYbWdqYTk3eUJPVWN6WXdhNDZ2amQ1Umx4ZzBtMVZxSmo3cGxGUDA3RnlpRjBYMUV4RWFVcm1uMW1ESyszZUF6NTdlcERKdlF6bk1HQWZIcnJPOWxlMWpsVzlQbWw2dnZtMUxoTjMxN1ZZMldiQWVudDkrZ083cFdCL1BFUVhZd1A4dVdJa2tQY0NIaVlydlVrSURRMFZzWWFHbUUwS29wbTQ3UmFnVWdJSElWYmNZaEdpZUZnSERFTWdmS3BobEZNb0ZLYUFJUkJFb21SMFZ1Qjh1SGVHQXZuVDhCQk1FQmh0KzBHREphRWVvU0dNNFJLVkFQTHd5QUlCN3NSOGZGRHd5Ri9ETVhjWUZTZ1U0V0pjOVc1dm9EZ05zWlhXcFZlbmQ1Zml1U0F5ZFEvZ3FkUEJnUDN0V0c4NGo3OHlIallTVy8wYnhXMytqZCtKdTNGOWpJV3ZpTzVaRVlkZ1RRTDgrRllPSmdWSXliM1lvOW1rMVhQQ0dpMXBBb2xQRk5SU1dleHZmUjlkVU55NUhRc25oM3ZRZmZ3WS9zNTJCWTJWZktDNElFd2dqaUJwTW0wVG5LTld4RDdEUVdhc2RJNGYyNElpdVQ3eG9aZzFNbm5NMlVVUnJXa3diK0tYa3pvSktLaDRFMG5nemtxSVVmZFo1enBhdzdhUVc0c011OFEvaS82S1BLOHA0ZzRFSDRRTzNkcndwQ0VuQUZQeVBWbG1sSitxVlpRMUY4ME12dmE3cFpmSEI3Rnc1ZWJiaEpWNlhXWE0yYTFGR1ZPSG5OaWFDNTNkVnRFRlJRMUNzVzVqQ3FrRjRWRVpRVVBvVVBteEdLbFZwdEJtZ04wYUdIcnVpbDlSdFhISVhvTm5ieCtTazlUZ3dnWlVuZmFxSGdjallvRlNFdmZzT2lQcmhZY24yWUFBL2J2TEp3NFlqeEV2TG1xZUFydVZ2aXdQUTJqTHZXUC9SNlpsQ25pQ3pBNnc1TkRKVk1rV1lhVy9GSG00TkVMVFVCNk5MRGtTRWxUR2ovdHA0bC9uaCs1eUxtNzIyeU9CUFdSRVpQcTQrdFQ2dFgxQVhpNXJTRmpuYXY2amhXOXZoWUVGQ2NnSzhjMWVUVTlTWUVtd3J5YWZ2MXFXdjdiZ0RjYmE4ZmNMcWZwM1BWaDFtTnRGK2ltVUF5RTRNMGlFVnFZMFFTenNDUnlCc093NjVDNWVlSll3NUJMOXp4SVptUExpQzFiajlVSFBsNFB2Uk53bDR0dFhrM2F3WW14R2k2RTgzR1NNeEVRemRKbldMYnZQTmUxQVZjSndma0NLN3Z3b203RG85Y1ZPNjRlS3MwdnR6Y09MU0NTRVlJdG1jS2tRYkdTcEtJSmVDNTJvS2tqK2lzMUZiSTB0R01yN2s5dXVQbDRuTENpeUc1UURZeU45bEp3Nkt5dzFmTjRpZkZUQjAyZHYxSlJzRFJqVnY2V1U4UHlGa3dmTmU0VVBZazNrZFFDbzMzcnRRd2RJM0g4TU0xZ3RYcXdaaGhNNE9DQ3pTT0JCejJsR0EreWVSYS90TEYvcC9VOStIYnhmQTdIZEcyZXNldnU4ek5ubnQvdFhMUzVJK2F3ajU4WEh0bDhHTUZmSHFLVTIreHlKZi9hM0luWEJFcWIvRWRYR1J5RDV4NTUrL1puOStPZjAzZUxEUC9XdFBOOE5zZDA2SS9ScW43cHcyVkRBb09Wb1hyWmdLOGxranh4OXBRcDJlSTh5VGtDZ2J0L2NiWWs3NXhFZi9IWnZMNDk3dTcrL3ZueGp0UUZxOFpUUmJRclZDVVYwTHI2RlpxSTFpQlRxRW9hRUl1ZFFoTlIzL2xwY2VtUUcwSktLVUVSZUZJMTdBWlQ5VXRScEhsNkNWNVFDTHRnajJwSHJJQ0ZaT1A5czNQbG1BUHpVb3NOZURIS21jTGZhY3EwMzBLbXNFY1BYejkxTnkrQzF4M24xL2JZc0Ixcm9rZlFtN0ROTDAvV1BPTjZIYTliN2ZlS3M0Q3NXTVRhaE9jZW5PQlM5Tkkwa0NPbk1XZmhlR3VtajFSR2ljZm5FWHdId0FRY2JiUTVIblBqcCtQNWVYUThqajdNWmhGSXJKbkxJNWJmSExMY1l6bWdSeDZORHE4MFVlanlVRkVheUZhSHBvZUVwTHNNU0hDK09lUkFubVJQS1VSTnVXVWFubzZma3AwU21CZ1lFQ0VwbTBEQXEzTU96RTdSOFRXODNETFV0SWUvVnIyV0R5SUtRaVE2ZjcreHp6eEdpYzJISFBnNVBCdnI1NjlMMFpscVZHMENWWVo2eVprSGRIK2RXWmU0WnVPNmF5cEJtNnJHcE90OEVkY1dSK2x4ZDduM0FQYmU0SGtMUDJEWHNmc0xoczc0NWkrMDU0WnRNdVRhaFlaVFFjVjRmZ0hpUWp5cWJPMVhnWi9sSm5MTEdOZ25GV05kK0orSTQ1aGF2UnpaZmhZOE1jOFd3UnFJbHFJSlI1bFIyejcvaCtWUXpSQUFveE80TUFMUDNnclJRY2hRa091NlozNDBjZDNVcWJTdHRBVlR4MjAraktNdkZCYjBCYjNqLy81ZDNLZkxCazJqNlliR0xid0t2RDdvaDhVbzAwdWxlcG5Sa2hoc0dQazN2d2hkWjhMOHZ5T0REWWtXNUNUVjY2VkdHVkRNS2FsSXE3aVh1Z3k5ZURHVjF5NnJwY1Jpd1h0Wm5xZnUxRWc2SkdnbW1oYmVtR3REN0VLdFZtZ1BpVmNQU2pPaUpXakh4R3BNV3hQR2h3anRXcTA5c3IxbzlkSGFWTHlhcmtaMVkxY05UNFVON21OdFVQYU1PMGtGNHdxU1B0NFI5STZPekMrSXFpRFFVeG5kVzNBSHJIclpnOXArU1ZHaU5PaHFlMUZhNlIwczkxNEVSQWdqUHovaWNJSjUrZzZTb3BtNUJNZlpPajZ2dDB4VFR3cXZaMUJ3dk1WVEt4UzlxUGVyOEpJeXBCVEJKdWNiQkd4NUVTR2dLUGZSY21vR1pRc2w5QWxmMFBUWEhKUW85and6MHg1SHZJUm1YcFJDK042Lzd1d3M2Z3ZZREZ4VHFETmpJK0J6QUp6RHhiT1hZWHNnSXF3MGNEVUowMjZoYTdGQXJtVFNUMm1DUXE5b1FyRXFWNVJOSHBPcFRPTGFxcXV6dkJNVmpoaTVKY0paQ2RPeHhUYzRQY0hadWJOZmJMSWdPcG1oRjFkSHQ5c3Y1YlBkRFNYQ1ErR0lwRUFFdm5lSFpvVFFGNkVSc1ZrSW1rVHBROUN3RXdKSzRZWlUwY0x6b1dtc1pFNTZRV2hJUmtiSVRYa3ZLV1NiRUJlOVo4YjYvWExmQXZubHJ5Z3pMVTRmRko0OExvbUN5UFBFUDk3U0NnaWRoQlpDRzU1V1FMMmVKK2JqS0VuSjQ4S0Q5R1pqOHRVNkNWYUY0dHU2MEVud05ObUQ2cHVjRkxVdVUraVpVVHZXUFMrTW1qZDhZS25ubm1wQlVsUXlIV1VrYVpVRldmSnlZM1BLdU9xRlNaSEoyUGxGWjNNT3FjRjZibWV4dmlubHpieTk2dXhHZ0gzUFRwNHNLZE13TldVbFhaSXVwL001bzEzU3puaFQ2T3lTT0NSZHl6cWVPMGs2ZVZJRlI4Mm9OL3JpMTRDbjkydTZQaVAxK3EvR2FMRmlrbnhQOUczK01xbmM3ZEZiOG9YNnBlZGdkcnBYbm4vTTFzUnpZbjhWLzdEK25pRHZIZnM5bThCcVB2YXhzZ2lBVmVnMWw3a2luZUhoemtqWFl3SWg1OFhwa2g4TEpheWoxR2EzMlJiL3R2OEdPcWVNZlZQaGtlQnVOQlh1Nkx6RVNCYlFvUkJ1akw4U0xYVE5RUENpRkxLZG1Yam1jTitXZVRNVHBsOStoM3FsRnErZWVPVG84ZVlnZUJINHI0aGFyaXBhc3RvMkpESE93b1h4VkJmSlRFTVkwV0lEM25KODU3MnVpMjZ0Z09FNkpuNXlLcnBrdlBqb1QwdUxGWDEycUhSRXViMTFXRG1KZ2lObXBsSlpOSG9zSjZkeUF0NVQ4YUI5ZnZTM3V2NlFvM0VkZmNmOWpwWlhqOFlySnhYWmpjYUJxZEhlU2k2RHJkcmRLa2l4VEt1Yk5uK0hvbUN6YTFiWjFwdGpoNjZmTVdyMkczcXFZREo1RVVSMzdqUXdUYXlVa3FPUGEwbGZ2b05ubTJzQ2FmWDNoSHRkTDJkZk9rQjFEMUhqakdnZEV2QUNDNVhIN1NWeWRzcThRblRFRHIrTDRzand3V0Uyd1hYNTFSQVZsZW85UXJQREUyTmlRNnd3YTZDV09DdkNIMXJINFVTWXcwZ251WUxnWVpLUSt2NTN3VUZidUxwTmJpWU1wdXFyMlFpdHA0ZnNSaDdSZnpiODNWYi9WMHdIdkp6NElNZGhGc0hYcTNmRFpUMlRtMGgwbkxRUTF1M0hSNWJtTzBGZVZxd2R5SjBCRjVDNWRjYkRDeW8rWWpiQ1Y1a0NaQWh6QnRvVE54cnhxMWduRVRuZmpIaGJFMnpqdVc3NEw3NHpBNS9XbXIzOVBHSy9FU25JU3dEa2twNGNHUGNpOXR3Tm5QcVlEY0FBekF6Mm9aY2xsRG4vcGRGNGtiQ0E1WXU5elBjTVFHVXZZWTE4OW5oWlg3Q2tYU1lYNTllM3hIOTY2MXJ2emN4ZUQyZnkrNUM2QWlBWEpBRTA1QUlnUnpZUTVFLy9GempoLy80QVFSbm5iOGNtd2dmZGdUUjZCTEpxVDBBQlByVVhRQURTMmdjSUJDRUZuNEFCY2dBQ0lCd0pRSUFHaGt4b09MQ09SZ0tiYUZ4Z1MyMDN3QVlyYXVNQkRleXBUUWFaNE5UcFVJQUU4dU8zR2d4VEx0RTNFU1F4UEdmMGc1SURVekhzRFlTSDhZaUVBb3EybUhaRm52dVJxaXVjY0YwOE1Dbkd5RVVTL2tXanZVbzFYZlg3VHZiQjlRelhTNjBHdzVSTDlFMEVrYzhocC81QnlURTdPN2hpMkJ1VTA0K1lWT29IUlN0TnU1VnpudnVSWnBJckZxN0NkZkdneHlxaUdDTyt4MGt1LzZLSlNhL1NrTk5WUDF1U1U4VzltazMxME1UMGpMbW1lYmRwMElacHNkcnNmOFZ6dXJsN2VQcG45azlma2hWVjB3M1RzaDNYODRNd2lwTTB5NHV5cXB1MjY0ZHhtcGQxMjQvenVwLzMrLzFaMUZMMktMWDFNZGMrOS8wb1N6Z1l3dzNwS2xoN2VCUEJ6QjRrV09qR0NuSmdRR3lKT2Z6aG5ZRGZNSkFiaU91bVFqUGJXYW5HTmNTNCtaN0tYSmpXREtkdWU4a1ZEYkloMTV3NDcxcHU2WGF6Titzb3dyS0Jpd1JrdHh5aW5kYm1kT2hDakdqdlZOQjFtWnQyelFXeUc0NmxpdHpXZkhDNjVRVzZOL2E4L25vYWs0M2dpUVhYQWpuZWplalVzTGdXTjhPbHQzTThKaTdSY0YwaldkREFsSThTTkIvd3NsSlZZaXRCY1QxQlZseE5nVGFUWUIyYWV2OWwwanRVQ0hFM2Q4Q0hKc1pUcWVpUTNvS3Y5RkpFdDc1YVdpRnorZUJ4NHoxbUs2UU5RZGY2NGFiYzIvZEVpN05lZDBQWXpGQ1BNcExTYTRQM0M2aFR4THlWVVRXUXo1dTVZaWwydjZXTnNnU0lHdzFGOVdkNnJRV2hnd21MMVlid3BsRmw4aTBBZ3pXSXNtNUVNdzlFMEJrcm9lelBIYTlTbTB0YXQ1eXBhMjhtUHR3SFwiKSBmb3JtYXQoXCJ3b2ZmMlwiKTtcbn1cblxuLnd0aWNvbnMge1xuXHRsaW5lLWhlaWdodDogMTtcbn1cblxuLnd0aWNvbnM6YmVmb3JlIHtcblx0Zm9udC1mYW1pbHk6IHd0aWNvbnMgIWltcG9ydGFudDtcblx0Zm9udC1zdHlsZTogbm9ybWFsO1xuXHRmb250LXdlaWdodDogbm9ybWFsICFpbXBvcnRhbnQ7XG5cdHZlcnRpY2FsLWFsaWduOiB0b3A7XG59XG5cbi53dGljb24tYWNjb3VudDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwMVwiO1xufVxuLnd0aWNvbi1hZGQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMDJcIjtcbn1cbi53dGljb24tQmxhY2tGcmlkYXlTdGFyOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTAzXCI7XG59XG4ud3RpY29uLWNhcmRSZXNpemVEcmFnOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTA0XCI7XG59XG4ud3RpY29uLWNhc3VhbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwNVwiO1xufVxuLnd0aWNvbi1jaGVjazpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwNlwiO1xufVxuLnd0aWNvbi1jaGVja1NtYWxsOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTA3XCI7XG59XG4ud3RpY29uLWNoZXZyb246YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMDhcIjtcbn1cbi53dGljb24tY29weTpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwOVwiO1xufVxuLnd0aWNvbi1jb3B5U21hbGw6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMGFcIjtcbn1cbi53dGljb24tZGlzbWlzczpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwYlwiO1xufVxuLnd0aWNvbi1kb3duQ2hldnJvbjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwY1wiO1xufVxuLnd0aWNvbi1lcnJvcjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwZFwiO1xufVxuLnd0aWNvbi1leHBhbmQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMGVcIjtcbn1cbi53dGljb24tZmVlZGJhY2s6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMGZcIjtcbn1cbi53dGljb24tZmlsbGVkRG93bkFycm93OmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTEwXCI7XG59XG4ud3RpY29uLWZpbmQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTFcIjtcbn1cbi53dGljb24tZm9ybWFsOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTEyXCI7XG59XG4ud3RpY29uLWdpZnQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTNcIjtcbn1cbi53dGljb24tZ3JheUxvZ286YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTRcIjtcbn1cbi53dGljb24tZ3JheVc6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTVcIjtcbn1cbi53dGljb24taWdub3JlOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTE2XCI7XG59XG4ud3RpY29uLWluZm86YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTdcIjtcbn1cbi53dGljb24tbGVmdENoZXZyb246YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMThcIjtcbn1cbi53dGljb24tbG9nbzpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExOVwiO1xufVxuLnd0aWNvbi1sb3ZlOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTFhXCI7XG59XG4ud3RpY29uLW5vUmVjb21tZW5kYXRpb25zOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTFiXCI7XG59XG4ud3RpY29uLXBhcmFncmFwaFJld3JpdGU6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMWNcIjtcbn1cbi53dGljb24tcGFzdGU6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMWRcIjtcbn1cbi53dGljb24tcGluOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTFlXCI7XG59XG4ud3RpY29uLXByZW1pdW06YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMWZcIjtcbn1cbi53dGljb24tcHJlbWl1bURldGFpbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyMFwiO1xufVxuLnd0aWNvbi1wcmVtaXVtRnVsbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyMVwiO1xufVxuLnd0aWNvbi1yZWNvbW1lbmRhdGlvbkxpZ2h0OmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTIyXCI7XG59XG4ud3RpY29uLXJlY29tbWVuZGF0aW9uTGlnaHRDYXJkOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTIzXCI7XG59XG4ud3RpY29uLXJlY29tbWVuZGF0aW9uTGlnaHROb1N1Z2dlc3Rpb25zOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTI0XCI7XG59XG4ud3RpY29uLXJlZmluZTpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyNVwiO1xufVxuLnd0aWNvbi1yZXdyaXRlOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTI2XCI7XG59XG4ud3RpY29uLXJpZ2h0Q2hldnJvbjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyN1wiO1xufVxuLnd0aWNvbi1yb2NrZXQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMjhcIjtcbn1cbi53dGljb24tc2VudGVuY2VFeGFtcGxlczpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyOVwiO1xufVxuLnd0aWNvbi1zZXR0aW5nczpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyYVwiO1xufVxuLnd0aWNvbi1zaG9ydGVuOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTJiXCI7XG59XG4ud3RpY29uLXR1dG9yaWFsOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTJjXCI7XG59XG4ud3RpY29uLXVubG9jazpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyZFwiO1xufVxuLnd0aWNvbi13YXJuOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTJlXCI7XG59XG4ud3RpY29uLVdvcmR0dW5lQnV0dG9uOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTJmXCI7XG59XG4ud3RpY29uLXg6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMzBcIjtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><link
+            rel="stylesheet"
+            href="chrome-extension://mhnlakgilnojmhinhkckjpncpbhabphi/content.css"><style
+            id="_goober"> .go1475592160{height:0;}.go1671063245{height:auto;}.go1888806478{display:flex;flex-wrap:wrap;flex-grow:1;}@media (min-width:600px){.go1888806478{flex-grow:initial;min-width:288px;}}.go167266335{background-color:#313131;font-size:0.875rem;line-height:1.43;letter-spacing:0.01071em;color:#fff;align-items:center;padding:6px 16px;border-radius:4px;box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);}.go3162094071{padding-left:20px;}.go3844575157{background-color:#313131;}.go1725278324{background-color:#43a047;}.go3651055292{background-color:#d32f2f;}.go4215275574{background-color:#ff9800;}.go1930647212{background-color:#2196f3;}.go946087465{display:flex;align-items:center;padding:8px 0;}.go703367398{display:flex;align-items:center;margin-left:auto;padding-left:16px;margin-right:-8px;}.go3963613292{width:100%;position:relative;transform:translateX(0);top:0;right:0;bottom:0;left:0;min-width:288px;}.go1141946668{box-sizing:border-box;display:flex;max-height:100%;position:fixed;z-index:1400;height:auto;width:auto;transition:top 300ms ease 0ms,right 300ms ease 0ms,bottom 300ms ease 0ms,left 300ms ease 0ms,max-width 300ms ease 0ms;pointer-events:none;max-width:calc(100% - 40px);}.go1141946668 .notistack-CollapseWrapper{padding:6px 0px;transition:padding 300ms ease 0ms;}@media (max-width:599.95px){.go1141946668{width:100%;max-width:calc(100% - 32px);}}.go3868796639 .notistack-CollapseWrapper{padding:2px 0px;}.go3118922589{top:14px;flex-direction:column;}.go1453831412{bottom:14px;flex-direction:column-reverse;}.go4027089540{left:20px;}@media (min-width:600px){.go4027089540{align-items:flex-start;}}@media (max-width:599.95px){.go4027089540{left:16px;}}.go2989568495{right:20px;}@media (min-width:600px){.go2989568495{align-items:flex-end;}}@media (max-width:599.95px){.go2989568495{right:16px;}}.go4034260886{left:50%;transform:translateX(-50%);}@media (min-width:600px){.go4034260886{align-items:center;}}</style></head>
+
+    <body class="no-touch" data-new-gr-c-s-check-loaded="14.1153.0"
+        data-gr-ext-installed style="padding-right: 17px; overflow: hidden;">
+        <div id="app" class="App affix App--index" aria-hidden="true"
+            style="min-height: 730px;">
+
+            <div id="app-navigation" class="App-navigation"><div
+                    class="Navigation ButtonGroup App-backControl"><button
+                        class="Button Button--icon Navigation-drawer hasIcon"
+                        type="button" aria-label="Open Navigation Drawer"><i
+                            aria-hidden="true"
+                            class="icon fas fa-bars Button-icon"></i><span
+                            class="Button-label"></span></button></div></div>
+
+            <div id="drawer" class="App-drawer">
+
+                <header id="header" class="App-header navbar-fixed-top">
+                    <div id="header-navigation" class="Header-navigation"><div
+                            class="Navigation ButtonGroup"></div></div>
+                    <div class="container">
+                        <div class="Header-title">
+                            <a href="https://demo.flarum.site" id="home-link">
+                                <img
+                                    src="https://demo.flarum.site/assets/logo-jjrf3k9u.png"
+                                    alt="Flarum/demo" class="Header-logo">
+                            </a>
+                        </div>
+                        <div id="header-primary" class="Header-primary"><ul
+                                class="Header-controls"></ul></div>
+                        <div id="header-secondary" class="Header-secondary"><ul
+                                class="Header-controls"><li
+                                    class="item-search"><div role="search"
+                                        aria-label="Search Forum"
+                                        class="Search"><div
+                                            class="Search-input"><input
+                                                aria-label="Search Forum"
+                                                class="FormControl"
+                                                type="search"
+                                                placeholder="Search Forum"></div><ul
+                                            class="Dropdown-menu Search-results"
+                                            aria-hidden
+                                            style="max-height: 672px;"></ul></div></li><li
+                                    class="item-signUp"><button
+                                        class="Button Button--link"
+                                        type="button"><span
+                                            class="Button-label">Sign
+                                            Up</span></button></li><li
+                                    class="item-logIn"><button
+                                        class="Button Button--link"
+                                        type="button"><span
+                                            class="Button-label">Log+
+                                            In</span></button></li></ul></div>
+                    </div>
+                </header>
+
+            </div>
+
+            <main class="App-content">
+                <div id="content"><div class="IndexPage"><div
+                            class="container"><div class="sideNavContainer"><nav
+                                    class="IndexPage-nav sideNav"><ul><li
+                                            class="item-newDiscussion App-primaryControl"><button
+                                                class="Button Button--primary IndexPage-newDiscussion hasIcon"
+                                                type="button"
+                                                itemclassname="App-primaryControl"><i
+                                                    aria-hidden="true"
+                                                    class="icon fas fa-edit Button-icon"></i><span
+                                                    class="Button-label">Start a
+                                                    Discussion</span></button></li><li
+                                            class="item-nav"><div
+                                                class="ButtonGroup Dropdown dropdown App-titleControl Dropdown--select itemCount4"><button
+                                                    class="Dropdown-toggle Button"
+                                                    aria-haspopup="menu"
+                                                    aria-label="Toggle navigation dropdown menu"
+                                                    data-toggle="dropdown"><span
+                                                        class="Button-label">All
+                                                        Discussions</span><i
+                                                        aria-hidden="true"
+                                                        class="icon fas fa-sort Button-caret"></i></button><ul
+                                                    class="Dropdown-menu dropdown-menu "><li
+                                                        class="item-allDiscussions active"><a
+                                                            class="hasIcon"
+                                                            href="/"
+                                                            active="true"><i
+                                                                aria-hidden="true"
+                                                                class="icon far fa-comments Button-icon"></i><span
+                                                                class="Button-label">All
+                                                                Discussions</span></a></li><li
+                                                        class="item-tags"><a
+                                                            class="hasIcon"
+                                                            href="/tags"
+                                                            active="false"><i
+                                                                aria-hidden="true"
+                                                                class="icon fas fa-th-large Button-icon"></i><span
+                                                                class="Button-label">Tags</span></a></li><li
+                                                        class="Dropdown-separator"></li><li
+                                                        class="item-tag26"><a
+                                                            class="TagLinkButton hasIcon"
+                                                            href="/t/new-ventures"
+                                                            style><span
+                                                                class="Button-icon icon TagIcon"
+                                                                style></span><span
+                                                                class="Button-label">New
+                                                                Ventures</span></a></li></ul></div></li></ul></nav><div
+                                    class="IndexPage-results sideNavOffset"><div
+                                        class="IndexPage-toolbar"><ul
+                                            class="IndexPage-toolbar-view"><li
+                                                class="item-sort"><div
+                                                    class="ButtonGroup Dropdown dropdown  itemCount4"><button
+                                                        class="Dropdown-toggle Button"
+                                                        aria-haspopup="menu"
+                                                        aria-label="Change discussion list sorting"
+                                                        data-toggle="dropdown"><span
+                                                            class="Button-label">Latest</span><i
+                                                            aria-hidden="true"
+                                                            class="icon fas fa-caret-down Button-caret"></i></button><ul
+                                                        class="Dropdown-menu dropdown-menu "><li
+                                                            class><button
+                                                                class="hasIcon"
+                                                                type="button"
+                                                                active><i
+                                                                    aria-hidden="true"
+                                                                    class="icon fas fa-check Button-icon"></i><span
+                                                                    class="Button-label">Latest</span></button></li><li
+                                                            class><button
+                                                                class="hasIcon"
+                                                                type="button"><i
+                                                                    aria-hidden="true"
+                                                                    class="icon Button-icon"></i><span
+                                                                    class="Button-label">Top</span></button></li><li
+                                                            class><button
+                                                                class="hasIcon"
+                                                                type="button"><i
+                                                                    aria-hidden="true"
+                                                                    class="icon Button-icon"></i><span
+                                                                    class="Button-label">Newest</span></button></li><li
+                                                            class><button
+                                                                class="hasIcon"
+                                                                type="button"><i
+                                                                    aria-hidden="true"
+                                                                    class="icon Button-icon"></i><span
+                                                                    class="Button-label">Oldest</span></button></li></ul></div></li></ul><ul
+                                            class="IndexPage-toolbar-action"><li
+                                                class="item-refresh"><button
+                                                    class="Button Button--icon hasIcon"
+                                                    type="button"
+                                                    aria-label="Refresh"><i
+                                                        aria-hidden="true"
+                                                        class="icon fas fa-sync Button-icon"></i><span
+                                                        class="Button-label"></span></button></li></ul></div><div
+                                        class="DiscussionList"><ul role="feed"
+                                            class="DiscussionList-discussions"><li
+                                                data-id="381" role="article"
+                                                aria-setsize="-1"
+                                                aria-posinset="0"><div
+                                                    class="DiscussionListItem"><span
+                                                        class="Slidable-underneath Slidable-underneath--left Slidable-underneath--elastic disabled"><i
+                                                            aria-hidden="true"
+                                                            class="icon fas fa-check"></i></span><div
+                                                        class="DiscussionListItem-content Slidable-content"><a
+                                                            class="DiscussionListItem-author"
+                                                            href="/u/admin"
+                                                            title
+                                                            aria-label="admin started a day ago"
+                                                            data-original-title="admin started a day ago"><span
+                                                                class="Avatar"
+                                                                loading="lazy"
+                                                                style="--avatar-bg: #a0e5cf;">A</span></a><ul
+                                                            class="DiscussionListItem-badges badges"></ul><a
+                                                            href="/d/381-test-discussion"
+                                                            class="DiscussionListItem-main"><h2
+                                                                class="DiscussionListItem-title">Test
+                                                                discussion</h2><ul
+                                                                class="DiscussionListItem-info"><li
+                                                                    class="item-tags"><span
+                                                                        class="TagsLabel"><span
+                                                                            class="TagLabel "
+                                                                            style><span
+                                                                                class="TagLabel-text"><span
+                                                                                    class="TagLabel-name">New
+                                                                                    Ventures</span></span></span></span></li><li
+                                                                    class="item-terminalPost"><span><i
+                                                                            aria-hidden="true"
+                                                                            class="icon fas fa-reply"></i>
+                                                                        <span
+                                                                            class="username">admin</span>
+                                                                        replied
+                                                                        <time
+                                                                            pubdate
+                                                                            datetime="2024-02-02T22:04:16+03:00"
+                                                                            title="Friday, February 2, 2024 10:04 PM"
+                                                                            data-humantime>3
+                                                                            hours
+                                                                            ago</time></span></li></ul></a><span
+                                                            class="DiscussionListItem-count"><span
+                                                                aria-hidden="true">4</span><span
+                                                                class="visually-hidden">4
+                                                                replies</span></span></div></div></li></ul><div
+                                            class="DiscussionList-loadMore"></div></div></div></div></div></div></div>
+
+                <div id="flarum-loading" style="display: none;">
+                    Loading...
+                </div>
+
+                <noscript>
+                    <div class="Alert">
+                        <div class="container">
+                            This site is best viewed in a modern browser with
+                            JavaScript enabled.
+                        </div>
+                    </div>
+                </noscript>
+
+                <div id="flarum-loading-error" style="display: none">
+                    <div class="Alert">
+                        <div class="container">
+                            Something went wrong while trying to load the full
+                            version of this site. Try hard-refreshing this page
+                            to fix the error.
+                        </div>
+                    </div>
+                </div>
+
+                <noscript id="flarum-content">
+                    <div class="container">
+                        <h1>All Discussions</h1>
+
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://demo.flarum.site/d/381-test-discussion">
+                                    Test discussion
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </noscript>
+
+                <div class="App-composer">
+                    <div class="container">
+                        <div id="composer"><div class="Composer "
+                                style="display: none; bottom: -300px; height: 300px;"><div
+                                    class="Composer-handle"
+                                    style="cursor: row-resize;"></div><ul
+                                    class="Composer-controls"><li
+                                        class="item-minimize App-backControl"><button
+                                            class="Button Button--icon Button--link hasIcon"
+                                            type="button" aria-label="Minimize"
+                                            itemclassname="App-backControl"><i
+                                                aria-hidden="true"
+                                                class="icon fas fa-minus minimize Button-icon"></i><span
+                                                class="Button-label"></span></button></li><li
+                                        class="item-fullScreen"><button
+                                            class="Button Button--icon Button--link hasIcon"
+                                            type="button"
+                                            aria-label="Full Screen"><i
+                                                aria-hidden="true"
+                                                class="icon fas fa-expand Button-icon"></i><span
+                                                class="Button-label"></span></button></li><li
+                                        class="item-close"><button
+                                            class="Button Button--icon Button--link hasIcon"
+                                            type="button" aria-label="Close"><i
+                                                aria-hidden="true"
+                                                class="icon fas fa-times Button-icon"></i><span
+                                                class="Button-label"></span></button></li></ul><div
+                                    class="Composer-content"></div></div></div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+
+        <div id="modal"><div class="ModalManager modal" data-modal-key="1"
+                data-modal-number="0" role="dialog" aria-modal="true"
+                style="--modal-number: 0;"><div
+                    class="Modal modal-dialog fade LogInModal Modal--small in"><div
+                        class="Modal-content"><div
+                            class="Modal-close App-backControl"><button
+                                class="Button Button--icon Button--link hasIcon"
+                                type="button" aria-label="Close"><i
+                                    aria-hidden="true"
+                                    class="icon fas fa-times Button-icon"></i><span
+                                    class="Button-label"></span></button></div><form><div
+                                class="Modal-header"><h3
+                                    class="App-titleControl App-titleControl--text">Log
+                                    In</h3></div><div class="Modal-body"><div
+                                    class="LogInButtons"></div><div
+                                    class="Form Form--centered"><div
+                                        class="Form-group"><input
+                                            class="FormControl"
+                                            name="identification" type="text"
+                                            placeholder="Username or Email"
+                                            aria-label="Username or Email"></div><div
+                                        class="Form-group"><input
+                                            class="FormControl" name="password"
+                                            type="password"
+                                            autocomplete="current-password"
+                                            placeholder="Password"
+                                            aria-label="Password"></div><div
+                                        class="Form-group"><div><label
+                                                class="checkbox"><input
+                                                    type="checkbox">Remember
+                                                Me</label></div></div><div
+                                        class="Form-group"><button
+                                            class="Button Button--primary Button--block"
+                                            type="submit"><span
+                                                class="Button-label">Log
+                                                In</span></button></div></div></div><div
+                                class="Modal-footer"><p
+                                    class="LogInModal-forgotPassword"><a>Forgot
+                                        password?</a></p><p
+                                    class="LogInModal-signUp">Don't have an
+                                    account? <a>Sign
+                                        Up</a></p></div></form></div></div><div
+                    class="ModalManager-invisibleBackdrop"></div></div><div
+                class="Modal-backdrop backdrop" style="--modal-count: 1;"
+                data-showing></div></div>
+        <div id="alerts"><div class="AlertManager"></div></div>
+
+        <script>
+        document.getElementById('flarum-loading').style.display = 'block';
+        var flarum = {extensions: {}};
+    </script>
+
+        <script
+            src="https://demo.flarum.site/assets/forum.js?v=8939365a"></script>
+        <script
+            src="https://demo.flarum.site/assets/forum-en.js?v=a50986b6"></script>
+
+        <script id="flarum-json-payload"
+            type="application/json">{"resources":[{"type":"forums","id":"1","attributes":{"title":"Flarum\/demo","description":"demo demo installation of Flarum","showLanguageSelector":true,"baseUrl":"https:\/\/demo.flarum.site","basePath":"","baseOrigin":"https:\/\/demo.flarum.site","debug":false,"apiUrl":"https:\/\/demo.flarum.site\/api","welcomeTitle":"Welcome to Flarum\/demo","welcomeMessage":"Using version \u003Ca href=\u0022https:\/\/github.com\/flarum\/core\/tree\/v1.8.3\u0022 target=\u0022_blank\u0022\u003Ev1.8.3\u003C\/a\u003E. It is regularly reset and updated. Last reset: 2023-11-12 17:12:32. No mail is sent. Do not publish any sensitive information.","themePrimaryColor":"#8f66db","themeSecondaryColor":"#e4e2e2","logoUrl":"https:\/\/demo.flarum.site\/assets\/logo-jjrf3k9u.png","faviconUrl":null,"headerHtml":null,"footerHtml":null,"allowSignUp":true,"defaultRoute":"\/all","canViewForum":true,"canStartDiscussion":false,"canSearchUsers":false,"canCreateAccessToken":false,"canModerateAccessTokens":false,"assetsBaseUrl":"https:\/\/demo.flarum.site\/assets","canViewFlags":false,"guidelinesUrl":null,"canBypassTagCounts":false,"minPrimaryTags":"1","maxPrimaryTags":"1","minSecondaryTags":"0","maxSecondaryTags":"3","displayNameDriver":"username","setNicknameOnRegistration":false,"randomizeUsernameOnRegistration":false,"allowUsernameMentionFormat":true},"relationships":{"groups":{"data":[{"type":"groups","id":"1"},{"type":"groups","id":"2"},{"type":"groups","id":"3"},{"type":"groups","id":"11"},{"type":"groups","id":"12"},{"type":"groups","id":"13"},{"type":"groups","id":"14"},{"type":"groups","id":"15"},{"type":"groups","id":"16"}]},"tags":{"data":[{"type":"tags","id":"26"}]}}},{"type":"groups","id":"1","attributes":{"nameSingular":"Admin","namePlural":"Admins","color":"#B72A2A","icon":"fas fa-wrench","isHidden":0}},{"type":"groups","id":"2","attributes":{"nameSingular":"Guest","namePlural":"Guests","color":null,"icon":null,"isHidden":0}},{"type":"groups","id":"3","attributes":{"nameSingular":"Member","namePlural":"Members","color":null,"icon":null,"isHidden":0}},{"type":"groups","id":"11","attributes":{"nameSingular":"Mod","namePlural":"Mods","color":"#7f3434","icon":"fas fa-shield-alt","isHidden":0}},{"type":"groups","id":"12","attributes":{"nameSingular":"Apprentice","namePlural":"Apprentices","color":"","icon":"","isHidden":0}},{"type":"groups","id":"13","attributes":{"nameSingular":"Verified","namePlural":"Verified","color":"#28c4d5","icon":"fas fa-check","isHidden":0}},{"type":"groups","id":"14","attributes":{"nameSingular":"Premium","namePlural":"Premium","color":"#f8ba12","icon":"fas fa-star","isHidden":0}},{"type":"groups","id":"15","attributes":{"nameSingular":"Newbies","namePlural":"Newbies","color":"#ad3e00","icon":"","isHidden":0}},{"type":"groups","id":"16","attributes":{"nameSingular":"Venture","namePlural":"Venture","color":"","icon":"","isHidden":0}},{"type":"tags","id":"26","attributes":{"name":"New Ventures","description":"","slug":"new-ventures","color":"","backgroundUrl":null,"backgroundMode":null,"icon":"","discussionCount":1,"position":5,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-02-02T19:04:16+00:00","canStartDiscussion":false,"canAddToDiscussion":false}}],"session":{"userId":0,"csrfToken":"6Xr7REvAskPo6P6iGVHjwZD8c79YaqdJpfEjecHe"},"locales":{"en":"Default"},"locale":"en","fof-sentry.scrub-emails":true,"apiDocument":{"links":{"first":"https:\/\/demo.flarum.site\/api\/discussions?sort=\u0026page%5Blimit%5D=20"},"data":[{"type":"discussions","id":"381","attributes":{"title":"Test discussion","slug":"381-test-discussion","commentCount":5,"participantCount":1,"createdAt":"2024-02-01T19:26:04+00:00","lastPostedAt":"2024-02-02T19:04:16+00:00","lastPostNumber":5,"canReply":false,"canRename":false,"canDelete":false,"canHide":false,"isApproved":true,"canTag":false,"subscription":null,"isSticky":false,"canSticky":false,"isLocked":false,"canLock":false},"relationships":{"user":{"data":{"type":"users","id":"1"}},"lastPostedUser":{"data":{"type":"users","id":"1"}},"tags":{"data":[{"type":"tags","id":"26"}]},"firstPost":{"data":{"type":"posts","id":"3601"}}}}],"included":[{"type":"users","id":"1","attributes":{"username":"admin","displayName":"admin","avatarUrl":null,"slug":"admin"}},{"type":"tags","id":"26","attributes":{"name":"New Ventures","description":"","slug":"new-ventures","color":"","backgroundUrl":null,"backgroundMode":null,"icon":"","discussionCount":1,"position":5,"defaultSort":null,"isChild":false,"isHidden":false,"lastPostedAt":"2024-02-02T19:04:16+00:00","canStartDiscussion":false,"canAddToDiscussion":false}},{"type":"posts","id":"3601","attributes":{"number":1,"createdAt":"2024-02-01T19:26:04+00:00","contentType":"comment","contentHtml":"\u003Cp\u003EI\u0027m having a test discussion. Hey, discuss.\u003C\/p\u003E ","renderFailed":false,"mentionedByCount":0}}]}}</script>
+
+        <script>
+        const data = JSON.parse(document.getElementById('flarum-json-payload').textContent);
+        document.getElementById('flarum-loading').style.display = 'none';
+
+        try {
+            flarum.core.app.load(data);
+            flarum.core.app.bootExtensions(flarum.extensions);
+            flarum.core.app.boot();
+        } catch (e) {
+            var error = document.getElementById('flarum-loading-error');
+            error.innerHTML += document.getElementById('flarum-content').textContent;
+            error.style.display = 'block';
+            throw e;
+        }
+    </script>
+
+        <script>
+                if (window.Sentry) {
+                    const client = Sentry.createClient({
+                        dsn: 'https://4bb354444aee4b4ca6e5f27758cf745e@sentry.io/1507332',
+                        environment: 'demo.flarum.site',
+                        scrubEmails: true,
+                        showFeedback: true,
+
+                        captureConsole: false,
+
+                        tracesSampleRate: 0,
+                        replaysSessionSampleRate: 0,
+                        replaysOnErrorSampleRate: 0,
+                    });
+
+                    Sentry.getCurrentHub().bindClient(client);
+                } else {
+                    console.error('Unable to initialize Sentry');
+                }
+            </script>
+
+        <use-chat-gpt-ai-content-menu
+            id="USE_CHAT_GPT_AI_ROOT_Context_Menu"></use-chat-gpt-ai-content-menu><use-chat-gpt-ai
+            id="USE_CHAT_GPT_AI_ROOT" data-version="2.5.4"
+            style="display: none;"></use-chat-gpt-ai><max-ai-minimum-app
+            id="USE_CHAT_GPT_AI_ROOT_Minimize_Container"
+            data-version="2.5.4"></max-ai-minimum-app><maxai-custom-element-85d214ff-ce7c-4608-bc86-c4f4fd6d5b98
+            id="MAXAI_SNACKBAR_ROOT"
+            style="color: rgb(255, 255, 255);"></maxai-custom-element-85d214ff-ce7c-4608-bc86-c4f4fd6d5b98></body><wordtune-read-extension></wordtune-read-extension><grammarly-desktop-integration
+        data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
