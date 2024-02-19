@@ -1,7 +1,8 @@
 # atm-management-system
 
-An ATM Management System written in C, using ncurses for the TUI and PostgreSQL for the Storage.
-
-
-### Full Description at [01-edu/public/atm-management-system](https://github.com/01-edu/public/tree/master/subjects/atm-management-system)
-
+## Prepare the database
+> Requires postgresql installed in path
+Run `setup.sh` to prepare everything
+```sh
+bash setup.sh
+```

@@ -20,12 +20,13 @@ bool asciiReader(char * _Nonnull buff, size_t buff_size);
 // converts `type` to  `AccountType` or `NULL`
 _Nullable AccountType get_accountType(const char * _Nonnull type);
 
-// convert a `u_int64_t` to a string, returns a `char[21]` or `NULL` and you should free it
-const char * _Nullable ullToChar(u_int64_t n);
+// convert a `unsigned long` to a string, returns a `char[21]` or `NULL` and you should free it
+const char * _Nullable ullToChar(unsigned long n);
 
 // inverse of ullToChar, -1 in errors
-u_int64_t charToUll(const char * _Nonnull s);
+unsigned long charToUll(const char * _Nonnull s);
 
 double charToDouble(const char * _Nonnull s);
 
+const char * _Nullable doubleToChar(double n);
 #endif

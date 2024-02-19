@@ -1,8 +1,10 @@
 #include <Headers/RandomHelpers.h>
 #include <stdlib.h>
 #include <string.h>
-
+# include <stdint.h>
 #define BUFF_SIZE 512
+
+
 
 long getFileSize(const char * _Nonnull path) {
     FILE *fp = fopen(path, "r");
@@ -66,9 +68,9 @@ _Nullable AccountType get_accountType(const char * _Nonnull type) {
 }
 
 
-const char * _Nullable ullToChar(u_int64_t n) {
+const char * _Nullable ullToChar(unsigned long n) {
     char *buffer = calloc(1, sizeof(char) * 21);  // Buffer to hold the string representation (max 20 digits + '\0')
-    int chars_written = snprintf(buffer, 20, "%llu", n);
+    int chars_written = snprintf(buffer, 20, "%lu", n);
     if ((unsigned long)chars_written >= 20 || chars_written < 0) {
         free(buffer);
         return NULL;
@@ -76,16 +78,26 @@ const char * _Nullable ullToChar(u_int64_t n) {
     return buffer;
 }
 
-u_int64_t charToUll(const char * _Nonnull s) {
+unsigned long charToUll(const char * _Nonnull s) {
     if (s == NULL || strlen(s) == 0) {
         return -1;
     }
     char *endptr;
-    u_int64_t result = strtoull(s, &endptr, 10);
+    unsigned long result = strtoull(s, &endptr, 10);
     if (*endptr != '\0') {
         return -1;
     }
     return result;
+}
+
+const char * _Nullable doubleToChar(double n) {
+    char *buffer = calloc(1, sizeof(char) * 20);
+    int chars_written = snprintf(buffer, 19, "%f", n);
+    if ((unsigned long)chars_written >= 19 || chars_written < 0) {
+        free(buffer);
+        return NULL;
+    }
+    return buffer;
 }
 
 double charToDouble(const char * _Nonnull s) {

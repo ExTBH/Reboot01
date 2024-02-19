@@ -21,7 +21,7 @@ CREATE TABLE Accounts (
     balance DOUBLE PRECISION NOT NULL DEFAULT 0,  -- Use DOUBLE PRECISION for floating-point values in PostgreSQL.
     country VARCHAR(19) NOT NULL,  -- Use CHAR(3) for fixed-length strings.
     phone VARCHAR(9) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE NO ACTION ON UPDATE NO ACTION
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE NO ACTION ON UPDATE NO ACTION,
     active BOOLEAN DEFAULT TRUE NOT NULL
 );
 
@@ -49,3 +49,12 @@ ALTER TABLE Users OWNER TO natheer;
 ALTER TABLE Accounts OWNER TO natheer;
 ALTER TABLE Accounts_Transfers OWNER TO natheer;
 ALTER TABLE Transactions OWNER TO natheer;
+
+-- add default users
+INSERT INTO Users (name, password) VALUES ('Alice', 'q1w2e3r4t5y6');
+INSERT INTO Users (name, password) VALUES ('Michel', 'q1w2e3r4t5y6');
+
+-- insert default accounts
+INSERT INTO Accounts (user_id, type, balance, country, phone) VALUES (0, 'savings',22432.52 , 'Africa', '291321234');
+INSERT INTO Accounts (user_id, type, balance, country, phone) VALUES (1, 'fixed01', 10023.230000, 'Portugal', '123543455');
+INSERT INTO Accounts (user_id, type, balance, country, phone) VALUES (1, 'saving', 12345.30, 'UK', '1234123');

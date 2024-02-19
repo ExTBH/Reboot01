@@ -1,96 +1,182 @@
-#include <ncurses.h>
-#include <menu.h>
+#include "Headers/ATM.h"
+#include "Headers/header.h"
+#include <Headers/databaseUtil.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-#define MAX_FIELD_SIZE 20
-
-typedef struct {
-    char username[MAX_FIELD_SIZE + 1];
-    char password[MAX_FIELD_SIZE + 1];
-} Credentials;
-
-void handle_resize(int signal) {
-    // Handle resizing logic if needed
-    // For simplicity, do nothing in this example
-}
-
-void initialize_ncurses() {
-    initscr();
-    cbreak();
-    noecho();
-    keypad(stdscr, TRUE);
-    start_color(); // Enable color if not already enabled
-    init_pair(1, COLOR_WHITE, COLOR_BLACK); // Define a color pair with white text on black background
-    bkgd(COLOR_PAIR(1)); // Set the background color to black
-}
-
-void draw_login_page() {
-    mvprintw(5, 5, "Username:");
-    mvprintw(6, 5, "Password:");
-    mvprintw(8, 5, "[Login]");
-    mvprintw(8, 15, "[Register]");
-}
-
-void draw_register_page() {
-    mvprintw(5, 5, "New Username:");
-    mvprintw(6, 5, "New Password:");
-    mvprintw(8, 5, "[Back]");
-    mvprintw(8, 15, "[Create Account]");
-}
-
-void draw_input_fields(Credentials *credentials, int y, int x) {
-    mvprintw(y, x, "%s", credentials->username);
-    mvprintw(y + 1, x, "%s", credentials->password);
-}
-
-void handle_input(char *field, int max_size, int y, int x) {
-    echo();
-    curs_set(1); // Show cursor
-    move(y, x);
-    getnstr(field, max_size);
-    curs_set(0); // Hide cursor
-    noecho();
-}
-
-int main() {
-    initialize_ncurses();
-
-    // Set up the signal handler for SIGWINCH
-    signal(SIGWINCH, handle_resize);
-
-    char *choices[] = {"Login", "Register"};
-    int num_choices = sizeof(choices) / sizeof(choices[0]);
-    MENU *my_menu = create_menu(choices, num_choices);
-
+void initMenu(struct User *u) {
+  int option;
+  system("clear");
+  printf("\n\n\t\t======= ATM =======\n");
+  printf("\n\t\t-->> Feel free to login / register :\n");
+  printf("\n\t\t[1]- login\n");
+  printf("\n\t\t[2]- register\n");
+  printf("\n\t\t[3]- exit\n");
+  printf("\n\n");
+  while (scanf("%d", &option) != 1 || option < 1 || option > 3) {
+    printf("Invalid input. Please enter a number between 1 and 3.\n");
+    // Clear input buffer
     int c;
-    Credentials credentials = {0}; // Initialize credentials struct with zeros
+    while ((c = getchar()) != '\n' && c != EOF) {
+      // Consume characters from input buffer until newline or EOF
+    }
+    // Prompt again for input
+    printf("Choose an option (1-3): ");
+  }
 
-    while ((c = getch()) != KEY_F(1)) {
-        switch (c) {
-            case KEY_DOWN:
-                menu_driver(my_menu, REQ_DOWN_ITEM);
-                break;
-            case KEY_UP:
-                menu_driver(my_menu, REQ_UP_ITEM);
-                break;
-            case 10: // Enter key
-                clear();
-                if (item_index(current_item(my_menu)) == 0) {
-                    draw_login_page();
-                    draw_input_fields(&credentials, 5, 15);
-                } else if (item_index(current_item(my_menu)) == 1) {
-                    draw_register_page();
-                    draw_input_fields(&credentials, 5, 20);
-                }
-                break;
-        }
+  switch (option) {
+  case 1:
+    loginMenu(u);
+    char inputPass[65];
+    enum ATMDBStatus status;
+    strncpy(inputPass, u->password, 64);
+
+    // userInfo = *u; // Copy the user information
+    status = get_user(u, false);
+
+    if (status != ATMDBStatusOK) {
+      // Handle error
+      // printf("Error retrieving user: %d\n", status);
+      printf("\nWrong password!! or User Name\n");
+      exit(EXIT_FAILURE);
+    }
+    // User retrieved successfully
+    if (strncmp(u->password, inputPass, 64) == 0) {
+      // strncmp(const char *, const char *, unsigned long)
+      printf("\n\nPassword Match!\n");
+    } else {
+      printf("\nWrong password!! or User Name\n");
+      exit(EXIT_FAILURE);
     }
 
-    // Clean up
-    
-    ITEM **my_items = menu_items(my_menu);
-    cleanup_menu(my_menu, my_items, num_choices);
-    endwin();
+    // printf("\t\t\t===== ID11 string %lu =====\n", u->id);
+    // exit(EXIT_FAILURE);
 
-    return 0;
+    break;
+  case 2:
+    // student TODO : add your **Registration** function
+    registerUser();
+    break;
+
+  case 3:
+    system("clear");
+    atmdb_close();
+    exit(EXIT_SUCCESS);
+    break;
+
+  default:
+    printf("Insert a valid operation!\n");
+    break;
+  }
+};
+
+void mainMenu(struct User u) {
+  int option;
+  system("clear");
+  printf("\n\n\t\t======= ATM =======\n\n");
+  printf("\n\t\t-->> Feel free to choose one of the options below <<--\n");
+  printf("\n\t\t[1]- Create a new account\n");
+  printf("\n\t\t[2]- Update account information\n");
+  printf("\n\t\t[3]- Check accounts\n");
+  printf("\n\t\t[4]- Check list of owned account\n");
+  printf("\n\t\t[5]- Make Transaction\n");
+  printf("\n\t\t[6]- Remove existing account\n");
+  printf("\n\t\t[7]- Transfer ownership\n");
+  printf("\n\t\t[8]- Exit\n");
+
+  //   scanf("%d", &option);
+  printf("\n\nChoose an option (1-8): ");
+  while (scanf("%d", &option) != 1 || option < 1 || option > 8) {
+    printf("Invalid input. Please enter a number between 1 and 8.\n");
+    // Clear input buffer
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) {
+      // Consume characters from input buffer until newline or EOF
+    }
+    // Prompt again for input
+    printf("Choose an option (1-8): ");
+  }
+
+  //   flushInputBuffer();
+
+  switch (option) {
+  case 1:
+    createNewAcc(&u);
+    // add_account();
+    break;
+  case 2:
+    // student TODO : add your **Update account information** function
+    updateAccountInfo(&u);
+    // here
+    break;
+  case 3:
+    // student TODO : add your **Check the details of existing accounts**
+    // function
+    checkAccountDetails(&u);
+    // here
+    break;
+  case 4:
+    checkAllAccounts(&u);
+    break;
+  case 5:
+    // student TODO : add your **Make transaction** function
+    makeTransaction(&u);
+    break;
+  case 6:
+    // student TODO : add your **Remove existing account** function
+    removeAccount(&u);
+    break;
+  case 7:
+    // student TODO : add your **Transfer owner** function
+    transferOwnership(&u);
+    break;
+  case 8:
+    exit(1);
+    break;
+  default:
+    printf("Invalid operation!\n");
+  }
+};
+
+int main() {
+  enum ATMDBStatus rc = atmdb_connect();
+  if (rc == ATMDBStatusCantConnect) {
+    printf("Failed to connect to database\n");
+    return EXIT_FAILURE;
+  } else if (rc == ATMDBStatusCantVerify) {
+    printf("Failed to verify database\n");
+    return EXIT_FAILURE;
+  }
+  // printf("Choose an option (1-3): ");
+  // int selectedOptions;
+
+  // scanf("%d", &selectedOptions);
+  // printf("You Selected Options: %d\n", selectedOptions);
+  // if (selectedOptions < 1 || selectedOptions > 3) {
+  //     puts("Invalid option sleected ");
+  //     return  EXIT_FAILURE;
+  // }
+  // struct User newUser1 = {213, "aj", "aj123", false, NULL};
+  // rc = add_user(&newUser1);
+  // if (rc == ATMDBStatusUsersBadName) {
+  //     puts("name is not valid");
+  // } else if (rc == ATMDBStatusUsersConstraintName) {
+  //     puts("username already exists");
+  // }
+  struct User u;
+  initMenu(&u);
+
+  mainMenu(u);
+
+  atmdb_close();
+  return EXIT_SUCCESS;
+}
+
+// This function is used to flush the input buffer
+void flushInputBuffer() {
+  int c;
+  while ((c = getchar()) != '\n' && c != EOF) {
+  } // Keep reading characters until a newline or end-of-file
 }

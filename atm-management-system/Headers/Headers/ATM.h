@@ -13,36 +13,36 @@ static AccountType accountTypeSavings = "savings";
 static AccountType accountTypeCurrent = "current";
 
 struct User {
-    uint64_t id;
-    char name[51];
-    char password[65];
-    bool active;
-    struct Account **accounts;
+  unsigned long id;
+  char name[51];
+  char password[65];
+  bool active;
+  struct Account **accounts;
 };
 
 struct Account {
-    uint64_t id;
-    struct User *user;
-    AccountType type;
-    char date[11]; // 31-10-2023 + '\0'
-    double balance;
-    char country[20];
-    char phone[10];
+  unsigned long id;
+  struct User *user;
+  AccountType type;
+  char date[11]; // 31-10-2023 + '\0'
+  double balance;
+  char country[20];
+  char phone[10];
 };
 
 struct AccountTransfer {
-    uint64_t id;
-    uint64_t receiver;
-    uint64_t acc_to_transfer;
-    uint64_t date;
+  unsigned long id;
+  unsigned long receiver;
+  unsigned long acc_to_transfer;
+  unsigned long date;
 };
 
 struct Transaction {
-    uint64_t id;
-    struct Account *sender;
-    struct Account *receiver;
-    double amount;
-    uint64_t date;
+  unsigned long id;
+  struct Account *sender;
+  struct Account *receiver;
+  double amount;
+  unsigned long date;
 };
 
 #endif
